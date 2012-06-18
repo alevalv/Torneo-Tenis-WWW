@@ -37,9 +37,20 @@ echo $encabezado;
   $env = 
 json_decode(file_get_contents("/home/dotcloud/environment.json"), true);
 
-echo "Application Name: {$env['DOTCLOUD_PROJECT']}\n";
-
+echo "<p>Application Name: {$env['DOTCLOUD_PROJECT']}</p>\n";
+ var_dump($env); //imprimir arreglo
+$conn = new 
+Mongo("mongodb:/\/{$env['DOTCLOUD_TENIS4_MONGODB_LOGIN']}:{$env['DOTCLOUD_TENIS4_MONGODB_PASSWORD']}@{$env['DOTCLOUD_TENIS4_MONGODB_HOST']}/");
+$db = $conn->torneotenis;
+$jugadores = $conn->jugadores;
+$almejo = $jugadores->find();
+foreach($almejo as $item){
+echo $item['_id']; echo "<br />";
+echo $item['nombre']; echo "<br />";
+echo $item['apellido']; echo "<br />";
+}
 ?>
+
 
 </body>
 </html>
