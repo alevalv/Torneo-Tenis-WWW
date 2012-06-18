@@ -42,6 +42,25 @@ echo "<p>Application Name: {$env['DOTCLOUD_PROJECT']}</p>\n";
 try{
 $conn = new Mongo("{$env['DOTCLOUD_DATA_MONGODB_URL']}");
 $db = $conn->torneotenis;
+echo "<p> Pase :<p>";
+
+$list = $db->listCollections();
+foreach ($list as $collection) {
+    echo "borrando $collection... ";
+        echo "se fue\n";
+}
+
+$coleccion = $db->jugadores;
+$cursor = $coleccion->find();
+
+foreach ($cursor as $obj) {
+    echo $obj["nombre"] . "\n";
+}
+
+
+
+
+
 }
 catch ( MongoConnectionException $e ) 
 {
@@ -50,9 +69,9 @@ running?</p>';
     exit();
 }
 
-$coleccion = $db->jugadores;
-$almejo = $coleccion->findOne();
-dump($almejo);
+//$coleccion = $db->jugadores;
+//$almejo = $coleccion->findOne();
+//dump($almejo);
 //foreach($almejo as $item){
 //echo $item['_id']; echo "<br />";
 //echo $item['nombre']; echo "<br />";
