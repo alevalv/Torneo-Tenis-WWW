@@ -114,6 +114,18 @@ footer a:hover{}
 #ContactForm a:hover{background:#080808}
 #ContactForm .input {width:269px;height:18px;border:1px solid #e5e5e5;background:#fff;padding:3px 5px;color:#696968;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;font-style:italic;margin:0}
 #ContactForm textarea {overflow:auto;width:549px;height:258px;border:1px solid #e5e5e5;background:#fff;padding:3px 5px;color:#696968;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;font-style:italic;margin:0}
+
+#registroJugador {margin-top:-4px}
+#registroJugador span{width:170px;float:left;line-height:26px}
+#registroJugador .wrapper{min-height:30px}
+#registroJugador .radios{min-height:30px; text-align=center;}
+#registroJugador .textarea_box{min-height:275px;width:100%;overflow:hidden;padding-bottom:6px}
+#registroJugador {}
+#registroJugador a{margin-left:10px;float:right;width:62px;font-style:normal;font-weight:bold;color:#fff;height:32px;line-height:32px;text-decoration:none;background:#60b000;text-align:center}
+#registroJugador a:hover{background:#080808}
+#registroJugador .input {width:269px;height:18px;border:1px solid #e5e5e5;background:#fff;padding:3px 5px;color:#696968;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;font-style:italic;margin:0}
+#registroJugador textarea {overflow:auto;width:549px;height:258px;border:1px solid #e5e5e5;background:#fff;padding:3px 5px;color:#696968;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;font-style:italic;margin:0}
+
 #newsletter{}
 #newsletter .input{background:#fff;padding:6px 18px;width:184px;height:18px;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;font-style:inherit;color:#b4b4b4;margin:0}
 #newsletter .input:focus{color:#696969}
