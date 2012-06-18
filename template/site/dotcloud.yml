@@ -1,2 +1,5 @@
 www:
   type: php
+
+data:
+  type: mongodb
