@@ -1,19 +1,20 @@
 #insert para un torneo
 db.torneo.insert({'torneo_codigo': '12345' , 'torneo_lugar': 'Canchas olimpicas' , 'torneo_nombre': 'Mini Copa Local', 'torneo_num_canchas': 6 , 'torneo_num_jugadores': 15 , 'torneo_jugadores_registrados': 10 , 'torneo_fecha_inicio': '06-12-2012' , 'torneo_fecha_fin': '17-12-2012' , 'torneo_categoria': 'Categoria 2' , 'torneo_modalidad': 'single_masculino'})
 
-#insert para la clasificación de jugador individual
-db.clasificacion_torneos.insert({'registrados_jugador_codigo': 'j1234', 'registrados_torneo_codigo': '12345' , 'jugador_ronda': 2 ,'jugador_grupo': 4, 'jugador_puntos': '', 'jugador_partidos_ganados': '','jugador_partidos_empatados': '', 'jugador_partidos_perdidos': '' , 'jugador_total_partidos_jugados': '', 'jugador_puesto_actual': '1', 'categoria_ronda':''})
+#insert para la clasificación de jugador
+db.clasificacion_torneos.insert({'registrados_jugador_codigo': 'j1234', 'registrados_torneo_codigo': '12345' , 'jugador_ronda': 2 ,'jugador_grupo': 4, 'jugador_puntos': 3, 'jugador_partidos_ganados': 1,'jugador_partidos_empatados': 0, 'jugador_partidos_perdidos': 0 , 'jugador_total_partidos_jugados': 1, 'jugador_puesto_actual': 1, 'categoria_ronda':'A'})
 
-#insert para la clasificación de jugador equipo
+#insert para partido sin juez
+db.partidos_torneos.insert({'partido_codigo': '456', 'registrados_jugador1_codigo': '6789', 'registrados_jugador2_codigo': '34589' , 'registrados_torneo_codigo': '12345' , 'partido_ronda': '2', 'partido_fecha': '08-12-2012' , 'partido_hora': '13:20', 'partido_cancha': '1', 'set_ganados_jugador1':'1', 'set_ganados_jugador2':'2', 'game1_jugador1':'2','game1_jugador2':'6','game2_jugador1':'6','game2_jugador2':'2','game3_jugado1':'2','game3_jugador2':'6','partido_ganador':'2'})
 
-
-#insert para partido
-db.partidos_torneos.insert({'partido_codigo': '', 'registrados_jugador1_codigo': '', 'registrados_jugador2_codigo': '' , 'registrados_torneo_codigo': '' , 'partido_ronda': '', 'partido_fecha': '' , 'partido_hora': '', 'partido_cancha': '', 'set_ganados_jugador1':'', 'set_ganados_jugador1':'', 'game1_jugador1':'','game1_jugador2':'','game2_jugador1':'','game2_jugador2':'','game3_jugado1':'','game3_jugador2':'','parido_ganador':'','partido_juez':'' })
+#insert para partido con juez
+db.partidos_torneos.insert({'partido_codigo': '457', 'registrados_jugador1_codigo': '8796', 'registrados_jugador2_codigo': '23789' , 'registrados_torneo_codigo': '12345' , 'partido_ronda': '2', 'partido_fecha': '07-12-2012' , 'partido_hora': '02:06', 'partido_cancha': '2', 'set_ganados_jugador1':'2', 'set_ganados_jugador2':'1', 'game1_jugador1':'6','game1_jugador2':'2','game2_jugador1':'2','game2_jugador2':'6','game3_jugado1':'6','game3_jugador2':'2','partido_ganador':'1','partido_juez':'3456' })
 
 #insert para juez
-db.juez.insert({'juez_codigo':'', 'juez_username':'','juez_password':'','juez_nombre':'','juez_fecha_nacimiento':''})
+db.juez.insert({'juez_codigo':'3456', 'juez_username':'alvaro','juez_password':'12345','juez_nombre':'Alvaro Dominguez','juez_fecha_nacimiento':'21-08-1976'})
 
 #insert para jugador individual
-db.jugador({'jugador_codigo': '6789','jugador_cedula1': '56545','jugador_cedula2': '', 'jugador_username': 'juanpl', 'jugador_password':'prueba','jugador_es_pareja':FALSE,'jugador_nombre1':'Juan Pablo Montoya','jugador_nombre2':'','jugador_categoria':'Categoria 2','jugador_ranking':1})
+db.jugador.insert({'jugador_codigo': '6789','jugador_cedula1': '56545', 'jugador_username': 'juanpl', 'jugador_password':'prueba','jugador_es_pareja' : false,'jugador_nombre1':'Juan Pablo Montoya','jugador_sexo1': 'M', 'jugador_categoria':'Categoria 2','jugador_ranking':1})
 
 #insert para jugadores equipo
+db.jugador.insert({'jugador_codigo': '8796','jugador_cedula1': '67678','jugador_cedula2': '45345', 'jugador_username': 'team1', 'jugador_password':'prueba','jugador_es_pareja': true,'jugador_nombre1':'David Motta','jugador_nombre2':'Laura Aguirre', 'jugador_sexo1':'M', 'jugador_sexo2': 'F', 'jugador_categoria':'Categoria 1','jugador_ranking':1})
