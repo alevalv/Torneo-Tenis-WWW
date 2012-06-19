@@ -6,7 +6,7 @@
 $variables = $_POST["feed_item_length"];?>
 
 <?php
-$titulo="TITULO DE LA PAGINA ";
+$titulo="Monki feo ";
 hacer_encabezado($titulo);
 
 ?>
