@@ -1,7 +1,10 @@
+<?php include ("seguridad.php");
+	comprobarSesion("crearTorneo.php");
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<title>Ingresar</title>
+<title>Crear Torneo</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
@@ -31,9 +34,9 @@
 		<div class="main">
 <!-- header -->
 			<header>
-				<?php 
+				<?php 					
 					include("insertMenu.php");
-					echo insertar_menus($_SESSION);					
+					echo insertar_menus();
 				?>
 			</header><div class="ic">More Website Templates  at TemplateMonster.com!</div>
 <!-- header end-->
@@ -47,27 +50,46 @@
 			<article id="content">
 				<div class="wrapper">
 					<section class="col1">
-						<h2 class="under">Iniciar Sesion</h2>
-						<form id="registroJugador" action="autenticar.php" method="POST">
-							<?php
-							if($_GET["errorusuario"]=="si"){
-								echo 	'<div id="errorMensage">
-											Nombre de Usuario o Password incorrectos
-										</div>';
-							}
-							?>
-							<div>								
-								<div class="wrapper">
-									<span>Nombre de Usuario:</span>
-									<input type="text" name="username" class="input" >
-								</div>
-								<div  class="wrapper">
-									<span>Password:</span>
-									<input type="password" name="password" class="input" >
-								</div>
-								<a href="#" onClick="document.getElementById('registroJugador').submit()">Enviar</a>
+						<h2 class="under">Crear Torneo (acomodar campos)</h2>
+						<form id="registroJugador" action="registrarJugador.php" method="post">
+						<div>
+							<div  class="wrapper">
+								<span>Cedula:</span>
+								<input type="text" name="jugador_codigo" class="input" >
 							</div>
-						</form>
+							<div  class="wrapper">
+								<span>Nombre Completo:</span>
+								<input type="text" name="jugador_nombre" class="input" >
+							</div>
+							<div  class="wrapper">
+								<span>Sexo:</span><br /><br />
+								<div class="radios">
+									<input type="radio" name="jugador_sexo" value="M" class="input" >Masculino<br />
+									<input type="radio" name="jugador_sexo" value="F" class="input" CHECKED>Femenino<br />
+								</div>
+							</div>
+							<div  class="wrapper">
+								<span>Nombre de Usuario:</span>
+								<input type="text" name="jugador_username" class="input" >
+							</div>
+							<div  class="wrapper">
+								<span>Contraseña:</span>
+								<input type="password" name="jugador_password" class="input" >
+							</div>
+							<div  class="wrapper">
+								<span>Categoría Inicial:</span><br /><br />
+								<div class="radios">
+									<input type="radio" name="jugador_categoria" value="Categoria 1" class="input" >Categoría 1<br />
+									<input type="radio" name="jugador_categoria" value="Categoria 2" class="input" >Categoría 2<br />
+									<input type="radio" name="jugador_categoria" value="Categoria 3" class="input" >Categoría 3<br />
+									<input type="radio" name="jugador_categoria" value="Categoria 4" class="input" >Categoría 4<br />
+									<input type="radio" name="jugador_categoria" value="Novato" checked class="input" >Novato
+								</div>
+							</div>
+							<a href="#" onClick="document.getElementById('registroJugador').submit()">Enviar</a>
+							<a href="#" onClick="document.getElementById('registroJugador').reset()">Limpiar</a>
+						</div>
+					</form>
 					</section>
 					<section class="col2 pad_left1">
 						<h2 class="under">Contacts</h2>

@@ -1,5 +1,3 @@
-<?php include ("seguridad.php");
-?> 
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -37,10 +35,9 @@
 		<div class="main">
 <!-- header -->
 			<header>
-				<?php 
+				<?php 					
 					include("insertMenu.php");
-					$var = insertar_menus($_SESSION);
-					echo $var;
+					echo insertar_menus();
 				?>
 				<div class="wrapper">
 					<div class="slider">
