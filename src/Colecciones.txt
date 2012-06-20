@@ -13,8 +13,8 @@ db.partidos_torneos.insert({'partido_codigo': '457', 'registrados_jugador1_codig
 #insert para juez
 db.juez.insert({'juez_codigo':'3456', 'juez_username':'alvaro','juez_password':'12345','juez_nombre':'Alvaro Dominguez','juez_fecha_nacimiento':'21-08-1976'})
 
-#insert para jugador individual
-db.jugador.insert({'jugador_codigo': '6789','jugador_cedula1': '56545', 'jugador_username': 'juanpl', 'jugador_password':'prueba','jugador_es_pareja' : false,'jugador_nombre1':'Juan Pablo Montoya','jugador_sexo1': 'M', 'jugador_categoria':'Categoria 2','jugador_ranking':1})
+#insert para jugador individual ##QUITE CEDULA, la cedula será jugador_codigo
+db.jugador.insert({'jugador_codigo': '6789', 'jugador_username': 'juanpl', 'jugador_password':'prueba','jugador_es_pareja' : false,'jugador_nombre1':'Juan Pablo Montoya','jugador_sexo1': 'M', 'jugador_categoria':'Categoria 2','jugador_ranking':1})
 
 #insert para jugadores equipo
 db.jugador.insert({'jugador_codigo': '8796','jugador_cedula1': '67678','jugador_cedula2': '45345', 'jugador_username': 'team1', 'jugador_password':'prueba','jugador_es_pareja': true,'jugador_nombre1':'David Motta','jugador_nombre2':'Laura Aguirre', 'jugador_sexo1':'M', 'jugador_sexo2': 'F', 'jugador_categoria':'Categoria 1','jugador_ranking':1})
