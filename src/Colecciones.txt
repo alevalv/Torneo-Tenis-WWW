@@ -16,5 +16,130 @@ db.juez.insert({'juez_codigo':'3456', 'juez_username':'alvaro','juez_password':'
 #insert para jugador individual ##QUITE CEDULA, la cedula será jugador_codigo
 db.jugador.insert({'jugador_codigo': '6789', 'jugador_username': 'juanpl', 'jugador_password':'prueba','jugador_es_pareja' : false,'jugador_nombre1':'Juan Pablo Montoya','jugador_sexo1': 'M', 'jugador_categoria':'Categoria 2','jugador_ranking':1})
 
+######ESTOS JUGADORES TIENEN CEDULA OJO!
+
 #insert para jugadores equipo
 db.jugador.insert({'jugador_codigo': '8796','jugador_cedula1': '67678','jugador_cedula2': '45345', 'jugador_username': 'team1', 'jugador_password':'prueba','jugador_es_pareja': true,'jugador_nombre1':'David Motta','jugador_nombre2':'Laura Aguirre', 'jugador_sexo1':'M', 'jugador_sexo2': 'F', 'jugador_categoria':'Categoria 1','jugador_ranking':1})
+
+
+
+####DOCUMENTOS CON FORMATO JSON PARA CONSULTAS INSERT Y REMOVE ETC.
+###tiene variables para que sea mas suave usarlo
+
+#torneo
+
+$t_codigo
+$t_lugar
+$t_nombre
+$t_nun_canchas
+$t_num_jugadores
+$jug_registrados
+$t_fecha_inicio
+$t_fecha_fin
+$t_categoria
+$t_modalidad
+
+$doc = array('torneo_codigo' => $t_codigo  , 'torneo_lugar' => $t_lugar , 'torneo_nombre' => $t_nombre, 'torneo_num_canchas' => $t_nun_canchas , 'torneo_num_jugadores' => $t_num_jugadores , 'torneo_jugadores_registrados' => $jug_registrados , 'torneo_fecha_inicio' => $t_fecha_inicio , 'torneo_fecha_fin' => $t_fecha_fin , 'torneo_categoria' => $t_categoria , 'torneo_modalidad' => $t_modalidad);
+
+
+############clasificación de jugador
+$c_jug_codigo
+$c_torneo_codigo
+$c_jug_ronda 
+$c_jug_grupo
+$c_jug_puntos
+$c_jug_par_ganados
+$c_jug_par_empatados
+$c_jug_par_perdidos
+$c_jug_total_par
+$c_jug_puesto
+$c_categoria_ronda
+
+$doc = array('registrados_jugador_codigo' => $c_jug_codigo, 'registrados_torneo_codigo' => $c_torneo_codigo , 'jugador_ronda' => $c_jug_ronda ,'jugador_grupo' => $c_jug_grupo, 'jugador_puntos' => $c_jug_puntos, 'jugador_partidos_ganados' => $c_jug_par_ganados,'jugador_partidos_empatados' => $c_jug_par_empatados, 'jugador_partidos_perdidos' => $c_jug_par_perdidos , 'jugador_total_partidos_jugados' => $c_jug_total_par, 'jugador_puesto_actual' => $c_jug_puesto, 'categoria_ronda' =>  $c_categoria_ronda);
+
+##########partido sin juez
+$p_codigo
+$p_codigo_jug1
+$p_codigo_jug2
+$p_torneo_codigo
+$p_ronda
+$p_fecha
+$p_hora
+$p_cancha
+$p_set_win_jug1
+$p_set_win_jug2
+$p_game1_jug1
+$p_game1_jug2
+$p_game2_jug1
+$p_game2_jug2
+$p_game3_jug1
+$p_game3_jug2
+$p_ganador
+
+
+$doc = array('partido_codigo' => $p_codigo, 'registrados_jugador1_codigo' => $p_codigo_jug1, 'registrados_jugador2_codigo' => $p_codigo_jug2 , 'registrados_torneo_codigo' => $p_torneo_codigo , 'partido_ronda' => $p_ronda, 'partido_fecha' => $p_fecha , 'partido_hora'=> $p_hora, 'partido_cancha' => $p_cancha, 'set_ganados_jugador1' => $p_set_win_jug1, 'set_ganados_jugador2' => $p_set_win_jug2, 'game1_jugador1' => $p_game1_jug1,'game1_jugador2' => $p_game1_jug2,'game2_jugador1' => $p_game2_jug1,'game2_jugador2' => $p_game2_jug2,'game3_jugado1' => $p_game3_jug1,'game3_jugador2' => $p_game3_jug2,'partido_ganador' => $p_ganador);
+
+##########partido con juez
+$p_codigo
+$p_codigo_jug1
+$p_codigo_jug2
+$p_torneo_codigo
+$p_ronda
+$p_fecha
+$p_hora
+$p_cancha
+$p_set_win_jug1
+$p_set_win_jug2
+$p_game1_jug1
+$p_game1_jug2
+$p_game2_jug1
+$p_game2_jug2
+$p_game3_jug1
+$p_game3_jug2
+$p_ganador
+$p_juez
+
+
+$doc = array('partido_codigo' => $p_codigo, 'registrados_jugador1_codigo' => $p_codigo_jug1, 'registrados_jugador2_codigo' => $p_codigo_jug2 , 'registrados_torneo_codigo' => $p_torneo_codigo , 'partido_ronda' => $p_ronda, 'partido_fecha' => $p_fecha , 'partido_hora'=> $p_hora, 'partido_cancha' => $p_cancha, 'set_ganados_jugador1' => $p_set_win_jug1, 'set_ganados_jugador2' => $p_set_win_jug2, 'game1_jugador1' => $p_game1_jug1,'game1_jugador2' => $p_game1_jug2,'game2_jugador1' => $p_game2_jug1,'game2_jugador2' => $p_game2_jug2,'game3_jugado1' => $p_game3_jug1,'game3_jugador2' => $p_game3_jug2,'partido_ganador' => $p_ganador , 'partido_juez' => $p_juez);
+
+#########juez
+$j_codigo
+$j_username
+$j_password
+$j_nombre
+$j_nacimiento
+
+
+$doc = array('juez_codigo'=> $j_codigo, 'juez_username' => $j_username,'juez_password' => $j_password,'juez_nombre' => $j_nombre,'juez_fecha_nacimiento' => $j_nacimiento);
+
+######ESTOS JUGADORES TIENEN CEDULA OJO!
+
+############jugador individual
+$j_codigo
+$j_cedula1   ##########CEDULA
+$j_username
+$j_password
+$j_pareja
+$j_nombre1
+$j_sexo1
+$j_categoria
+$j_ranking
+
+
+$doc = array('jugador_codigo' => $j_codigo,'jugador_cedula1' => $j_cedula1, 'jugador_username' => $j_username, 'jugador_password' => $j_password,'jugador_es_pareja' => $j_pareja,'jugador_nombre1' => $j_nombre1, 'jugador_sexo1' => $j_sexo1, 'jugador_categoria' => $j_categoria,'jugador_ranking' => $j_ranking);
+
+##############jugadores equipo
+$j_codigo
+$j_cedula1
+$j_cedula2
+$j_username
+$j_password
+$j_pareja
+$j_nombre1
+$j_nombre2
+$j_sexo1
+$j_sexo2
+$j_categoria
+$j_ranking
+
+$doc = array('jugador_codigo' => $j_codigo,'jugador_cedula1' => $j_cedula1,'jugador_cedula2' => $j_cedula2, 'jugador_username' => $j_username, 'jugador_password' => $j_password,'jugador_es_pareja' => $j_pareja,'jugador_nombre1' => $j_nombre1,'jugador_nombre2' => $j_nombre2, 'jugador_sexo1' => $j_sexo1, 'jugador_sexo2' => $j_sexo2, 'jugador_categoria' => $j_categoria,'jugador_ranking' => $j_ranking);
