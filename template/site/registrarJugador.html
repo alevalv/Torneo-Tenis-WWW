@@ -67,6 +67,13 @@
 								<input type="text" name="jugador_nombre" class="input" >
 							</div>
 							<div  class="wrapper">
+								<span>Categoría Inicial:</span><br /><br />
+								<div class="radios">
+									<input type="radio" name="jugador_sexo" value="M" class="input" >Masculino<br />
+									<input type="radio" name="jugador_sexo" value="F" class="input" CHECKED>Femenino<br />
+								</div>
+							</div>
+							<div  class="wrapper">
 								<span>Nombre de Usuario:</span>
 								<input type="text" name="jugador_username" class="input" >
 							</div>
@@ -75,15 +82,13 @@
 								<input type="password" name="jugador_password" class="input" >
 							</div>
 							<div  class="wrapper">
-								<span>Tu Categoría Inicial:</span><br /><br />
+								<span>Categoría Inicial:</span><br /><br />
 								<div class="radios">
-									<input type="radio" name="jugador_categoria" value="C1" class="input" >Categoría 1<br />
-									<input type="radio" name="jugador_categoria" value="C2" class="input" >Categoría 2<br />
-									<input type="radio" name="jugador_categoria" value="C3" class="input" >Categoría 3<br />
-									<input type="radio" name="jugador_categoria" value="C4" class="input" >Categoría 4<br />
-									
-<input type="radio" name="jugador_categoria" value="Novato" checked 
-class="input" >Novato
+									<input type="radio" name="jugador_categoria" value="Categoria 1" class="input" >Categoría 1<br />
+									<input type="radio" name="jugador_categoria" value="Categoria 2" class="input" >Categoría 2<br />
+									<input type="radio" name="jugador_categoria" value="Categoria 3" class="input" >Categoría 3<br />
+									<input type="radio" name="jugador_categoria" value="Categoria 4" class="input" >Categoría 4<br />
+									<input type="radio" name="jugador_categoria" value="Novato" checked class="input" >Novato
 								</div>
 							</div>
 							<a href="#" onClick="document.getElementById('registroJugador').submit()">Enviar</a>
