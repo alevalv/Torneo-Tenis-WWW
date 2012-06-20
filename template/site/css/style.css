@@ -52,6 +52,8 @@ header{padding-top:34px;height:148px}
 #menu #nav4 a:hover, #menu #nav4.active a{background:url(../images/menu_icon4_active.gif) bottom center no-repeat}
 #menu #nav5 a{background:url(../images/menu_icon5.gif) bottom center no-repeat}
 #menu #nav5 a:hover, #menu #nav5.active a{background:url(../images/menu_icon5_active.gif) bottom center no-repeat}
+#menu #nav6 a{background:url(../images/menu_icon6.gif) bottom center no-repeat}
+#menu #nav6 a:hover, #menu #nav5.active a{background:url(../images/menu_icon6_active.gif) bottom center no-repeat}
 .slider{top:162px;position:absolute;z-index:1}
 .slider .items{display:none}
 .slider  .pagination{position:absolute;z-index:2;bottom:47px;left:432px}

@@ -47,8 +47,10 @@
 						<?php
 						if($_SESSION["autentificado"] != "si"){
 									echo '<li id="nav5"><a href="registrarJugador.html">Registrate<span>para participar</span></a></li>
-									<li id="nav6"><a href="login.php">Identificate<span>si eres miembro</span></a></li>' ;
-						} ?>
+									<li id="nav6"><a href="login.php">Identificate<span>si eres miembro</span></a></li>';
+						}else{
+								echo '<li id="nav5"> <a href="salir.php">'.$_SESSION["username"].'<span>Desconectarme</span></a></li>';
+							} ?>
 					</ul>
 				</nav>
 				</div>
