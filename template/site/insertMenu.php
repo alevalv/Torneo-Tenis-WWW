@@ -10,7 +10,7 @@
 						if($_SESSION["rol"] == "jugador"){
 							$output .= '<li id="nav3"><a href="jugador.php">Jugador<span>gestione su cuenta</span></a></li>';
 						}elseif($_SESSION["rol"] == "admin"){
-							$output .= '<li id="nav3"><a href="gestionarAdmin.php">Administrador<span>gestione su cuenta</span></a></li>';
+							$output .= '<li id="nav3"><a href="administrador.php">Administrador<span>gestione su cuenta</span></a></li>';
 						}elseif($_SESSION["rol"] == "juez"){
 							$output .= '<li id="nav3"><a href="juez.php">Juez<span>gestione su cuenta</span></a></li>';
 						}

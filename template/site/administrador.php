@@ -1,5 +1,5 @@
 <?php include ("seguridad.php");
-	comprobarSesion("gestionarAdmin.php");
+	comprobarSesion("administrador.php");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -72,8 +72,8 @@
 						<div class="wrapper pad_bot2">
 							<h3><span class="dropcap">2</span>Ingresar Juez</h3>
 							<figure><img src="images/page4_img3.jpg" alt=""></figure>
-							<p class="pad_bot1">En esta sección se desplegara un formulario para el ingreso de jueces oficiales para los diferentes torneos que se realicen y la asignación de estos.</p>
-							<a href="crearJuez.php" class="link1">Ingresar un Juez</a>
+							<p class="pad_bot1">En esta sección se desplegara un formulario para el ingreso de jueces oficiales para los diferentes torneos que se realicen.</p>
+							<a href="ingresarJuez.php" class="link1">Ingresar un Juez</a>
 						</div>
 						<!--<div class="wrapper">
 							<h3><span class="dropcap">5</span>Product name</h3>
@@ -83,14 +83,14 @@
 						</div>
 						-->						
 					</section>
-					<!--
+					
 					<section class="cols pad_left1">
 						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">3</span>Product name</h3>
+							<h3><span class="dropcap">3</span>Asigar Juez a Partido</h3>
 							<figure><img src="images/page4_img5.jpg" alt=""></figure>
-							<p class="pad_bot1">Commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-							<a href="#" class="link1">Read More</a>
-						</div>
+							<p class="pad_bot1">Gestiona los jueces y asignalos a los partidos que sean necesarios.</p>
+							<a href="asignarJuezPartido.php" class="link1">Asignar</a>
+						</div><!--
 						<div class="wrapper">
 							<h3><span class="dropcap">6</span>Product name</h3>
 							<figure><img src="images/page4_img6.jpg" alt=""></figure>

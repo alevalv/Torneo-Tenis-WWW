@@ -18,7 +18,7 @@ function comprobarSesion($pagename){
 		}
 			if($_SESSION["rol"] != "admin"){
 				
-				if(($pagename == "gestionarAdmin.php") || ($pagename == "crearTorneo.php" || ($pagename == "ingresarJuez.php"))){
+				if(($pagename == "administrador.php") || ($pagename == "crearTorneo.php" || ($pagename == "ingresarJuez.php"))){
 						exit();
 				}else{
 					//No se puede acceder no tiene privilegios alguna pagina de error
