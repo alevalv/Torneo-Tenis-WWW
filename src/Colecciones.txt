@@ -22,6 +22,9 @@ db.jugador.insert({'jugador_codigo': '6789', 'jugador_username': 'juanpl', 'juga
 db.jugador.insert({'jugador_codigo': '8796','jugador_cedula1': '67678','jugador_cedula2': '45345', 'jugador_username': 'team1', 'jugador_password':'prueba','jugador_es_pareja': true,'jugador_nombre1':'David Motta','jugador_nombre2':'Laura Aguirre', 'jugador_sexo1':'M', 'jugador_sexo2': 'F', 'jugador_categoria':'Categoria 1','jugador_ranking':1})
 
 
+##existe un usuario admin en la coleccion admin
+db.admin.insert({'admin_username' : 'admin', 'admin_password' : '12345'}})
+
 
 ####DOCUMENTOS CON FORMATO JSON PARA CONSULTAS INSERT Y REMOVE ETC.
 ###tiene variables para que sea mas suave usarlo

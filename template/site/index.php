@@ -1,4 +1,5 @@
-<?php include ("seguridad.php");?> 
+<?php include ("seguridad.php");
+?> 
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -36,24 +37,11 @@
 		<div class="main">
 <!-- header -->
 			<header>
-				<div class="wrapper">
-				<!--<h1><a href="index.html" id="logo"></a></h1>-->
-				<nav>
-					<ul id="menu">
-						<li id="nav1" class="active"><a href="index.html">Inicio<span>¡Bienvenido!</span></a></li>
-						<li id="nav2"><a href="jugador.php">Jugador<span>Fresh</span></a></li>
-						<li id="nav3"><a href="administrador.php">Administrador<span>Fresh</span></a></li>
-						<li id="nav4"><a href="informacion_Torneos.php">Torneos<span>sigue la acción</span></a></li>
-						<?php
-						if($_SESSION["autentificado"] != "si"){
-									echo '<li id="nav5"><a href="registrarJugador.html">Registrate<span>para participar</span></a></li>
-									<li id="nav6"><a href="login.php">Identificate<span>si eres miembro</span></a></li>';
-						}else{
-								echo '<li id="nav5"> <a href="salir.php">'.$_SESSION["username"].'<span>Desconectarme</span></a></li>';
-							} ?>
-					</ul>
-				</nav>
-				</div>
+				<?php 
+					include("insertMenu.php");
+					$var = insertar_menus($_SESSION);
+					echo $var;
+				?>
 				<div class="wrapper">
 					<div class="slider">
 					  <ul class="items">

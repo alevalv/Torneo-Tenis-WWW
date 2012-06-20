@@ -28,7 +28,7 @@
 		 $_SESSION["autentificado"]= "si";
 		 $_SESSION["username"]= $_POST['username'];
 		 $_SESSION["rol"]= "juez";
-		 header ("Location: index.php");		 
+		 header ("Location: index.php");
 	 }else if($result->count()!=0){
 		 session_start();
 		 $_SESSION["autentificado"]= "si";
