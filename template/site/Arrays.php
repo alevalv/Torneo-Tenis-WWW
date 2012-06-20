@@ -50,11 +50,11 @@ foreach ($list as $collection) {
         echo "se fue\n";
 }
 
-$coleccion = $db->jugadores;
+$coleccion = $db->jugador;
 $cursor = $coleccion->find();
 
 foreach ($cursor as $obj) {
-    echo $obj["nombre"] . "\n";
+    echo $obj["jugador_username"] . "\n";
 }
 
 

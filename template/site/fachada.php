@@ -5,7 +5,7 @@ class fachada
   	
   	@ $env = json_decode(file_get_contents("/home/dotcloud/environment.json"), true);
   	
-  	echo "<p>Application Name: {$env['DOTCLOUD_PROJECT']}</p>\n";
+  	//echo "<p>Application Name: {$env['DOTCLOUD_PROJECT']}</p>\n";
   	try{
   	  	$conn = new Mongo("{$env['DOTCLOUD_DATA_MONGODB_URL']}");
   	  	$db = $conn->torneotenis;
