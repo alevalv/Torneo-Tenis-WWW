@@ -1,19 +1,18 @@
 <html>
 	<head>
-		<title>Autentificación PHP</title>
+		<title>Autentificacion PHP</title>
 	</head>
 	<body>
-		<h1>Autentificación PHP</h1>
+		<h1>Autentificacion PHP</h1>
 		<form action="autenticar.php" method="POST">
 			<table align="center" width="225" cellspacing="2" cellpadding="2" border="0">
 				<tr>
 					<td colspan="2" align="center"
-					<?phpif ($_GET["errorusuario"]=="si"){?>
-					bgcolor=red><span style="color:ffffff"><b>Datos incorrectos</b></span>
-					<?php}else{?>
-						bgcolor=#cccccc>Introduce tu clave de acceso
-					<?php}?>
-					</td>
+						<?php if ($_GET["errorusuario"]=="si"){
+							 echo 'bgcolor=red><span style="color:ffffff"><b>Datos incorrectos</b></span>';
+						}else{
+							echo 'bgcolor=#cccccc>Introduce tu clave de acceso';
+						}?></td>
 				</tr>
 				<tr>
 					<td align="right">USER:</td>

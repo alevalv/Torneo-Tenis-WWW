@@ -1,3 +1,4 @@
+<?php include ("seguridad.php");?> 
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -43,10 +44,11 @@
 						<li id="nav2"><a href="jugador.php">Jugador<span>Fresh</span></a></li>
 						<li id="nav3"><a href="administrador.php">Administrador<span>Fresh</span></a></li>
 						<li id="nav4"><a href="informacion_Torneos.php">Torneos<span>sigue la acción</span></a></li>
-						<?php if($_SESSION["autentificado"]!= "si") echo '
-							<li id="nav5"><a href="registrarJugador.html">Registrate<span>para participar</span></a></li>
-							<li id="nav6"><a href="login.php">Identificate<span>si eres miembro</span></a></li>';
-						?>
+						<?php
+						if($_SESSION["autentificado"] != "si"){
+									echo '<li id="nav5"><a href="registrarJugador.html">Registrate<span>para participar</span></a></li>
+									<li id="nav6"><a href="login.php">Identificate<span>si eres miembro</span></a></li>' ;
+						} ?>
 					</ul>
 				</nav>
 				</div>
