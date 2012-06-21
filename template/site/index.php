@@ -1,4 +1,4 @@
-<?php include ("seguridad.php");
+Ôªø<?php include ("seguridad.php");
 	comprobarSesion("index.php");
 ?>
 <!DOCTYPE html>
@@ -73,7 +73,7 @@
 					</section>
 					<section class="cols pad_left1">
 						<h3><span class="dropcap">B</span>Business<span>strategies</span></h3>
-						<p class="pad_bot1">This <a href="http://blog.templatemonster.com/2011/07/11/free-website-template-slider-typography/">Progress Template</a> goes with two packages ñ with PSD source files and without them.</p>
+						<p class="pad_bot1">This <a href="http://blog.templatemonster.com/2011/07/11/free-website-template-slider-typography/">Progress Template</a> goes with two packages ‚Äì with PSD source files and without them.</p>
 						<a href="#" class="link1">Read More</a>
 					</section>
 					<section class="cols pad_left1">
@@ -83,46 +83,46 @@
 					</section>
 					<section class="cols pad_left1">
 						<h3><span class="dropcap">D</span>Worldwide<span>solutions</span></h3>
-						<p class="pad_bot1">This website template has several pages: Home, News, Services, Products, Contacts (contact form doesnít work).</p>
+						<p class="pad_bot1">This website template has several pages: Home, News, Services, Products, Contacts (contact form doesn‚Äôt work).</p>
 						<a href="#" class="link1">Read More</a>
 					</section>
 				</div> -->
 				<div class="wrapper">
 					<section class="col1">
-						<h2 class="under">°Bienvenidos!</h2>
+						<h2 class="under">¬°Bienvenidos!</h2>
 						<div class="wrapper">
 							<figure class="left marg_right1"><img src="images/page1_img1.jpg" alt=""></figure>
 							<p class="pad_bot1">
-								La presente pagina es un proyecto del curso de <b>Aplicaciones Web y Redes Inalambricas</b> para la gestiÛn de Torneos de Tenis a nivel local. Esta aplicaciÛn web realiza el manejo de diferentes sesiones como lo son: administrador, jueces para los partidos y los jugadores que participaran de los diferentes torneos.
+								La presente pagina es un proyecto del curso de <b>Aplicaciones Web y Redes Inalambricas</b> para la gesti√≥n de Torneos de Tenis a nivel local. Esta aplicaci√≥n web realiza el manejo de diferentes sesiones como lo son: administrador, jueces para los partidos y los jugadores que participaran de los diferentes torneos.
 							</p>
 							<p>
 								
 						    </p>
 						</div>
 					</section>
-					<!--
+					
 					<section class="col2 pad_left1">
-						<h2>Testimonials</h2>
+						<h2>Partidos Destacados</h2>
 						<div class="testimonials">
 						<div id="testimonials">
 						  <ul>
 							<li>
 								<div>
-									ìNam libero tempore, cum soluta nobis eligendi quo minus quod maxime placeat facere.î
+									‚ÄúNam libero tempore, cum soluta nobis eligendi quo minus quod maxime placeat facere.‚Äù
 								</div>
 								<span><strong class="color1">James Coloway,</strong> <br>
 								Director</span>
 							</li>
 							<li>
 								<div>
-									ìNam libero tempore, cum soluta nobis eligendi quo minus quod maxime placeat facere.î
+									‚ÄúNam libero tempore, cum soluta nobis eligendi quo minus quod maxime placeat facere.‚Äù
 								</div>
 								<span><strong class="color1">James Coloway,</strong> <br>
 								Director</span>
 							</li>
 							<li>
 								<div>
-									ìNam libero tempore, cum soluta nobis eligendi quo minus quod maxime placeat facere.î
+									‚ÄúNam libero tempore, cum soluta nobis eligendi quo minus quod maxime placeat facere.‚Äù
 								</div>
 								<span><strong class="color1">James Coloway,</strong> <br>
 								Director</span>
@@ -132,7 +132,7 @@
 						<a href="#" class="up"></a>
 						<a href="#" class="down"></a>
 						</div>
-					</section>-->
+					</section>
 				</div>
 			</article>
 		</div>
@@ -162,7 +162,7 @@
 						</ul>
 					</section>
 					<section class="col3 pad_left2">
-						<h4>°Siguenos!</h4>
+						<h4>¬°Siguenos!</h4>
 						<ul id="icons">
 							<li><a href="#"><img src="images/icon1.jpg" alt="">Facebook</a></li>
 							<li><a href="#"><img src="images/icon2.jpg" alt="">Twitter</a></li>
