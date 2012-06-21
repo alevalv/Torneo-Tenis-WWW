@@ -1,5 +1,7 @@
 <?php include ("seguridad.php");
-	if(comprobarSesion("login.php")==1){
+	if(comprobarSesion("login.php")==0){
+		header("Location: login.php");
+	}else{
 		header("Location: index.php");
 	}
 ?>
