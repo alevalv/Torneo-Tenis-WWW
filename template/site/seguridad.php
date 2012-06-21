@@ -4,29 +4,23 @@ function comprobarSesion($pagename){
 	
 	session_start();
 	//COMPRUEBA QUE EL USUARIO ESTA AUTENTIFICADO
-	if ($_SESSION["autentificado"] != "si" && $_SESSION["loop"] != "no") {
+	if ($_SESSION["autentificado"] != "si") {//no esta autentificado
 		if($pagename == "index.php"){
-			header("Location: index.php");
-			$_SESSION["loop"] = "yes";
 			return 0;
 		}if($pagename == "login.php"){
-			header("Location: login.php");
-			$_SESSION["loop"] = "yes";
 			return 0;
 		}if($pagename == "registrarJugador.php"){
-			header("Location: registrarJugador.php");
-			$_SESSION["loop"] = "yes";
 			return 0;
 			}
 		//si no existe, envio a la página de autentificacion
 		header("Location: login.php");
 		//ademas salgo de este script    
-		exit();
+		return 0;
     }else{// si nos registramos
-		if( ($pagename == "index.php") || ($pagename == "registrarJugador.php") || ($pagename == "login.php")){//redirecciona a index.php
+		if($pagename == "index.php"){ return 1;}
+		if(($pagename == "registrarJugador.php") || ($pagename == "login.php")){//redirecciona a index.php
 			header("Location: index.php");
-			return 1;
-			
+			return 1;			
 		}
 			if($_SESSION["rol"] != "admin"){
 				
@@ -40,7 +34,7 @@ function comprobarSesion($pagename){
 			}
 		
 		}
-    
+    return 3;
 }
     
 ?> 
