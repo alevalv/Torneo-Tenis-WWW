@@ -3,6 +3,8 @@
 	function insertar_menus(){
 		session_start();
 			$output = '<div class="wrapper">
+
+	<h1><a href="index.html" id="logo">Tenis Vallecaucano</a></h1>
 				<nav>
 					<ul id="menu">
 						<li id="nav1" class="active"><a href="index.php">Inicio<span>¡Bienvenido!</span></a></li>';
