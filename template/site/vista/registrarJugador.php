@@ -51,6 +51,7 @@
 				<div class="wrapper">
 					<section class="col1">
 						<h2 class="under">Registrarse</h2>
+						<a href="registrarPareja.php"><h3>Registrarse como Pareja</h3></a>
 						<form id="registroJugador" action="../modelo/guardarJugador.php" method="post">
 						<div>
 							<div  class="wrapper">
