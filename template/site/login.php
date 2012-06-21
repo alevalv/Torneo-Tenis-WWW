@@ -73,17 +73,16 @@
 						</form>
 					</section>
 					<section class="col2 pad_left1">
-						<h2 class="under">Contacts</h2>
-						<div id="address"><span>Country:<br>
-								City:<br>
-								Telephone:<br>
+						<h2 class="under">Contactar</h2>
+						<div id="address"><span>Pais:<br>
+								Ciudad:<br>
+								Telefono:<br>
 								Email:</span>
-								USA<br>
-								San Diego<br>
-								+354 5635600<br>
-								<a href="mailto:" class="color2">elenwhite@mail.com</a></div>
-						<h2 class="under">Miscellaneous</h2>
-						<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium volupta- tum deleniti atque corrupti quos dolores et quas molestias excep- turi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum.</p>
+								Colombia<br>
+								Santiago de Cali<br>
+								605 45 78<br>
+								<a href="mailto:" class="color2">webtennis@mail.com</a></div>
+						
 					</section>
 				</div>
 
