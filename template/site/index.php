@@ -108,7 +108,7 @@
 						  <ul>
 							<li>
 								<div>
-									""Nam libero tempore, cum soluta nobis eligendi quo minus quod maxime placeat facere."
+									"Nam libero tempore, cum soluta nobis eligendi quo minus quod maxime placeat facere."
 								</div>
 								<span><strong class="color1">James Coloway,</strong> <br>
 								Director</span>
