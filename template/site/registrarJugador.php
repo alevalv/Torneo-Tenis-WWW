@@ -1,10 +1,4 @@
-<?php include ("seguridad.php");
-	if(comprobarSesion("registrarJugador.php")==1){
-		header("Location: registrarJugador.php");
-	}else{
-		header("Location: index.php");
-	}
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
