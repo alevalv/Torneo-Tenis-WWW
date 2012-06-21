@@ -1,5 +1,9 @@
 <?php include ("seguridad.php");
-	comprobarSesion("registratJugador.php");
+	if(comprobarSesion("registratJugador.php")==1){
+				header("Location: registratJugador.php");
+
+		
+		}
 ?>
 <!DOCTYPE html>
 <html lang="en">
