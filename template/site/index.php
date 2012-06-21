@@ -1,5 +1,5 @@
 <?php include ("seguridad.php");
-	comprobarSesion("registrarJugador.php");
+	comprobarSesion("index.php");
 ?>
 <!DOCTYPE html>
 <html lang="es">
