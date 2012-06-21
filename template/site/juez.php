@@ -1,10 +1,10 @@
 <?php include ("seguridad.php");
-	comprobarSesion("administrador.php");
+	comprobarSesion("juez.php");
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Gestión Administrador</title>
+<title>Gestión Juez</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
@@ -55,7 +55,7 @@
 				<div class="wrapper">
 					<section class="cols">
 						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">1</span>Crear Torneo</h3>
+							<h3><span class="dropcap">1</span>(cambiar esto))</h3>
 							<figure><img src="images/page4_img1.jpg" alt=""></figure>
 							<p class="pad_bot1">Aqui puede relizar la creación de un torneo de tennis.</p>
 							<a href="crearTorneo.php" class="link1">Crear Torneo</a>
@@ -86,7 +86,7 @@
 					
 					<section class="cols pad_left1">
 						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">3</span>Asigar Juez </span>a Partido</span></h3>
+							<h3><span class="dropcap">3</span>Asigar Juez a Partido</h3>
 							<figure><img src="images/page4_img5.jpg" alt=""></figure>
 							<p class="pad_bot1">Gestiona los jueces y asignalos a los partidos que sean necesarios.</p>
 							<a href="asignarJuezPartido.php" class="link1">Asignar</a>

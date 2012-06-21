@@ -59,6 +59,7 @@
 		<div class="main">
 <!-- content -->
 			<article id="content">
+				<!--
 				<div class="wrapper">
 					<section class="cols">
 						<h3><span class="dropcap">A</span>Business<span>planning</span></h3>
@@ -80,17 +81,21 @@
 						<p class="pad_bot1">This website template has several pages: Home, News, Services, Products, Contacts (contact form doesn’t work).</p>
 						<a href="#" class="link1">Read More</a>
 					</section>
-				</div>
+				</div> -->
 				<div class="wrapper">
 					<section class="col1">
-						<h2 class="under">Welcome, dear visitor!</h2>
+						<h2 class="under">¡Bienvenidos!</h2>
 						<div class="wrapper">
 							<figure class="left marg_right1"><img src="images/page1_img1.jpg" alt=""></figure>
-							<p class="pad_bot1">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa.</p>
+							<p class="pad_bot1">
+								La presente pagina es un proyecto del curso de <span>Aplicaciones Web y Redes Inalambricas</span> para la gestión de Torneos de Tenis a nivel local. Esta aplicación web realiza el manejo de diferentes sesiones como lo son: administrador, jueces para los partidos y los jugadores que participaran de los diferentes torneos.
+							</p>
 							<p>
-									Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+								
+						    </p>
 						</div>
 					</section>
+					<!--
 					<section class="col2 pad_left1">
 						<h2>Testimonials</h2>
 						<div class="testimonials">
@@ -122,7 +127,7 @@
 						<a href="#" class="up"></a>
 						<a href="#" class="down"></a>
 						</div>
-					</section>
+					</section>-->
 				</div>
 			</article>
 		</div>
