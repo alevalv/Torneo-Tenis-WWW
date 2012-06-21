@@ -6,12 +6,16 @@
 <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/table.css" type="text/css" media="all">
+
 <script type="text/javascript" src="js/jquery-1.6.js" ></script>
 <script type="text/javascript" src="js/cufon-yui.js"></script>
 <script type="text/javascript" src="js/cufon-replace.js"></script>
 <script type="text/javascript" src="js/Swis721_Cn_BT_400.font.js"></script>
 <script type="text/javascript" src="js/Swis721_Cn_BT_700.font.js"></script>
 <script type="text/javascript" src="js/tabs.js"></script>
+
+<link href="css/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
 
   <!--[if lt IE 9]>
   	<script type="text/javascript" src="js/html5.js"></script>
@@ -62,7 +66,29 @@
 					</ul>
 					<p> <br></p>
 					<div class="tab-content" id="tab1">
-						<p> <br> </p><h1> Mostrar los partidos de esta fase</h1><p> <br> </p>						
+						<p> <br> </p><h1> Mostrar los partidos de esta fase</h1><p> <br> </p>
+						<table cellspacing="0" cellpadding="0">
+							<col style="width: 200px" />
+							<col style="width: 100px" span="3" />
+							<tr>
+								<th >Jugadores</th>
+								<th >Game 1</th>
+								<th >Game 2</th>
+								<th >Game 3</th>
+							</tr>
+							<tr class="winner">
+								<td>Nombre 1</td>
+								<td>6</td>
+								<td>1</td>
+								<td>7</td>
+							</tr>
+							<tr>
+								<td>Nombre 2</td>
+								<td>4</td>
+								<td>6</td>
+								<td>5</td>
+							</tr>							
+						</table>						
 					</div>
 					<div class="tab-content" id="tab2">
 						<p> <br> </p><h1> Mostrar los partidos de esta fase</h1><p> <br> </p>
