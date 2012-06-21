@@ -24,7 +24,7 @@
 							}
 						}else{
 							$output .= '<li id="nav3"><a href="../vista/registrarJugador.php">Registrate<span>para participar</span></a></li>
-								      <li id="nav4"><a href="../controlador/login.php">Identificate<span>si eres miembro</span></a></li>';		
+								      <li id="nav4"><a href="../vista/login.php">Identificate<span>si eres miembro</span></a></li>';		
 						}
 			  $output .='</ul>
 				</nav>
