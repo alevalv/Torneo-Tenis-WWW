@@ -50,7 +50,8 @@
 			<article id="content">
 				<div class="wrapper">
 					<section class="col1">
-						<h2 class="under">Registrarse<span><a href="../vista/registrarPareja.php">Registra a tu equipo aqui</a></span></h2>						
+						<h2 class="under">Registrarse</h2>
+						<a href="registrarPareja.php"><h3>Registrarse como Pareja</h3></a>
 						<form id="registroJugador" action="../modelo/guardarJugador.php" method="post">
 						<div>
 							<div  class="wrapper">
