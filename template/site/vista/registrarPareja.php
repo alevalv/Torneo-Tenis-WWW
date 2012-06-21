@@ -1,5 +1,5 @@
 <?php include ("../controlador/seguridad.php");
-	comprobarSesion("registrarJugador.php");
+	comprobarSesion("registrarPareja.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -109,17 +109,16 @@
 					</form>
 					</section>
 					<section class="col2 pad_left1">
-						<h2 class="under">Contacts</h2>
-						<div id="address"><span>Country:<br>
-								City:<br>
-								Telephone:<br>
+						<h2 class="under">Contactar</h2>
+						<div id="address"><span>Pais:<br>
+								Ciudad:<br>
+								Telefono:<br>
 								Email:</span>
-								USA<br>
-								San Diego<br>
-								+354 5635600<br>
-								<a href="mailto:" class="color2">elenwhite@mail.com</a></div>
-						<h2 class="under">Miscellaneous</h2>
-						<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium volupta- tum deleniti atque corrupti quos dolores et quas molestias excep- turi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum.</p>
+								Colombia<br>
+								Santiago de Cali<br>
+								605 45 78<br>
+								<a href="mailto:" class="color2">webtennis@mail.com</a></div>
+						
 					</section>
 				</div>
 
@@ -130,6 +129,7 @@
 		<div class="main">
 			<article id="content2">
 				<div class="wrapper">
+				 <!--
 					<section class="col3">
 						<h4>Why Us?</h4>
 						<ul class="list1">
@@ -139,17 +139,18 @@
 							<li><a href="#">Tempor incididunt ut</a></li>
 						</ul>
 					</section>
+					-->
 					<section class="col3 pad_left2">
 						<h4>Address</h4>
 						<ul class="address">
-							<li><span>Country:</span>USA</li>
-							<li><span>City:</span>San Diego</li>
-							<li><span>Phone:</span>8 800 154-45-67</li>
-							<li><span>Email:</span><a href="mailto:">progress@mail.com</a></li>
+							<li><span>Pais:</span>Colombia</li>
+							<li><span>Ciudad:</span>Santiago de Cali</li>
+							<li><span>Telefono:</span>605 45 78</li>
+							<li><span>Email:</span><a href="mailto:">webtennis@mail.com</a></li>
 						</ul>
 					</section>
 					<section class="col3 pad_left2">
-						<h4>Follow Us</h4>
+						<h4>¡Siguenos!</h4>
 						<ul id="icons">
 							<li><a href="#"><img src="images/icon1.jpg" alt="">Facebook</a></li>
 							<li><a href="#"><img src="images/icon2.jpg" alt="">Twitter</a></li>
@@ -157,17 +158,18 @@
 							<li><a href="#"><img src="images/icon4.jpg" alt="">Delicious</a></li>
 						</ul>
 					</section>
-					<section class="col2 right">
+					<!--<section class="col2 right">
 						<h4>Newsletter</h4>
 						<form id="newsletter" method="post">
 							<div>
 								<div class="wrapper">
-									<input class="input" type="text" value="Type Your Email Here"  onblur="if(this.value=='') this.value='Type Your Email Here'" onFocus="if(this.value =='Type Your Email Here' ) this.value=''" >
+									<input class="input" type="text" value="Type Your Email Here"  onblur="if(this.value=='') this.value='Type Your Email Here'" onfocus="if(this.value =='Type Your Email Here' ) this.value=''" >
 								</div>
-								<a href="#" class="button" onClick="document.getElementById('newsletter').submit()">Subscribe</a>
+								<a href="#" class="button" onclick="document.getElementById('newsletter').submit()">Subscribe</a>
 							</div>
 						</form>
 					</section>
+					-->
 				</div>
 			</article>
 <!-- content end -->

@@ -15,24 +15,29 @@ function comprobarSesion($pagename){
 		if($pagename == "informacion_Torneos.php"){
 			return 0;
 			}
+		if($pagename == "registrarPareja.php"){
+			return 0;
+			}
 		//si no existe, envio a la página de autentificacion
 		header("Location: ../vista/login.php");
 		//ademas salgo de este script    
 		return 0;
     }else{// si nos registramos
 		if(($pagename == "index.php") || ($pagename == "informacion_Torneos.php")){ return 1;}
-		if(($pagename == "registrarJugador.php") || ($pagename == "login.php")){//redirecciona a index.php
+		if(($pagename == "registrarJugador.php") || ($pagename == "registrarPareja.php") || ($pagename == "login.php")){//redirecciona a index.php
 			header("Location: ../vista/index.php");
 			return 1;			
 		}
 			if($_SESSION["rol"] == "admin"){
 				
-				if(($pagename == "administrador.php") || ($pagename == "crearTorneo.php" || ($pagename == "ingresarJuez.php"))){
+				if(($pagename == "administrador.php") || ($pagename == "crearTorneo.php" || ($pagename == "ingresarJuez.php")
+				|| ($pagename == "asignarJuezPartido.php"))){
 					return 1;
 
 				}else{
 					//No se puede acceder no tiene privilegios alguna pagina de error
 					header("Location: ../vista/errorPrivilegios.php");
+					return 1;
 				}
 			}
 			if($_SESSION["rol"] == "juez"){
@@ -43,6 +48,7 @@ function comprobarSesion($pagename){
 				}else{
 					//No se puede acceder no tiene privilegios alguna pagina de error
 					header("Location: ../vista/errorPrivilegios.php");
+					return 1;
 				}
 			}
 			
@@ -54,11 +60,12 @@ function comprobarSesion($pagename){
 				}else{
 					//No se puede acceder no tiene privilegios alguna pagina de error
 					header("Location: ../vista/errorPrivilegios.php");
+					return 1;
 				}
 			}
 		
 		}
-    return 3;
+    return 2;
 }
     
 ?> 

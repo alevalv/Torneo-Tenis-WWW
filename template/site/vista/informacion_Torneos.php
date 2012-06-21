@@ -56,9 +56,14 @@
 					<section class="cols">
 						<div class="wrapper pad_bot2">
 							<h3><span class="dropcap">1</span>Esto se contruye mostrando los torneos (macro)que ahi</h3>
-							<figure><img src="images/page4_img1.jpg" alt=""></figure>
-							<p class="pad_bot1">Aqui puede relizar la creación de un torneo de tennis.</p>
-							<a href="../vista/crearTorneo.php" class="link1">Crear Torneo</a>
+							<figure><img src="images/cup.gif" alt=""></figure>
+							<p class="pad_bot1">Aqui se va listando las diferentes modalidaes que estan jugando.</p>
+							<form id="registroJugador" action="../vista/crearTorneo.php?modalidad1" method="get">
+								<a href="#" onClick="document.getElementById('registroJugador').submit()">Enviar</a>							
+							</form>
+							<form id="registroJugador" action="../vista/crearTorneo.php?modalidad2" method="get">
+								<a href="#" onClick="document.getElementById('registroJugador').submit()">Enviar</a>							
+							</form>
 						</div>
 						<!--<div class="wrapper">
 							<h3><span class="dropcap">4</span>Ingresar Juez</h3>
@@ -73,7 +78,7 @@
 							<h3><span class="dropcap">2</span>Ingresar Juez</h3>
 							<figure><img src="images/page4_img3.jpg" alt=""></figure>
 							<p class="pad_bot1">En esta sección se desplegara un formulario para el ingreso de jueces oficiales para los diferentes torneos que se realicen.</p>
-							<a href="../controlador/vista.php" class="link1">Ingresar un Juez</a>
+							<a href="../vista/ingresarJuez.php" class="link1">Ingresar un Juez</a>
 						</div>
 						<!--<div class="wrapper">
 							<h3><span class="dropcap">5</span>Product name</h3>
