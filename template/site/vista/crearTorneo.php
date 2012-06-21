@@ -50,40 +50,50 @@
 			<article id="content">
 				<div class="wrapper">
 					<section class="col1">
-						<h2 class="under">Crear Torneo (acomodar campos)</h2>
+						<h2 class="under">Crear Torneo</h2>
 						<form id="registroJugador" action="../modelo/registrarTorneo.php" method="post">
 						<div>
 							<div  class="wrapper">
-								<span>Cedula:</span>
-								<input type="text" name="jugador_codigo" class="input" >
+								<span>Ubicación del Torneo:</span>
+								<input type="text" name="torneo_lugar" class="input" >
 							</div>
 							<div  class="wrapper">
-								<span>Nombre Completo:</span>
-								<input type="text" name="jugador_nombre" class="input" >
+								<span>Nombre del Torneo:</span>
+								<input type="text" name="torneo_nombre" class="input" >
 							</div>
 							<div  class="wrapper">
-								<span>Sexo:</span><br /><br />
+								<span>Número de Canchas:</span>
+								<input type="text" name="torneo_num_canchas" class="input" >
+							</div>
+							<div  class="wrapper">
+								<span>Número de Jugadores:</span>
+								<input type="text" name="torneo_num_jugadores" class="input" >
+							</div>
+							<div  class="wrapper">
+								<span>Fecha de Inicio:</span>
+								<input type="text" name="torneo_fecha_inicio" class="input" >
+							</div>
+							<div  class="wrapper">
+								<span>Fecha de Finalización:</span>
+								<input type="text" name="torneo_fecha_fin" class="input" >
+							</div>
+							<div  class="wrapper">
+								<span>Categoría:</span><br /><br />
 								<div class="radios">
-									<input type="radio" name="jugador_sexo" value="M" class="input" >Masculino<br />
-									<input type="radio" name="jugador_sexo" value="F" class="input" CHECKED>Femenino<br />
+									<input type="radio" name="torneo_categoria" value="Categoria 1" class="input" >Categoría 1<br />
+									<input type="radio" name="torneo_categoria" value="Categoria 2" class="input" >Categoría 2<br />
+									<input type="radio" name="torneo_categoria" value="Categoria 3" class="input" >Categoría 3<br />
+									<input type="radio" name="torneo_categoria" value="Categoria 4" class="input" >Categoría 4<br />
+									<input type="radio" name="torneo_categoria" value="Novato" checked class="input" >Novato
 								</div>
 							</div>
 							<div  class="wrapper">
-								<span>Nombre de Usuario:</span>
-								<input type="text" name="jugador_username" class="input" >
-							</div>
-							<div  class="wrapper">
-								<span>Contraseña:</span>
-								<input type="password" name="jugador_password" class="input" >
-							</div>
-							<div  class="wrapper">
-								<span>Categoría Inicial:</span><br /><br />
+								<span>Modalidad:</span><br /><br />
 								<div class="radios">
-									<input type="radio" name="jugador_categoria" value="Categoria 1" class="input" >Categoría 1<br />
-									<input type="radio" name="jugador_categoria" value="Categoria 2" class="input" >Categoría 2<br />
-									<input type="radio" name="jugador_categoria" value="Categoria 3" class="input" >Categoría 3<br />
-									<input type="radio" name="jugador_categoria" value="Categoria 4" class="input" >Categoría 4<br />
-									<input type="radio" name="jugador_categoria" value="Novato" checked class="input" >Novato
+									<input type="radio" name="torneo_modalidad" value="single_masculino" class="input" CHECKED>Single Masculino<br />
+									<input type="radio" name="torneo_modalidad" value="single_femenino" class="input" >Single Femenino<br />
+									<input type="radio" name="torneo_modalidad" value="single_mixto" class="input" >Single Mixto<br />
+									<input type="radio" name="torneo_modalidad" value="dobles_mixto" class="input" >Dobles Mixto<br />
 								</div>
 							</div>
 							<a href="#" onClick="document.getElementById('registroJugador').submit()">Enviar</a>
