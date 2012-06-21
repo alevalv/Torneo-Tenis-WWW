@@ -22,7 +22,7 @@
 								$output .= '<li id="nav4"> <a href="salir.php">'.$_SESSION["username"].'<span>Desconectarme</span></a></li>';
 							}
 						}else{
-							$output .= '<li id="nav3"><a href="registrarJugador.html">Registrate<span>para participar</span></a></li>
+							$output .= '<li id="nav3"><a href="registrarJugador.php">Registrate<span>para participar</span></a></li>
 								      <li id="nav4"><a href="login.php">Identificate<span>si eres miembro</span></a></li>';		
 						}
 			  $output .='</ul>

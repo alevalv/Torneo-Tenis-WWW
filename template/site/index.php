@@ -88,7 +88,7 @@
 						<div class="wrapper">
 							<figure class="left marg_right1"><img src="images/page1_img1.jpg" alt=""></figure>
 							<p class="pad_bot1">
-								La presente pagina es un proyecto del curso de <span>Aplicaciones Web y Redes Inalambricas</span> para la gestión de Torneos de Tenis a nivel local. Esta aplicación web realiza el manejo de diferentes sesiones como lo son: administrador, jueces para los partidos y los jugadores que participaran de los diferentes torneos.
+								La presente pagina es un proyecto del curso de <b>Aplicaciones Web y Redes Inalambricas</b> para la gestión de Torneos de Tenis a nivel local. Esta aplicación web realiza el manejo de diferentes sesiones como lo son: administrador, jueces para los partidos y los jugadores que participaran de los diferentes torneos.
 							</p>
 							<p>
 								
@@ -136,6 +136,7 @@
 		<div class="main">
 			<article id="content2">
 				<div class="wrapper">
+					<!--
 					<section class="col3">
 						<h4>Why Us?</h4>
 						<ul class="list1">
@@ -145,17 +146,18 @@
 							<li><a href="#">Tempor incididunt ut</a></li>
 						</ul>
 					</section>
+					-->
 					<section class="col3 pad_left2">
 						<h4>Address</h4>
 						<ul class="address">
-							<li><span>Country:</span>USA</li>
-							<li><span>City:</span>San Diego</li>
-							<li><span>Phone:</span>8 800 154-45-67</li>
-							<li><span>Email:</span><a href="mailto:">progress@mail.com</a></li>
+							<li><span>Pais:</span>Colombia</li>
+							<li><span>Ciudad:</span>Santiago de Cali</li>
+							<li><span>Telefono:</span>605 45 78</li>
+							<li><span>Email:</span><a href="mailto:">webtennis@mail.com</a></li>
 						</ul>
 					</section>
 					<section class="col3 pad_left2">
-						<h4>Follow Us</h4>
+						<h4>¡Siguenos!</h4>
 						<ul id="icons">
 							<li><a href="#"><img src="images/icon1.jpg" alt="">Facebook</a></li>
 							<li><a href="#"><img src="images/icon2.jpg" alt="">Twitter</a></li>
@@ -163,7 +165,7 @@
 							<li><a href="#"><img src="images/icon4.jpg" alt="">Delicious</a></li>
 						</ul>
 					</section>
-					<section class="col2 right">
+					<!--<section class="col2 right">
 						<h4>Newsletter</h4>
 						<form id="newsletter" method="post">
 							<div>
@@ -174,6 +176,7 @@
 							</div>
 						</form>
 					</section>
+					-->
 				</div>
 			</article>
 <!-- content end -->
