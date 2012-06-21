@@ -29,7 +29,28 @@ function comprobarSesion($pagename){
 
 				}else{
 					//No se puede acceder no tiene privilegios alguna pagina de error
-					//header("Location: error.php");
+					//header("Location: errorPrivilegios.php");
+				}
+			}
+			if($_SESSION["rol"] != "juez"){
+				
+				if($pagename == "juez.php") {
+					return 1;
+
+				}else{
+					//No se puede acceder no tiene privilegios alguna pagina de error
+					//header("Location: errorPrivilegios.php");
+				}
+			}
+			
+			if($_SESSION["rol"] != "jugador"){
+				
+				if($pagename == "jugador.php"){
+					return 1;
+
+				}else{
+					//No se puede acceder no tiene privilegios alguna pagina de error
+					//header("Location: errorPrivilegios.php");
 				}
 			}
 		

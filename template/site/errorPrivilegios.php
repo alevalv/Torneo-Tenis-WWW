@@ -1,10 +1,7 @@
-<?php include ("seguridad.php");
-	comprobarSesion("administrador.php");
-?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<title>Gestión Administrador</title>
+<title>Error de Privilegios</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
@@ -15,32 +12,28 @@
 <script type="text/javascript" src="js/Swis721_Cn_BT_400.font.js"></script>
 <script type="text/javascript" src="js/Swis721_Cn_BT_700.font.js"></script>
 <script type="text/javascript" src="js/tabs.js"></script>
-
-  <!--[if lt IE 9]>
+<!--[if lt IE 9]>
   	<script type="text/javascript" src="js/html5.js"></script>
 	<style type="text/css">
 		.bg{ behavior: url(js/PIE.htc); }
 	</style>
-  <![endif]-->
-	<!--[if lt IE 7]>
+<![endif]-->
+<!--[if lt IE 7]>
 		<div style=' clear: both; text-align:center; position: relative;'>
 			<a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0"  alt="" /></a>
 		</div>
-	<![endif]-->
-
+<![endif]-->
 </head>
-
-<body id="page4">
+<body id="page5">
 	<div class="body1">
 	<div class="body2">
 	<div class="body5">
 		<div class="main">
 <!-- header -->
 			<header>
-				<?php 
+				<?php 					
 					include("insertMenu.php");
-					$var = insertar_menus($_SESSION);
-					echo $var;
+					echo insertar_menus();
 				?>
 			</header><div class="ic">More Website Templates  at TemplateMonster.com!</div>
 <!-- header end-->
@@ -53,51 +46,27 @@
 <!-- content -->
 			<article id="content">
 				<div class="wrapper">
-					<section class="cols">
-						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">1</span>Crear Torneo</h3>
-							<figure><img src="images/page4_img1.jpg" alt=""></figure>
-							<p class="pad_bot1">Aqui puede relizar la creación de un torneo de tennis.</p>
-							<a href="crearTorneo.php" class="link1">Crear Torneo</a>
+					<section class="col1">
+						<div>
+							<p>
+								Lo Sentimos pero no tiene privilegios para ver esta pagina.
+							</p>
+							<a href="#" onClick="history.go(-1);">Atrás</a>
 						</div>
-						<!--<div class="wrapper">
-							<h3><span class="dropcap">4</span>Ingresar Juez</h3>
-							<figure><img src="images/page4_img2.jpg" alt=""></figure>
-							<p class="pad_bot1">En esta sección se desplegara un formulario para el ingreso de jueces oficiales para los diferentes torneos que se realicen y la asignación de estos.</p>
-							<a href="#" class="link1">Ingresar un Juez</a>
-						</div>
-						-->
-					</section>
-					<section class="cols pad_left1">
-						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">2</span>Ingresar Juez</h3>
-							<figure><img src="images/page4_img3.jpg" alt=""></figure>
-							<p class="pad_bot1">En esta sección se desplegara un formulario para el ingreso de jueces oficiales para los diferentes torneos que se realicen.</p>
-							<a href="ingresarJuez.php" class="link1">Ingresar un Juez</a>
-						</div>
-						<!--<div class="wrapper">
-							<h3><span class="dropcap">5</span>Product name</h3>
-							<figure><img src="images/page4_img4.jpg" alt=""></figure>
-							<p class="pad_bot1">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-							<a href="#" class="link1">Read More</a>
-						</div>
-						-->						
-					</section>
 					
-					<section class="cols pad_left1">
-						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">3</span>Asigar Juez </span>a Partido</span></h3>
-							<figure><img src="images/page4_img5.jpg" alt=""></figure>
-							<p class="pad_bot1">Gestiona los jueces y asignalos a los partidos que sean necesarios.</p>
-							<a href="asignarJuezPartido.php" class="link1">Asignar</a>
-						</div><!--
-						<div class="wrapper">
-							<h3><span class="dropcap">6</span>Product name</h3>
-							<figure><img src="images/page4_img6.jpg" alt=""></figure>
-							<p class="pad_bot1">Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-							<a href="#" class="link1">Read More</a>
-						</div> 
-					</section>-->
+					</section>
+					<section class="col2 pad_left1">
+						<h2 class="under">Contactar</h2>
+						<div id="address"><span>Pais:<br>
+								Ciudad:<br>
+								Telefono:<br>
+								Email:</span>
+								Colombia<br>
+								Santiago de Cali<br>
+								605 45 78<br>
+								<a href="mailto:" class="color2">webtennis@mail.com</a></div>
+						
+					</section>
 				</div>
 
 			</article>
@@ -169,3 +138,5 @@
 </script>
 </body>
 </html>
+
+
