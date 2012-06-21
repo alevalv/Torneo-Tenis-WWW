@@ -1,5 +1,5 @@
 /* Getting the new tags to behave */
-article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, nav-inter, output, progress, section, source, video{display:block}
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video{display:block}
 mark, rp, rt, ruby, summary, time{display:inline }
 /* Left & Right alignment */
 .left {float:left}
@@ -99,12 +99,6 @@ header{padding-top:34px;height:148px}
 .tabs ul.nav li a{display:block;position:relative;width:32px;height:32px;font-size:19px;color:#fff;line-height:32px;background:#60b000;text-decoration:none;text-align:center}
 .tabs ul.nav .selected a, .tabs ul.nav  a:hover{background:#696969}
 .tabs .tab-content {display:none;padding-top:24px}
-.tabs-inter {}
-.tabs-inter ul.nav-inter {float:left;padding-left:372px;padding-bottom:24px;padding-top:24px}
-.tabs-inter ul.nav-inter li{padding-right:1px;float:left}
-.tabs-inter ul.nav-inter li a{display:block;position:relative;width:32px;height:32px;font-size:19px;color:#fff;line-height:32px;background:#60b000;text-decoration:none;text-align:center}
-.tabs-inter ul.nav-inter .selected-inter a, .tabs-inter ul.nav-inter  a:hover{background:#696969}
-.tabs-inter .tab-content-inter {display:none;padding-top:24px}
 /*--- tabs end ---*/
 #address span{float:left;width:80px}
 /* ============================= footer ====================== */

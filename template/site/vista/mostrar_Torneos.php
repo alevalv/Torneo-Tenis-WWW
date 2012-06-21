@@ -12,8 +12,6 @@
 <script type="text/javascript" src="js/Swis721_Cn_BT_400.font.js"></script>
 <script type="text/javascript" src="js/Swis721_Cn_BT_700.font.js"></script>
 <script type="text/javascript" src="js/tabs.js"></script>
-<script type="text/javascript" src="js/tabs-inter.js"></script>
-
 
   <!--[if lt IE 9]>
   	<script type="text/javascript" src="js/html5.js"></script>
@@ -51,124 +49,23 @@
 		<div class="main">
 <!-- content -->
 			<article id="content">
-				<h5>Nombre Torneo</h5>
+				<h5>Nombre Torneo: Categoria</h5>
 				<div class="wrapper tabs">
-					<h3> Categorias</h3>
+					<h3> Rondas: </h3>
 					<ul class="nav">
-						<li class="selected"><a href="#tab1">C1</a></li>
-						<li><a href="#tab2">C2</a></li>
-						<li><a href="#tab3">C3</a></li>
-						<li><a href="#tab4">C4</a></li>
-						<li><a href="#tab5">C5</a></li>
-						<li><a href="#tab6">C6</a></li>
+						<li class="selected"><a href="#tab1">R1</a></li>
+						<li><a href="#tab2">R2</a></li>
+						<li><a href="#tab3">R3</a></li>
+						<li><a href="#tab4">R4</a></li>
+						<li><a href="#tab5">R5</a></li>
+						<li><a href="#tab6">R6</a></li>
 					</ul>
 					<p> <br></p>
 					<div class="tab-content" id="tab1">
-						<p> <br> </p><h1> Rondas1</h1><p> <br> </p>
-						<div>
-							<div class="wrapper tabs-inter">
-							<ul class="nav-inter">
-								<li class="selected-inter"><a href="#tabR1C1">R1</a></li>
-								<li><a href="#tabR1C2">R2</a></li>
-								<li><a href="#tabR1C3">R3</a></li>
-								<li><a href="#tabR1C4">R4</a></li>
-								<li><a href="#tabR1C5">R5</a></li>
-								<li><a href="#tabR1C6">R6</a></li>
-							</ul>
-							<p> <br> </p>
-							<div class="tab-content-inter" id="tabR1C1">
-								<div class="wrapper">
-									<section class="cols">
-										<div class="wrapper pad_bot2">
-											<h3><span class="dropcap">1</span>Productaaaaaa name</h3>
-											<figure><img src="images/page4_img1.jpg" alt=""></figure>
-											<p class="pad_bot1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-											<a href="#" class="link1">Read More</a>
-										</div>
-										<div class="wrapper">
-											<h3><span class="dropcap">4</span>Product name</h3>
-											<figure><img src="images/page4_img2.jpg" alt=""></figure>
-											<p class="pad_bot1">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese- runt mollit anim id est laborum.</p>
-											<a href="#" class="link1">Read More</a>
-										</div>
-									</section>								
-								</div>
-							</div>
-							<div class="tab-content-inter" id="tabR1C2">
-								<div class="wrapper">
-									<section class="cols">
-										<div class="wrapper pad_bot2">
-											<h3><span class="dropcap">1</span>Product111111 name</h3>
-											<figure><img src="images/page4_img1.jpg" alt=""></figure>
-											<p class="pad_bot1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-											<a href="#" class="link1">Read More</a>
-										</div>
-										<div class="wrapper">
-											<h3><span class="dropcap">4</span>Product name</h3>
-											<figure><img src="images/page4_img2.jpg" alt=""></figure>
-											<p class="pad_bot1">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese- runt mollit anim id est laborum.</p>
-											<a href="#" class="link1">Read More</a>
-										</div>
-									</section>								
-								</div>
-							</div>
-						</div>						
-					
-						</div>
-					
+						<p> <br> </p><h1> Mostrar los partidos de esta fase</h1><p> <br> </p>						
 					</div>
 					<div class="tab-content" id="tab2">
-						<h1> Rondas2</h1>
-						<div>
-							<div class="wrapper tabs-inter">
-							<ul class="nav-inter">
-								<li class="selected-inter"><a href="#tabR2C1">R1</a></li>
-								<li><a href="#tabR2C2">R2</a></li>
-								<li><a href="#tabR2C3">R3</a></li>
-								<li><a href="#tabR2C4">R4</a></li>
-								<li><a href="#tabR2C5">R5</a></li>
-								<li><a href="#tabR2C6">R6</a></li>
-							</ul>
-							<p> <br></p>
-							<div class="tab-content-inter" id="tabR2C1">
-								<div class="wrapper">
-									<section class="cols">
-										<div class="wrapper pad_bot2">
-											<h3><span class="dropcap">1</span>Product222222 name</h3>
-											<figure><img src="images/page4_img1.jpg" alt=""></figure>
-											<p class="pad_bot1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-											<a href="#" class="link1">Read More</a>
-										</div>
-										<div class="wrapper">
-											<h3><span class="dropcap">4</span>Product name</h3>
-											<figure><img src="images/page4_img2.jpg" alt=""></figure>
-											<p class="pad_bot1">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese- runt mollit anim id est laborum.</p>
-											<a href="#" class="link1">Read More</a>
-										</div>
-									</section>								
-								</div>
-							</div>
-							<div class="tab-content-inter" id="tabR2C2">
-								<div class="wrapper">
-									<section class="cols">
-										<div class="wrapper pad_bot2">
-											<h3><span class="dropcap">1</span>Product344444 name</h3>
-											<figure><img src="images/page4_img1.jpg" alt=""></figure>
-											<p class="pad_bot1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-											<a href="#" class="link1">Read More</a>
-										</div>
-										<div class="wrapper">
-											<h3><span class="dropcap">4</span>Product name</h3>
-											<figure><img src="images/page4_img2.jpg" alt=""></figure>
-											<p class="pad_bot1">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese- runt mollit anim id est laborum.</p>
-											<a href="#" class="link1">Read More</a>
-										</div>
-									</section>								
-								</div>
-							</div>
-						</div>						
-					
-						</div>
+						<p> <br> </p><h1> Mostrar los partidos de esta fase</h1><p> <br> </p>
 					</div>
 				</div>
 			</article>
