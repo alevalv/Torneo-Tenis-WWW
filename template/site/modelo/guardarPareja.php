@@ -8,12 +8,16 @@
 		db.jugador.insert('jugador_cedula1' => $_POST['jugador_cedula1'],'jugador_cedula2'=> $_POST['jugador_cedula2'], 'jugador_username' => $_POST['jugador_username'], 'jugador_password' => $_POST['jugador_password'],'jugador_es_pareja' => true,'jugador_nombre1' => $_POST['jugador_nombre1'],'jugador_nombre2' => $_POST['jugador_nombre2'], 'jugador_sexo1' => $_POST['jugador_sexo1'], 'jugador_sexo2' => $_POST['jugador_sexo2'], 'jugador_categoria' => $_POST['jugador_categoria'],'jugador_ranking' => 1);
 		$newUser = array("jugador_codigo" => $_POST['jugador_codigo'], "jugador_username" => $_POST['jugador_username'], "jugador_password" => $_POST['jugador_password'], "jugador_es_pareja" => false,"jugador_nombre1" => $_POST['jugador_nombre'], "jugador_sexo1" => $_POST['jugador_sexo'], "jugador_categoria" => $_POST['jugador_categoria'], "jugador_ranking" => 1);
 		$collection->insert($newUser);
+		header("Location: ../vista/index.php");
+		exit();
 		}
 		catch (Exception $e) {
-			echo 'Caught exception: ',  $e->getMessage(), "\n";
+			//echo 'Caught exception: ',  $e->getMessage(), "\n";
 		}
 	}
-	echo $_POST['jugador_codigo'];
+	//echo $_POST['jugador_codigo'];
+	header("Location: ../vista/registrarPareja.php?errorusuario=si");
+
 	//echo "<br />";
 	//echo $_POST['jugador_username'];
 	//echo "<br />";
