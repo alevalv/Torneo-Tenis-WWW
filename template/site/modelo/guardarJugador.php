@@ -16,16 +16,4 @@
 		
 	}
 	header("Location: ../vista/registrarJugador.php?errorusuario=si");
-	//echo $_POST['jugador_codigo'];
-	//echo "<br />";
-	//echo $_POST['jugador_username'];
-	//echo "<br />";
-	//echo $_POST['jugador_password'];
-	//echo "<br />";
-	//echo $_POST['jugador_nombre'];
-	//echo "<br />";
-	//echo $_POST['jugador_sexo'];
-	//echo "<br />";
-	//echo $_POST['jugador_categoria'];
-	//echo "<br />";
 ?>
