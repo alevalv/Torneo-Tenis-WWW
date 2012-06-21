@@ -22,17 +22,17 @@ function comprobarSesion($pagename){
 			header("Location: index.php");
 			return 1;			
 		}
-			if($_SESSION["rol"] != "admin"){
+			if($_SESSION["rol"] == "admin"){
 				
 				if(($pagename == "administrador.php") || ($pagename == "crearTorneo.php" || ($pagename == "ingresarJuez.php"))){
 					return 1;
 
 				}else{
 					//No se puede acceder no tiene privilegios alguna pagina de error
-					//header("Location: errorPrivilegios.php");
+					header("Location: errorPrivilegios.php");
 				}
 			}
-			if($_SESSION["rol"] != "juez"){
+			if($_SESSION["rol"] == "juez"){
 				
 				if($pagename == "juez.php") {
 					return 1;
@@ -43,7 +43,7 @@ function comprobarSesion($pagename){
 				}
 			}
 			
-			if($_SESSION["rol"] != "jugador"){
+			if($_SESSION["rol"] == "jugador"){
 				
 				if($pagename == "jugador.php"){
 					return 1;
