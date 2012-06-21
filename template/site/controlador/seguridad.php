@@ -16,13 +16,13 @@ function comprobarSesion($pagename){
 			return 0;
 			}
 		//si no existe, envio a la página de autentificacion
-		header("Location: login.php");
+		header("Location: ../vista/login.php");
 		//ademas salgo de este script    
 		return 0;
     }else{// si nos registramos
 		if(($pagename == "index.php") || ($pagename == "informacion_Torneos.php")){ return 1;}
 		if(($pagename == "registrarJugador.php") || ($pagename == "login.php")){//redirecciona a index.php
-			header("Location: index.php");
+			header("Location: ../vista/index.php");
 			return 1;			
 		}
 			if($_SESSION["rol"] == "admin"){
@@ -32,7 +32,7 @@ function comprobarSesion($pagename){
 
 				}else{
 					//No se puede acceder no tiene privilegios alguna pagina de error
-					header("Location: errorPrivilegios.php");
+					header("Location: ../vista/errorPrivilegios.php");
 				}
 			}
 			if($_SESSION["rol"] == "juez"){
@@ -42,7 +42,7 @@ function comprobarSesion($pagename){
 
 				}else{
 					//No se puede acceder no tiene privilegios alguna pagina de error
-					//header("Location: errorPrivilegios.php");
+					header("Location: ../vista/errorPrivilegios.php");
 				}
 			}
 			
@@ -53,7 +53,7 @@ function comprobarSesion($pagename){
 
 				}else{
 					//No se puede acceder no tiene privilegios alguna pagina de error
-					//header("Location: errorPrivilegios.php");
+					header("Location: ../vista/errorPrivilegios.php");
 				}
 			}
 		

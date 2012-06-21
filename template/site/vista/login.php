@@ -1,4 +1,4 @@
-<?php include ("seguridad.php");
+<?php include ("../controlador/seguridad.php");
 	comprobarSesion("login.php");
 ?>
 <!DOCTYPE html>
@@ -35,7 +35,7 @@
 <!-- header -->
 			<header>
 				<?php 
-					include("insertMenu.php");
+					include("../controlador/insertMenu.php");
 					echo insertar_menus($_SESSION);					
 				?>
 			</header><div class="ic">More Website Templates  at TemplateMonster.com!</div>
@@ -51,7 +51,7 @@
 				<div class="wrapper">
 					<section class="col1">
 						<h2 class="under">Iniciar Sesion</h2>
-						<form id="registroJugador" action="autenticar.php" method="POST">
+						<form id="registroJugador" action="../modelo/autenticar.php" method="POST">
 							<?php
 							if($_GET["errorusuario"]=="si"){
 								echo 	'<div id="errorMensage">

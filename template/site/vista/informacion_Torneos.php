@@ -1,4 +1,4 @@
-<?php include ("seguridad.php");
+<?php include ("../controlador/seguridad.php");
 	comprobarSesion("informacion_Torneos.php");
 ?>
 <!DOCTYPE html>
@@ -38,7 +38,7 @@
 <!-- header -->
 			<header>
 				<?php 
-					include("insertMenu.php");
+					include("../controlador/insertMenu.php");
 					$var = insertar_menus($_SESSION);
 					echo $var;
 				?>

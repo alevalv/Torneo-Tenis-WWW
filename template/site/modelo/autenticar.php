@@ -1,6 +1,6 @@
 <?php 
  if(isset($_POST['username']) && isset($_POST['password'])){
-	 include("fachada.php");
+	 include("../controlador/fachada.php");
      $instancia = new fachada();
 	 $db = $instancia->conect();
 	 	 
@@ -22,21 +22,21 @@
 		 $_SESSION["username"]= $_POST['username'];
 		 $_SESSION["rol"]= "admin";
 
-		 header ("Location: index.php");		 
+		 header ("Location: ../vista/index.php");		 
 	 }else if($result_Juez->count()!=0){
 		 session_start();
 		 $_SESSION["autentificado"]= "si";
 		 $_SESSION["username"]= $_POST['username'];
 		 $_SESSION["rol"]= "juez";
-		 header ("Location: index.php");
+		 header ("Location: ../vista/index.php");
 	 }else if($result->count()!=0){
 		 session_start();
 		 $_SESSION["autentificado"]= "si";
 		 $_SESSION["username"]= $_POST['username'];
 		 $_SESSION["rol"]= "jugador";
-		 header ("Location: index.php");
+		 header ("Location: ../vista/index.php");
 	 }else{
-		header("Location: login.php?errorusuario=si");
+		header("Location: ../vista/login.php?errorusuario=si");
 	 }
 }
  

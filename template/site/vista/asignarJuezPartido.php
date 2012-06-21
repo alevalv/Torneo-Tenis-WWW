@@ -1,4 +1,4 @@
-<?php include ("seguridad.php");
+<?php include ("../controlador/seguridad.php");
 	comprobarSesion("asignarJuezPartido.php");
 ?>
 <!DOCTYPE html>
@@ -35,7 +35,7 @@
 <!-- header -->
 			<header>
 				<?php 					
-					include("insertMenu.php");
+					include("../controlador/insertMenu.php");
 					echo insertar_menus();
 				?>
 			</header><div class="ic">More Website Templates  at TemplateMonster.com!</div>
@@ -51,7 +51,7 @@
 				<div class="wrapper">
 					<section class="col1">
 						<h2 class="under">Asignar Juez (acomodar campos)</h2>
-						<form id="registroJugador" action="registrarJugador.php" method="post">
+						<form id="registroJugador" action="../modelo/asiganarPartidoJuez.php" method="post">
 						<div>
 							<div  class="wrapper">
 								<span>Cedula:</span>

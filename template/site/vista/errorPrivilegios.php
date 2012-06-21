@@ -32,7 +32,7 @@
 <!-- header -->
 			<header>
 				<?php 					
-					include("insertMenu.php");
+					include("../controlador/insertMenu.php");
 					echo insertar_menus();
 				?>
 			</header><div class="ic">More Website Templates  at TemplateMonster.com!</div>

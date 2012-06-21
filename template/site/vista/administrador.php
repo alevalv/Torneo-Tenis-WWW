@@ -1,4 +1,4 @@
-<?php include ("seguridad.php");
+<?php include ("../controlador/seguridad.php");
 	comprobarSesion("administrador.php");
 ?>
 <!DOCTYPE html>
@@ -38,7 +38,7 @@
 <!-- header -->
 			<header>
 				<?php 
-					include("insertMenu.php");
+					include("../controlador/insertMenu.php");
 					$var = insertar_menus($_SESSION);
 					echo $var;
 				?>
@@ -58,7 +58,7 @@
 							<h3><span class="dropcap">1</span>Crear Torneo</h3>
 							<figure><img src="images/page4_img1.jpg" alt=""></figure>
 							<p class="pad_bot1">Aqui puede relizar la creación de un torneo de tennis.</p>
-							<a href="crearTorneo.php" class="link1">Crear Torneo</a>
+							<a href="../vista/crearTorneo.php" class="link1">Crear Torneo</a>
 						</div>
 						<!--<div class="wrapper">
 							<h3><span class="dropcap">4</span>Ingresar Juez</h3>
@@ -73,7 +73,7 @@
 							<h3><span class="dropcap">2</span>Ingresar Juez</h3>
 							<figure><img src="images/page4_img3.jpg" alt=""></figure>
 							<p class="pad_bot1">En esta sección se desplegara un formulario para el ingreso de jueces oficiales para los diferentes torneos que se realicen.</p>
-							<a href="ingresarJuez.php" class="link1">Ingresar un Juez</a>
+							<a href="../controlador/vista.php" class="link1">Ingresar un Juez</a>
 						</div>
 						<!--<div class="wrapper">
 							<h3><span class="dropcap">5</span>Product name</h3>
@@ -89,7 +89,7 @@
 							<h3><span class="dropcap">3</span>Asigar Juez </span>a Partido</span></h3>
 							<figure><img src="images/page4_img5.jpg" alt=""></figure>
 							<p class="pad_bot1">Gestiona los jueces y asignalos a los partidos que sean necesarios.</p>
-							<a href="asignarJuezPartido.php" class="link1">Asignar</a>
+							<a href="../vista/asignarJuezPartido.php" class="link1">Asignar</a>
 						</div><!--
 						<div class="wrapper">
 							<h3><span class="dropcap">6</span>Product name</h3>

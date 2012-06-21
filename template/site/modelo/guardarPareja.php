@@ -1,6 +1,6 @@
 <?php
 	if(isset($_POST['jugador_username']) && isset($_POST['jugador_password']) && isset($_POST['jugador_nombre1'])  && isset($_POST['jugador_nombre2']) && isset($_POST['jugador_sexo1']) && isset($_POST['jugador_sexo2']) && isset($_POST['jugador_categoria']) && isset($_POST['jugador_cedula1']) && isset($_POST['jugador_cedula2'])){
-		include("fachada.php");
+		include("../controlador/fachada.php");
 		try{
 		$instancia = new fachada();
 		$db = $instancia->conect();

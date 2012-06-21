@@ -1,6 +1,6 @@
 <?php
 	if(isset($_POST['juez_codigo']) && isset($_POST['juez_nombre']) && isset($_POST['juez_username']) && isset($_POST['juez_password']) && isset($_POST['juez_fecha_nacimiento'])){
-		include("fachada.php");
+		include("../controlador/fachada.php");
 		try{
 		$instancia = new fachada();
 		$db = $instancia->conect();
