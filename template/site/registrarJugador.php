@@ -5,7 +5,7 @@
 		$instancia = new fachada();
 		$db = $instancia->conect();
 		$collection= new MongoCollection($db, 'jugador');
-		$newUser = array("jugador_codigo" => $_POST['jugador_codigo'], "jugador_username" => $_POST['jugador_username'], "jugador_password" => $_POST['jugador_password'], "jugador_es_pareja" => false,"jugador_nombre1" => $_POST['jugador_nombre'], "jugador_sexo1" => $_POST['jugador_sexo'], "jugador_categoria" => $_POST['jugador_categoria'], "jugador_ranking" => 1});
+		$newUser = array("jugador_codigo" => $_POST['jugador_codigo'], "jugador_username" => $_POST['jugador_username'], "jugador_password" => $_POST['jugador_password'], "jugador_es_pareja" => false,"jugador_nombre1" => $_POST['jugador_nombre'], "jugador_sexo1" => $_POST['jugador_sexo'], "jugador_categoria" => $_POST['jugador_categoria'], "jugador_ranking" => 1);
 		$collection->insert($newUser);
 		}
 		catch (Exception $e) {
