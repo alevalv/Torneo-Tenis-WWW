@@ -51,40 +51,27 @@
 				<div class="wrapper">
 					<section class="col1">
 						<h2 class="under">Registrar Juez (acomodar campos)</h2>
-						<form id="registroJugador" action="registrarJugador.php" method="post">
+						<form id="registroJugador" action="registrarJuez.php" method="post">
 						<div>
 							<div  class="wrapper">
 								<span>Cedula:</span>
-								<input type="text" name="jugador_codigo" class="input" >
+								<input type="text" name="juez_codigo" class="input" >
 							</div>
 							<div  class="wrapper">
 								<span>Nombre Completo:</span>
-								<input type="text" name="jugador_nombre" class="input" >
-							</div>
-							<div  class="wrapper">
-								<span>Sexo:</span><br /><br />
-								<div class="radios">
-									<input type="radio" name="jugador_sexo" value="M" class="input" >Masculino<br />
-									<input type="radio" name="jugador_sexo" value="F" class="input" CHECKED>Femenino<br />
-								</div>
+								<input type="text" name="juez_nombre" class="input" >
 							</div>
 							<div  class="wrapper">
 								<span>Nombre de Usuario:</span>
-								<input type="text" name="jugador_username" class="input" >
+								<input type="text" name="juez_username" class="input" >
 							</div>
 							<div  class="wrapper">
 								<span>Contraseña:</span>
 								<input type="password" name="jugador_password" class="input" >
 							</div>
 							<div  class="wrapper">
-								<span>Categoría Inicial:</span><br /><br />
-								<div class="radios">
-									<input type="radio" name="jugador_categoria" value="Categoria 1" class="input" >Categoría 1<br />
-									<input type="radio" name="jugador_categoria" value="Categoria 2" class="input" >Categoría 2<br />
-									<input type="radio" name="jugador_categoria" value="Categoria 3" class="input" >Categoría 3<br />
-									<input type="radio" name="jugador_categoria" value="Categoria 4" class="input" >Categoría 4<br />
-									<input type="radio" name="jugador_categoria" value="Novato" checked class="input" >Novato
-								</div>
+								<span>Fecha de Nacimiento:</span>
+								<input type="text" name="juez_fecha_nacimiento" class="input" >
 							</div>
 							<a href="#" onClick="document.getElementById('registroJugador').submit()">Enviar</a>
 							<a href="#" onClick="document.getElementById('registroJugador').reset()">Limpiar</a>
