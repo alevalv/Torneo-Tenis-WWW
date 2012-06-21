@@ -56,7 +56,7 @@
 				<div class="wrapper">
 					<section class="col1">
 						<h2 class="under">Registrarse</h2>
-						<form id="registroJugador" action="registrarJugador.php" method="post">
+						<form id="registroJugador" action="guardarJugador.php" method="post">
 						<div>
 							<div  class="wrapper">
 								<span>Cedula:</span>
