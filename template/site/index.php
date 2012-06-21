@@ -73,7 +73,7 @@
 					</section>
 					<section class="cols pad_left1">
 						<h3><span class="dropcap">B</span>Business<span>strategies</span></h3>
-						<p class="pad_bot1">This <a href="http://blog.templatemonster.com/2011/07/11/free-website-template-slider-typography/">Progress Template</a> goes with two packages – with PSD source files and without them.</p>
+						<p class="pad_bot1">This <a href="http://blog.templatemonster.com/2011/07/11/free-website-template-slider-typography/">Progress Template</a> goes with two packages Ã‚Â– with PSD source files and without them.</p>
 						<a href="#" class="link1">Read More</a>
 					</section>
 					<section class="cols pad_left1">
@@ -83,17 +83,17 @@
 					</section>
 					<section class="cols pad_left1">
 						<h3><span class="dropcap">D</span>Worldwide<span>solutions</span></h3>
-						<p class="pad_bot1">This website template has several pages: Home, News, Services, Products, Contacts (contact form doesn’t work).</p>
+						<p class="pad_bot1">This website template has several pages: Home, News, Services, Products, Contacts (contact form doesnÃ‚Â’t work).</p>
 						<a href="#" class="link1">Read More</a>
 					</section>
 				</div> -->
 				<div class="wrapper">
 					<section class="col1">
-						<h2 class="under">¡Bienvenidos!</h2>
+						<h2 class="under">&iexcl;Bienvenidos!</h2>
 						<div class="wrapper">
 							<figure class="left marg_right1"><img src="images/page1_img1.jpg" alt=""></figure>
 							<p class="pad_bot1">
-								La presente pagina es un proyecto del curso de <b>Aplicaciones Web y Redes Inalambricas</b> para la gestión de Torneos de Tenis a nivel local. Esta aplicación web realiza el manejo de diferentes sesiones como lo son: administrador, jueces para los partidos y los jugadores que participaran de los diferentes torneos.
+								La presente pagina es un proyecto del curso de <b>Aplicaciones Web y Redes Inalambricas</b> para la gestiÃ³n de Torneos de Tenis a nivel local. Esta aplicaciÃ³n web realiza el manejo de diferentes sesiones como lo son: administrador, jueces para los partidos y los jugadores que participaran de los diferentes torneos.
 							</p>
 							<p>
 								
@@ -108,21 +108,21 @@
 						  <ul>
 							<li>
 								<div>
-									“Nam libero tempore, cum soluta nobis eligendi quo minus quod maxime placeat facere.”
+									""Nam libero tempore, cum soluta nobis eligendi quo minus quod maxime placeat facere."
 								</div>
 								<span><strong class="color1">James Coloway,</strong> <br>
 								Director</span>
 							</li>
 							<li>
 								<div>
-									“Nam libero tempore, cum soluta nobis eligendi quo minus quod maxime placeat facere.”
+									"Nam libero tempore, cum soluta nobis eligendi quo minus quod maxime placeat facere."
 								</div>
 								<span><strong class="color1">James Coloway,</strong> <br>
 								Director</span>
 							</li>
 							<li>
 								<div>
-									“Nam libero tempore, cum soluta nobis eligendi quo minus quod maxime placeat facere.”
+									"Nam libero tempore, cum soluta nobis eligendi quo minus quod maxime placeat facere."
 								</div>
 								<span><strong class="color1">James Coloway,</strong> <br>
 								Director</span>
@@ -162,7 +162,7 @@
 						</ul>
 					</section>
 					<section class="col3 pad_left2">
-						<h4>¡Siguenos!</h4>
+						<h4>&iexcl;Siguenos!</h4>
 						<ul id="icons">
 							<li><a href="#"><img src="images/icon1.jpg" alt="">Facebook</a></li>
 							<li><a href="#"><img src="images/icon2.jpg" alt="">Twitter</a></li>
