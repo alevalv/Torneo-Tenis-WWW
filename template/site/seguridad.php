@@ -11,8 +11,8 @@ function comprobarSesion($pagename){
 		}if($pagename == "login.php"){
 			//header("Location: login.php");
 			return 0;
-		}if($pagename == "resgitrarJugador.php"){
-			header("Location: resgitrarJugador.php");
+		}if($pagename == "registrarJugador.php"){
+			header("Location: registrarJugador.php");
 			return 0;
 			}
 		//si no existe, envio a la página de autentificacion
@@ -20,7 +20,7 @@ function comprobarSesion($pagename){
 		//ademas salgo de este script    
 		exit();
     }else{// si nos registramos
-		if( ($pagename == "index.php") || ($pagename == "resgitrarJugador.php") || ($pagename == "login.php")){//redirecciona a index.php
+		if( ($pagename == "index.php") || ($pagename == "registrarJugador.php") || ($pagename == "login.php")){//redirecciona a index.php
 			header("Location: index.php");
 			return 1;
 			

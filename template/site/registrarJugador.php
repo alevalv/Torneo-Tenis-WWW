@@ -1,3 +1,6 @@
+<?php include ("seguridad.php");
+	comprobarSesion("registrarJugador.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
