@@ -1,3 +1,8 @@
+<?php include ("seguridad.php");
+	if(comprobarSesion("login.php")==1){
+		header("Location: index.php");
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,3 +1,6 @@
+<?php include ("seguridad.php");
+	comprobarSesion("registratJugador.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,18 +34,10 @@
 		<div class="main">
 <!-- header -->
 			<header>
-				<div class="wrapper">
-				<h1><a href="index.html" id="logo">Progress Business Company</a></h1>
-				<nav>
-					<ul id="menu">
-						<li id="nav1"><a href="index.html">Home<span>Welcome!</span></a></li>
-						<li id="nav2"><a href="News.html">News<span>Fresh</span></a></li>
-						<li id="nav3"><a href="Services.html">Services<span>for you</span></a></li>
-						<li id="nav4"><a href="Products.html">Products<span>The best</span></a></li>
-						<li id="nav5" class="active"><a href="Contacts.html">Contacts<span>Our Address</span></a></li>
-					</ul>
-				</nav>
-				</div>
+				<?php 					
+					include("insertMenu.php");
+					echo insertar_menus();
+				?>
 			</header><div class="ic">More Website Templates  at TemplateMonster.com!</div>
 <!-- header end-->
 		</div>
