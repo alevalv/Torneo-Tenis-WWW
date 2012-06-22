@@ -48,7 +48,7 @@
                             <label for="textinput6">
                                 Username
                             </label>
-                            <input id="textinput6" placeholder="" value="" type="text" />
+                            <input id="username" placeholder="" value="" type="text" />
                         </fieldset>
                     </div>
                     <div data-role="fieldcontain">
@@ -56,7 +56,7 @@
                             <label for="textinput7">
                                 Password
                             </label>
-                            <input id="textinput7" placeholder="" value="" type="password" />
+                            <input id="password" placeholder="" value="" type="password" />
                         </fieldset>
                     </div>
                     <a data-role="button" data-transition="fade" a href="#" onClick="document.getElementById('loginJuez').submit()">
