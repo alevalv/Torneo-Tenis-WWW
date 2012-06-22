@@ -33,7 +33,7 @@
             <div data-theme="a" data-role="header">
             </div>
             <div data-role="content" style="padding: 15px">
-                <form id="loginJuez" action="autenticar-movil.php" method="post">
+                <form id="loginJuez" action="../modelo/autenticar.php?movil=si" method="post">
 					<?php
 							if($_GET["errorusuario"]=="si"){
 								echo 	'<div id="errorMensage">
