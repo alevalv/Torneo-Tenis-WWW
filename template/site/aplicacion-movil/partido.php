@@ -1,3 +1,6 @@
+<?php include ("../controlador/seguridad.php");
+	comprobarSesion("aplicacion-movil/partido.php");
+?>
 <!DOCTYPE html>
 <html>
     <head>

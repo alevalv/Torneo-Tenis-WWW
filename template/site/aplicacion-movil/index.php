@@ -1,5 +1,5 @@
 <?php include ("../controlador/seguridad.php");
-	comprobarSesion("index.php");
+	comprobarSesion("aplicacion-movil/index.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,19 +29,13 @@
             <div data-theme="a" data-role="header">
             </div>
             <div data-role="content" style="padding: 15px">
-                <form id="loginJuez" action="../modelo/autenticar.php" method="POST">
-		      <?php
+                <form id="loginJuez" action="../modelo/autenticar.php?movil=si" method="POST">
+							<?php
 							if($_GET["errorusuario"]=="si"){
 								echo 	'<div id="errorMensage">
 											Nombre de Usuario o Password incorrectos
 										</div>';
 							}
-							else if($_GET["rol"]= "jugador";){
-								echo 	'<div id="errorMensage">
-											Bienvenido Juez
-										</div>';
-
-								}
 							?>
                     <div data-role="fieldcontain">
                         <fieldset data-role="controlgroup">

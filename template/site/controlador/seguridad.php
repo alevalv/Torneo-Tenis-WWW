@@ -17,7 +17,14 @@ function comprobarSesion($pagename){
 			}
 		if($pagename == "registrarPareja.php"){
 			return 0;
-			}
+		}
+		if($pagename == "aplicacion-movil/index.php"){
+			return 3;
+		}
+		if(($pagename == "aplicacion-movil/partido.php")|| ($pagename == "aplicacion-movil/resultados.php")){
+			header("Location: ../aplicacion-movil/index.php");
+			return 3;			
+		}
 		//si no existe, envio a la página de autentificacion
 		header("Location: ../vista/login.php");
 		//ademas salgo de este script    
@@ -60,6 +67,18 @@ function comprobarSesion($pagename){
 				}else{
 					//No se puede acceder no tiene privilegios alguna pagina de error
 					header("Location: ../vista/errorPrivilegios.php");
+					return 1;
+				}
+			}
+			
+			if($_SESSION["rol"] == "juezmovil"){
+				
+				if(($pagename == "partido.php") || ($pagename == "resultados.php")){
+					return 3;
+
+				}else{
+					//No se puede acceder no tiene privilegios alguna pagina de error
+					header("Location: ../aplicacion-movil/index.php");
 					return 1;
 				}
 			}

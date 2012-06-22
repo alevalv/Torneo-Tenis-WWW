@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php include ("../controlador/seguridad.php");
+	comprobarSesion("aplicacion-movil/resultados.php");
+?><!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
