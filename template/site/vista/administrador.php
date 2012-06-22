@@ -1,4 +1,4 @@
-<?php include ("../controlador/seguridad.php");
+﻿<?php include ("../controlador/seguridad.php");
 	comprobarSesion("administrador.php");
 ?>
 <!DOCTYPE html>
@@ -58,15 +58,16 @@
 							<h3><span class="dropcap">1</span>Crear Torneo</h3>
 							<figure><img src="images/page4_img1.jpg" alt=""></figure>
 							<p class="pad_bot1">Aqui puede relizar la creación de un torneo de tennis.</p>
-							<a href="../vista/crearTorneo.php" class="link1">Crear Torneo</a>
+							<p><a href="../vista/crearTorneo.php" class="link1">Crear Torneo</a></p>
+							<a href="../vista/gestionarCronograma.php" class="link1">Generar Cronograma</a>
+
 						</div>
-						<!--<div class="wrapper">
-							<h3><span class="dropcap">4</span>Ingresar Juez</h3>
-							<figure><img src="images/page4_img2.jpg" alt=""></figure>
-							<p class="pad_bot1">En esta sección se desplegara un formulario para el ingreso de jueces oficiales para los diferentes torneos que se realicen y la asignación de estos.</p>
-							<a href="#" class="link1">Ingresar un Juez</a>
-						</div>
-						-->
+				
+					
+
+
+
+
 					</section>
 					<section class="cols pad_left1">
 						<div class="wrapper pad_bot2">
@@ -75,13 +76,8 @@
 							<p class="pad_bot1">En esta sección se desplegara un formulario para el ingreso de jueces oficiales para los diferentes torneos que se realicen.</p>
 							<a href="../controlador/vista.php" class="link1">Ingresar un Juez</a>
 						</div>
-						<!--<div class="wrapper">
-							<h3><span class="dropcap">5</span>Product name</h3>
-							<figure><img src="images/page4_img4.jpg" alt=""></figure>
-							<p class="pad_bot1">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-							<a href="#" class="link1">Read More</a>
-						</div>
-						-->						
+						
+											
 					</section>
 					
 					<section class="cols pad_left1">
@@ -90,14 +86,12 @@
 							<figure><img src="images/page4_img5.jpg" alt=""></figure>
 							<p class="pad_bot1">Gestiona los jueces y asignalos a los partidos que sean necesarios.</p>
 							<a href="../vista/asignarJuezPartido.php" class="link1">Asignar</a>
-						</div><!--
-						<div class="wrapper">
-							<h3><span class="dropcap">6</span>Product name</h3>
-							<figure><img src="images/page4_img6.jpg" alt=""></figure>
-							<p class="pad_bot1">Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-							<a href="#" class="link1">Read More</a>
-						</div> 
-					</section>-->
+						</div>
+					</section>
+
+
+
+
 				</div>
 
 			</article>

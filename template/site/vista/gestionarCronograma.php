@@ -1,4 +1,4 @@
-<?php include ("../controlador/seguridad.php");
+﻿<?php include ("../controlador/seguridad.php");
 	comprobarSesion("ingresarJuez.php");
 ?>
 <!DOCTYPE html>
@@ -50,29 +50,23 @@
 			<article id="content">
 				<div class="wrapper">
 					<section class="col1">
-						<h2 class="under">Registrar Juez (acomodar campos)</h2>
-						<form id="registroJugador" action="../modelo/registrarJuez.php" method="post">
+						<h2 class="under">Generar Cronograma (acomodar campos)</h2>
+						<form id="registroJugador" action="../modelo/generarCronograma.php" method="post">
 						<div>
 							<div  class="wrapper">
-								<span>Cedula:</span>
-								<input type="text" name="juez_codigo" class="input" >
+								<span>Partidos Por Cancha:</span>
+								<input type="text" name="partidos" class="input" >
 							</div>
 							<div  class="wrapper">
-								<span>Nombre Completo:</span>
-								<input type="text" name="juez_nombre" class="input" >
+								<span>Nombre Torneo:</span>
+								<input type="text" name="torneo_nombre" class="input" >
 							</div>
 							<div  class="wrapper">
-								<span>Nombre de Usuario:</span>
-								<input type="text" name="juez_username" class="input" >
+								<span> Cantidad de Canchas:</span>
+								<input type="text" name="canchas" class="input" >
 							</div>
-							<div  class="wrapper">
-								<span>Contraseña:</span>
-								<input type="password" name="jugador_password" class="input" >
-							</div>
-							<div  class="wrapper">
-								<span>Fecha de Nacimiento:</span>
-								<input type="text" name="juez_fecha_nacimiento" class="input" >
-							</div>
+							
+							
 							<a href="#" onClick="document.getElementById('registroJugador').submit()">Enviar</a>
 							<a href="#" onClick="document.getElementById('registroJugador').reset()">Limpiar</a>
 						</div>
