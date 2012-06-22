@@ -43,6 +43,9 @@
                         Enviar
                     </a>
                 </form>
+                <a data-role="button" data-transition="fade" href="../controlador/salir.php">
+                        Salir
+                </a>
             </div>
         </div>
         <script>

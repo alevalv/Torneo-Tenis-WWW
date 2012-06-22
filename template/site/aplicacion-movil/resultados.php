@@ -113,8 +113,11 @@
                     </div>
                     <a data-role="button" data-transition="fade" href="#">
                         Actualizar
-                    </a>
+                    </a>                    
                 </form>
+                <a data-role="button" data-transition="fade" href="../controlador/salir.php">
+                        Salir
+                </a>
             </div>
         </div>
     

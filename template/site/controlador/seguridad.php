@@ -72,8 +72,13 @@ function comprobarSesion($pagename){
 			}
 			
 			if($_SESSION["rol"] == "juezmovil"){
+				if($pagename=="aplicacion-movil/index.php"){
+					header("Location: ../aplicacion-movil/partido.php");
+					return 3;
+				}
 				
-				if(($pagename == "partido.php") || ($pagename == "resultados.php")){
+				if(($pagename == "aplicacion-movil/partido.php") 
+				|| ($pagename == "aplicacion-movil/resultados.php")){
 					return 3;
 
 				}else{

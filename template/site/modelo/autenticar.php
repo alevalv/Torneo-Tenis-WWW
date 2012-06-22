@@ -1,26 +1,38 @@
 <?php 
+echo "sere un manco";
 
  if(isset($_POST['username']) && isset($_POST['password'])){
-	 include("../controlador/fachada.php");
+	 echo "sisa";
+	 /*include("../controlador/fachada.php");
      $instancia = new fachada();
 	 $db = $instancia->conect();
 	 
-	 if((isset($_GET['movil'])) && ($_GET['movil']=="si")){
-		$colection_Juez = $db->juez;
-		$usr_Juez = array( "juez_username" => $_POST['username'] , "juez_password" => $_POST['password']);
-		$result_Juez = $colection_Juez->find($usr_Juez);
-		
-		if($result_Juez->count()!=0){
+	 if(isset($_POST['movil']){
+		 echo "estamos aca ";
+		 //$valueMovil = $_POST['movil'];
+		 //if(=="si"){
+			echo "entramos";
+			/*$colection_Juez = $db->juez;
+			$usr_Juez = array("juez_username" => $_POST['username'] , "juez_password" => $_POST['password']);
+			$result_Juez = $colection_Juez->find($usr_Juez);
+			
+			/*if($result_Juez->count()!=0){
 				session_start();
-			$_SESSION["autentificado"]= "si";
-			$_SESSION["username"]= $_POST['username'];
-			$_SESSION["rol"]= "juezmovil";
-			header ("Location: ../aplicacion-movil/partido.php");
-		}else{
-			header("Location: ../aplicacion-movil/index.php?errorusuario=si");
-		}
-	}else{
-		$colection_Admin = $db->admin;	 
+				$_SESSION["autentificado"]= "si";
+				$_SESSION["username"]= $_POST['username'];
+				$_SESSION["rol"]= "juezmovil";
+				//header ("Location: ../aplicacion-movil/partido.php");
+				header("Location: ../aplicacion-movil/index.php");
+				exit();
+			}else{
+				header("Location: ../aplicacion-movil/index.php");
+				//header("Location: ../aplicacion-movil/index.php?errorusuario=si");
+				exit();
+			}*/
+		//}
+	/*}else{
+		echo "no entramos";
+		/*$colection_Admin = $db->admin;	 
 		$usr_Admin = array( "admin_username" => $_POST['username'] , "admin_password" => $_POST['password']);	 
 		$result_Admin = $colection_Admin->find($usr_Admin);
 	 
@@ -53,9 +65,8 @@
 			header ("Location: ../vista/index.php");
 		}else{
 			header("Location: ../vista/login.php?errorusuario=si");
-		}
-		 
-	 }
+		}*/
+	/*	 
+	 }*/
 }
-
 ?>

@@ -10,6 +10,7 @@
         </title>
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
         <link rel="stylesheet" href="my.css" />
+
         <style>
             /* App custom styles */
         </style>
@@ -17,6 +18,9 @@
         </script>
         <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js">
         </script>
+        <script>
+			/*$("#movil").css("display", "none"); 
+			$('#movil').remove();*/</script>
     </head>
     <body>
         <!-- Home -->
@@ -29,39 +33,40 @@
             <div data-theme="a" data-role="header">
             </div>
             <div data-role="content" style="padding: 15px">
-                <form id="loginJuez" action="../modelo/autenticar.php?movil=si" method="POST">
-							<?php
+                <form id="loginJuez" action="autenticar-movil.php" method="post">
+					<?php
 							if($_GET["errorusuario"]=="si"){
 								echo 	'<div id="errorMensage">
 											Nombre de Usuario o Password incorrectos
 										</div>';
 							}
-							?>
+					?>		
                     <div data-role="fieldcontain">
                         <fieldset data-role="controlgroup">
-                            <label for="textinput6">
+                            <label for="username">
                                 Username
                             </label>
-                            <input id="username" placeholder="" value="" type="text" />
+                            <input id="username" name="username" type="text" />
                         </fieldset>
                     </div>
-                    <div data-role="fieldcontain">
+                    <div data-role="fieldcontain" >
                         <fieldset data-role="controlgroup">
-                            <label for="textinput7">
+                            <label for="password">
                                 Password
                             </label>
-                            <input id="password" placeholder="" value="" type="password" />
+                            <input id="password" name="password" type="password" />
                         </fieldset>
                     </div>
-                    <a data-role="button" data-transition="fade" a href="#" onClick="document.getElementById('loginJuez').submit()">
-                        Log-In
-                    </a>
+                    <div data-role="fieldcontain" >
+						<input value="Aceptar" type="submit" />
+                    </div>
                 </form>
             </div>
         </div>
    
         <script>
             //App custom javascript
+            
         </script>
     </body>
 </html>

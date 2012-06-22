@@ -1,5 +1,5 @@
 #insert para un torneo
-db.torneo.insert({ 'torneo_lugar': 'Canchas olimpicas' , 'torneo_nombre': 'Mini Copa Local', 'torneo_num_canchas': 6 , 'torneo_num_jugadores': 15 , 'torneo_jugadores_registrados': 10 , 'torneo_fecha_inicio': '06-12-2012' , 'torneo_fecha_fin': '17-12-2012' , 'torneo_categoria': 'Categoria 2' , 'torneo_modalidad': 'single_masculino'})
+db.torneo.insert({'torneo_codigo' : 1, 'torneo_lugar': 'Canchas olimpicas' , 'torneo_nombre': 'Mini Copa Local', 'torneo_num_canchas': 6 , 'torneo_num_jugadores': 15 , 'torneo_jugadores_registrados': 10 , 'torneo_fecha_inicio': '06-12-2012' , 'torneo_fecha_fin': '17-12-2012' , 'torneo_categoria': 'Categoria 2' , 'torneo_modalidad': 'single_masculino'})
 
 #insert para la clasificación de jugador
 db.clasificacion_torneos.insert({'registrados_jugador_codigo': 'j1234', 'registrados_torneo_codigo': '12345' , 'jugador_ronda': 2 ,'jugador_grupo': 4, 'jugador_puntos': 3, 'jugador_partidos_ganados': 1,'jugador_partidos_empatados': 0, 'jugador_partidos_perdidos': 0 , 'jugador_total_partidos_jugados': 1, 'jugador_puesto_actual': 1, 'categoria_ronda':'A'})
