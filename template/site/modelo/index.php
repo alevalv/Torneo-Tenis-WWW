@@ -1,3 +1,3 @@
 <?php 
-	header("Location: vista/");
+	header("Location: ../vista/");
 ?>
