@@ -20,11 +20,11 @@
 								$output .= '<li id="nav4"><a href="../vista/registrarTorneojugador.php">Participar<span>en un torneo</span></a></li>';
 								$output .= '<li id="nav5"> <a href="../controlador/salir.php">'.$_SESSION["username"].'<span>Desconectarme</span></a></li>';
 							}else {
-								$output .= '<li id="nav4"> <a href="../controlador/salir.php">'.$_SESSION["username"].'<span>Desconectarme</span></a></li>';
+								$output .= '<li id="nav5"> <a href="../controlador/salir.php">'.$_SESSION["username"].'<span>Desconectarme</span></a></li>';
 							}
 						}else{
-							$output .= '<li id="nav3"><a href="../vista/registrarJugador.php">Registrate<span>para participar</span></a></li>
-								      <li id="nav4"><a href="../vista/login.php">Identificate<span>si eres miembro</span></a></li>';		
+							$output .= '<li id="nav4"><a href="../vista/registrarJugador.php">Registrate<span>para participar</span></a></li>
+								      <li id="nav6"><a href="../vista/login.php">Identificate<span>si eres miembro</span></a></li>';		
 						}
 			  $output .='</ul>
 				</nav>

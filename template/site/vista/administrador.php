@@ -74,7 +74,7 @@
 							<h3><span class="dropcap">2</span>Ingresar Juez</h3>
 							<figure><img src="images/page4_img3.jpg" alt=""></figure>
 							<p class="pad_bot1">En esta sección se desplegara un formulario para el ingreso de jueces oficiales para los diferentes torneos que se realicen.</p>
-							<a href="../controlador/vista.php" class="link1">Ingresar un Juez</a>
+							<a href="../vista/ingresarJuez.php" class="link1">Ingresar un Juez</a>
 						</div>
 						
 											
