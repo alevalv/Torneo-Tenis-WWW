@@ -1,3 +1,6 @@
+<?php include ("../controlador/seguridad.php");
+	comprobarSesion("index.php");
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -26,7 +29,20 @@
             <div data-theme="a" data-role="header">
             </div>
             <div data-role="content" style="padding: 15px">
-                <form action="">
+                <form id="loginJuez" action="../modelo/autenticar.php" method="POST">
+		      <?php
+							if($_GET["errorusuario"]=="si"){
+								echo 	'<div id="errorMensage">
+											Nombre de Usuario o Password incorrectos
+										</div>';
+							}
+							else if($_GET["rol"]= "jugador";){
+								echo 	'<div id="errorMensage">
+											Bienvenido Juez
+										</div>';
+
+								}
+							?>
                     <div data-role="fieldcontain">
                         <fieldset data-role="controlgroup">
                             <label for="textinput6">
@@ -43,7 +59,7 @@
                             <input id="textinput7" placeholder="" value="" type="password" />
                         </fieldset>
                     </div>
-                    <a data-role="button" data-transition="fade" href="#page1">
+                    <a data-role="button" data-transition="fade" a href="#" onClick="document.getElementById('loginJuez').submit()">
                         Log-In
                     </a>
                 </form>
