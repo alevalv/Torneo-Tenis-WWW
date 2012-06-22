@@ -1,12 +1,12 @@
 <?php	
-	function insertar_menus(){
+	function insertar_menus($pagename){
 		session_start();
 			$output = '<div class="wrapper">
 
 	<h1><a href="index.html" id="logo">Tenis Vallecaucano</a></h1>
 				<nav>
 					<ul id="menu">
-						<li id="nav1" class="active"><a href="../vista/index.php">Inicio<span>¡Bienvenido!</span></a></li>';
+						<li id="nav1" ><a href="../vista/index.php">Inicio<span>¡Bienvenido!</span></a></li>';
 				$output .= '<li id="nav2"><a href="../vista/informacion_Torneos.php">Torneos<span>sigue la acción</span></a></li>';
 						if($_SESSION["rol"] == "jugador"){
 							$output .= '<li id="nav3"><a href="../vista/jugador.php">Jugador<span>gestione su cuenta</span></a></li>';
