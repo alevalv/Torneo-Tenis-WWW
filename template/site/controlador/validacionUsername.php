@@ -2,7 +2,7 @@
 	include("fachada.php");
 	class ValidadorUsername
 	{
-		public static function validar($username){
+		public function validar($username){
 			$instancia = new fachada();
 			$db = $instancia->conect();
 			$colection_Admin = $db->admin;	 
