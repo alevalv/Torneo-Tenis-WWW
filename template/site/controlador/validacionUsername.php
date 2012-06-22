@@ -19,6 +19,7 @@
 			}
 			else{ return false; }
   	}	
+  	echo ValidadorUsername::validar("alejo");
 }
 ?>
 
