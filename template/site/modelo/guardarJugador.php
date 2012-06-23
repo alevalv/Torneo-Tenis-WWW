@@ -8,34 +8,34 @@
 			$collection= new MongoCollection($db, 'jugador');
 			//echo ValidadorUsername::validar($_POST['jugador_username']);
 			$jugadorCategoriaModalidad=0;
-			if($_POST['jugador_sexo'] == "M" $_POST['jugador_categoria'] = "Novato"){
+			if($_POST['jugador_sexo'] == "M" && $_POST['jugador_categoria'] == "Novato"){
 				$jugadorCategoriaModalidad=1;
 			}
-			else if($_POST['jugador_sexo'] == "M" $_POST['jugador_categoria'] = "Categoria 1"){
+			else if($_POST['jugador_sexo'] == "M" && $_POST['jugador_categoria'] == "Categoria 1"){
 				$jugadorCategoriaModalidad=2;
 			}
-			else if($_POST['jugador_sexo'] == "M" $_POST['jugador_categoria'] = "Categoria 2"){
+			else if($_POST['jugador_sexo'] == "M" && $_POST['jugador_categoria'] == "Categoria 2"){
 				$jugadorCategoriaModalidad=3;
 			}
-			else if($_POST['jugador_sexo'] == "M" $_POST['jugador_categoria'] = "Categoria 3"){
+			else if($_POST['jugador_sexo'] == "M" && $_POST['jugador_categoria'] == "Categoria 3"){
 				$jugadorCategoriaModalidad=4;
 			}
-			else if($_POST['jugador_sexo'] == "M" $_POST['jugador_categoria'] = "Categoria 4"){
+			else if($_POST['jugador_sexo'] == "M" && $_POST['jugador_categoria'] == "Categoria 4"){
 				$jugadorCategoriaModalidad=5;
 			}
-			else if($_POST['jugador_sexo'] == "F" $_POST['jugador_categoria'] = "Novato"){
+			else if($_POST['jugador_sexo'] == "F" && $_POST['jugador_categoria'] == "Novato"){
 				$jugadorCategoriaModalidad=6;
 			}
-			else if($_POST['jugador_sexo'] == "F" $_POST['jugador_categoria'] = "Categoria 1"){
+			else if($_POST['jugador_sexo'] == "F" && $_POST['jugador_categoria'] == "Categoria 1"){
 				$jugadorCategoriaModalidad=7;
 			}
-			else if($_POST['jugador_sexo'] == "F" $_POST['jugador_categoria'] = "Categoria 2"){
+			else if($_POST['jugador_sexo'] == "F" && $_POST['jugador_categoria'] == "Categoria 2"){
 				$jugadorCategoriaModalidad=8;
 			}
-			else if($_POST['jugador_sexo'] == "F" $_POST['jugador_categoria'] = "Categoria 3"){
+			else if($_POST['jugador_sexo'] == "F" && $_POST['jugador_categoria'] == "Categoria 3"){
 				$jugadorCategoriaModalidad=9;
 			}
-			else if($_POST['jugador_sexo'] == "F" $_POST['jugador_categoria'] = "Categoria 4"){
+			else if($_POST['jugador_sexo'] == "F" && $_POST['jugador_categoria'] == "Categoria 4"){
 				$jugadorCategoriaModalidad=10;
 			}
 			echo $jugadorCategoriaModalidad;
