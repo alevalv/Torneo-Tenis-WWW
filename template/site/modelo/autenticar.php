@@ -4,7 +4,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
      $instancia = new fachada();
 	 $db = $instancia->conect();
 	 
-	 if(isset($_GET['movil']){
+	 if(isset($_GET['movil'])){
 		 if($_GET['movil']=="si"){
 			$colection_Juez = $db->juez;
 			$usr_Juez = array("juez_username" => $_POST['username'] , "juez_password" => $_POST['password']);
@@ -14,11 +14,14 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 				session_start();
 				$_SESSION["autentificado"]= "si";
 				$_SESSION["username"]= $_POST['username'];
-				$_SESSION["rol"]= "juezmovil";
-				header ("Location: ../aplicacion-movil/partido.php");
+				$_SESSION["rol"]= "juezmovil";				
+				echo '<html><body><script type="text/javascript"> window.location="../aplicacion-movil/partido.php";</script></body> </html>';
+				//header ("Location: ../aplicacion-movil/partido.php");
 				exit();
 			}else{
-				header("Location: ../aplicacion-movil/index.php?errorusuario=si");
+				echo '<html><body><script type="text/javascript">window.location="../aplicacion-movil/index.php?errorusuario=si";</script></body> </html>';
+
+				//header("Location: ../aplicacion-movil/index.php?errorusuario=si");
 				exit();
 			}
 		}
@@ -61,3 +64,8 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 	 }
 }
 ?>
+	</body>
+
+
+
+</html>

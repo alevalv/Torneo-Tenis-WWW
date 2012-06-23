@@ -22,7 +22,9 @@ function comprobarSesion($pagename){
 			return 3;
 		}
 		if(($pagename == "aplicacion-movil/partido.php")|| ($pagename == "aplicacion-movil/resultados.php")){
-			header("Location: ../aplicacion-movil/index.php");
+			//header("Location: ../aplicacion-movil/index.php");
+			//location.href='../aplicacion-movil/index.php';
+			echo '<html><body><script type="text/javascript">window.location="../aplicacion-movil/index.php";</script></body> </html>';
 			return 3;			
 		}
 		//si no existe, envio a la página de autentificacion
@@ -54,6 +56,7 @@ function comprobarSesion($pagename){
 
 				}else{
 					//No se puede acceder no tiene privilegios alguna pagina de error
+					
 					header("Location: ../vista/errorPrivilegios.php");
 					return 1;
 				}
@@ -73,7 +76,9 @@ function comprobarSesion($pagename){
 			
 			if($_SESSION["rol"] == "juezmovil"){
 				if($pagename=="aplicacion-movil/index.php"){
-					header("Location: ../aplicacion-movil/partido.php");
+					//header("Location: ../aplicacion-movil/partido.php");
+					//location.href='../aplicacion-movil/partido.php';
+					echo '<html><body><script type="text/javascript">window.location="../aplicacion-movil/partido.php";</script></body> </html>';
 					return 3;
 				}
 				
@@ -83,7 +88,9 @@ function comprobarSesion($pagename){
 
 				}else{
 					//No se puede acceder no tiene privilegios alguna pagina de error
-					header("Location: ../aplicacion-movil/index.php");
+					//header("Location: ../aplicacion-movil/index.php");
+					//location.href='../aplicacion-movil/index.php';
+					echo '<html><body><script type="text/javascript">window.location="../aplicacion-movil/index.php";</script></body> </html>';
 					return 1;
 				}
 			}
