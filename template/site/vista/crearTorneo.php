@@ -77,25 +77,6 @@
 								<span>Fecha de Finalización:</span>
 								<input type="text" name="torneo_fecha_fin" class="input" >
 							</div>
-							<div  class="wrapper">
-								<span>Categoría:</span><br /><br />
-								<div class="radios">
-									<input type="radio" name="torneo_categoria" value="Categoria 1" class="input" >Categoría 1<br />
-									<input type="radio" name="torneo_categoria" value="Categoria 2" class="input" >Categoría 2<br />
-									<input type="radio" name="torneo_categoria" value="Categoria 3" class="input" >Categoría 3<br />
-									<input type="radio" name="torneo_categoria" value="Categoria 4" class="input" >Categoría 4<br />
-									<input type="radio" name="torneo_categoria" value="Novato" checked class="input" >Novato
-								</div>
-							</div>
-							<div  class="wrapper">
-								<span>Modalidad:</span><br /><br />
-								<div class="radios">
-									<input type="radio" name="torneo_modalidad" value="single_masculino" class="input" CHECKED>Single Masculino<br />
-									<input type="radio" name="torneo_modalidad" value="single_femenino" class="input" >Single Femenino<br />
-									<input type="radio" name="torneo_modalidad" value="single_mixto" class="input" >Single Mixto<br />
-									<input type="radio" name="torneo_modalidad" value="dobles_mixto" class="input" >Dobles Mixto<br />
-								</div>
-							</div>
 							<a href="#" onClick="document.getElementById('registroJugador').submit()">Enviar</a>
 							<a href="#" onClick="document.getElementById('registroJugador').reset()">Limpiar</a>
 						</div>
