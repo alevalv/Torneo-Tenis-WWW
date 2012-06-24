@@ -1,7 +1,7 @@
 <?php
 
 		include("../controlador/fachada.php");	
-		$fecha_actual=date("d/m/Y");
+		$fecha_actual=date("d-m-Y");
 		$instancia = new fachada();
 		$db = $instancia->conect();
 		$collectionTorneo= $db->torneo;
