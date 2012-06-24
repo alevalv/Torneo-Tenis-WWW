@@ -1,5 +1,6 @@
 <?php include ("../controlador/seguridad.php");
-	comprobarSesion("registrarPareja.php");
+	$pagename="registrarPareja.php";
+	comprobarSesion($pagename);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +37,7 @@
 			<header>
 				<?php 					
 					include("../controlador/insertMenu.php");
-					echo insertar_menus();
+					echo insertar_menus($pagename);
 				?>
 			</header><div class="ic">More Website Templates  at TemplateMonster.com!</div>
 <!-- header end-->
@@ -142,7 +143,7 @@
 					</section>
 					-->
 					<section class="col3 pad_left2">
-						<h4>Address</h4>
+						<h4>Contacto</h4>
 						<ul class="address">
 							<li><span>Pais:</span>Colombia</li>
 							<li><span>Ciudad:</span>Santiago de Cali</li>

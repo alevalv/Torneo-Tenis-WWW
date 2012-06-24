@@ -1,3 +1,7 @@
+<?php //include("../controlador/seguridad.php");
+	$pagename="informacion_Torneos.php";
+	comprobarSesion($pagename);
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -40,7 +44,7 @@
 			<header>
 				<?php 
 					include("../controlador/insertMenu.php");
-					$var = insertar_menus($_SESSION);
+					$var = insertar_menus($pagename);
 					echo $var;
 				?>
 			</header><div class="ic">More Website Templates  at TemplateMonster.com!</div>
@@ -113,7 +117,7 @@
 					</section>
 					-->
 					<section class="col3 pad_left2">
-						<h4>Address</h4>
+						<h4>Contacto</h4>
 						<ul class="address">
 							<li><span>Pais:</span>Colombia</li>
 							<li><span>Ciudad:</span>Santiago de Cali</li>

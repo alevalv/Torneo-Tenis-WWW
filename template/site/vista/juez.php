@@ -1,5 +1,6 @@
 <?php include ("../controlador/seguridad.php");
-	comprobarSesion("juez.php");
+	$pagename="juez.php";
+	comprobarSesion($pagename);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -39,7 +40,7 @@
 			<header>
 				<?php 
 					include("../controlador/insertMenu.php");
-					$var = insertar_menus($_SESSION);
+					$var = insertar_menus($pagename);
 					echo $var;
 				?>
 			</header><div class="ic">More Website Templates  at TemplateMonster.com!</div>
@@ -119,7 +120,7 @@
 					</section>
 					-->
 					<section class="col3 pad_left2">
-						<h4>Address</h4>
+						<h4>Contactanos</h4>
 						<ul class="address">
 							<li><span>Pais:</span>Colombia</li>
 							<li><span>Ciudad:</span>Santiago de Cali</li>
@@ -164,7 +165,7 @@
 <script type="text/javascript"> Cufon.now(); </script>
 <script>
 	$(document).ready(function() {
-		tabs.init();
+		//tabs.init();
 	})
 </script>
 </body>
