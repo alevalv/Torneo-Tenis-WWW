@@ -13,6 +13,4 @@
 		foreach($cursor as $r){
 		   var_dump($r);
 		}
-		
-		echo $fecha_actual;
 ?>
