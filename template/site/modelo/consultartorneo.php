@@ -13,4 +13,8 @@
 		foreach($cursor as $r){
 		   var_dump($r);
 		}
-?>
+		
+		echo "ejecute algo";
+		
+	   
+?> 
