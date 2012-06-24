@@ -4,8 +4,8 @@
 		$instancia = new fachada();
 		$db = $instancia->conect();
 		$collectionTorneo= $db->torneo;
-		$collectionPartidos_torneos= $db->torneos;
-		$cursor=$collectionPartidos_torneos->find();
+		$collection_torneos= $db->torneo;
+		$cursor=$collection_torneos->find();
 		
 		var_dump($cursor);
 		
