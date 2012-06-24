@@ -53,18 +53,18 @@
 						<h2 class="under">Generar Cronograma (acomodar campos)</h2>
 						<form id="registroJugador" action="../modelo/generarCronograma.php" method="post">
 						<div>
-							<div  class="wrapper">
-								<span>Partidos Por Cancha:</span>
-								<input type="text" name="partidos" class="input" >
-							</div>
+							
 							<div  class="wrapper">
 								<span>Nombre Torneo:</span>
 								<input type="text" name="torneo_nombre" class="input" >
 							</div>
+
 							<div  class="wrapper">
-								<span> Cantidad de Canchas:</span>
-								<input type="text" name="canchas" class="input" >
+								<span>Partidos Por Cancha:</span>
+								<input type="text" name="partidos" class="input" >
 							</div>
+
+							
 							
 							
 							<a href="#" onClick="document.getElementById('registroJugador').submit()">Enviar</a>
