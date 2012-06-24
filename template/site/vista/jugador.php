@@ -56,10 +56,10 @@
 				<div class="wrapper">
 					<section class="cols">
 						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">1</span>(cambiar esto jugador)</h3>
+							<h3><span class="dropcap">1</span>Inscribete</h3>
 							<figure><img src="images/page4_img1.jpg" alt=""></figure>
-							<p class="pad_bot1">Aqui puede relizar la creación de un torneo de tennis.</p>
-							<a href="../vista/crearTorneo.php" class="link1">Crear Torneo</a>
+							<p class="pad_bot1">Registrate en un torneo para poder participar.</p>
+							<a href="../vista/registrarTorneoJugador.php" class="link1">Jugar Torneo</a>
 						</div>
 						<!--<div class="wrapper">
 							<h3><span class="dropcap">4</span>Ingresar Juez</h3>
@@ -70,13 +70,13 @@
 						-->
 					</section>
 					<section class="cols pad_left1">
-						<div class="wrapper pad_bot2">
+						<!--<div class="wrapper pad_bot2">
 							<h3><span class="dropcap">2</span>Ingresar Juez</h3>
 							<figure><img src="images/page4_img3.jpg" alt=""></figure>
 							<p class="pad_bot1">En esta sección se desplegara un formulario para el ingreso de jueces oficiales para los diferentes torneos que se realicen.</p>
 							<a href="../vista/ingresarJuez.php" class="link1">Ingresar un Juez</a>
 						</div>
-						<!--<div class="wrapper">
+						--><!--<div class="wrapper">
 							<h3><span class="dropcap">5</span>Product name</h3>
 							<figure><img src="images/page4_img4.jpg" alt=""></figure>
 							<p class="pad_bot1">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
@@ -86,19 +86,20 @@
 					</section>
 					
 					<section class="cols pad_left1">
-						<div class="wrapper pad_bot2">
+						<!--<div class="wrapper pad_bot2">
 							<h3><span class="dropcap">3</span>Asigar Juez a Partido</h3>
 							<figure><img src="images/page4_img5.jpg" alt=""></figure>
 							<p class="pad_bot1">Gestiona los jueces y asignalos a los partidos que sean necesarios.</p>
 							<a href="../vista/asignarJuezPartido.php" class="link1">Asignar</a>
-						</div><!--
+						</div>
+						--><!--
 						<div class="wrapper">
 							<h3><span class="dropcap">6</span>Product name</h3>
 							<figure><img src="images/page4_img6.jpg" alt=""></figure>
 							<p class="pad_bot1">Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 							<a href="#" class="link1">Read More</a>
-						</div> 
-					</section>-->
+						</div>--> 
+					</section>
 				</div>
 
 			</article>

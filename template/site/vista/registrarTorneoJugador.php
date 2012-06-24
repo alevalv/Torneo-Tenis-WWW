@@ -1,7 +1,11 @@
+<?php include ("../controlador/seguridad.php");
+	$pagename="registrarTorneoJugador.php";
+	comprobarSesion($pagename);
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Error de Privilegios</title>
+<title>Registrarse en un Torneo</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
@@ -12,28 +16,31 @@
 <script type="text/javascript" src="js/Swis721_Cn_BT_400.font.js"></script>
 <script type="text/javascript" src="js/Swis721_Cn_BT_700.font.js"></script>
 <script type="text/javascript" src="js/tabs.js"></script>
-<!--[if lt IE 9]>
+
+  <!--[if lt IE 9]>
   	<script type="text/javascript" src="js/html5.js"></script>
 	<style type="text/css">
 		.bg{ behavior: url(js/PIE.htc); }
 	</style>
-<![endif]-->
-<!--[if lt IE 7]>
+  <![endif]-->
+	<!--[if lt IE 7]>
 		<div style=' clear: both; text-align:center; position: relative;'>
 			<a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0"  alt="" /></a>
 		</div>
-<![endif]-->
+	<![endif]-->
+
 </head>
-<body id="page5">
+
+<body id="page4">
 	<div class="body1">
 	<div class="body2">
 	<div class="body5">
 		<div class="main">
 <!-- header -->
 			<header>
-				<?php 					
+				<?php 
 					include("../controlador/insertMenu.php");
-					echo insertar_menus();
+					echo insertar_menus($pagename);
 				?>
 			</header><div class="ic">More Website Templates  at TemplateMonster.com!</div>
 <!-- header end-->
@@ -46,32 +53,15 @@
 <!-- content -->
 			<article id="content">
 				<div class="wrapper">
-					<section class="col1">
-						<div>
-							<p>
-								<h1>Lo Sentimos pero no tiene privilegios para ver esta pagina.</h1>
-							</p>
-							<p>
-								<a href="#" onClick="history.go(-1);">Atrás</a>
-							</p>
-							
+					<section class="cols">
+						<div class="wrapper pad_bot2">
+							<h3><span class="dropcap">1</span>Torneo 1</h3>
+							<figure><img src="images/page4_img1.jpg" alt=""></figure>
+							<p class="pad_bot1">algo noc.</p>
+							<p><a href="#" class="link1">Jugar</a></p>							
 						</div>
-					
-					</section>
-					<section class="col2 pad_left1">
-						<h2 class="under">Contactar</h2>
-						<div id="address"><span>Pais:<br>
-								Ciudad:<br>
-								Telefono:<br>
-								Email:</span>
-								Colombia<br>
-								Santiago de Cali<br>
-								605 45 78<br>
-								<a href="mailto:" class="color2">webtennis@mail.com</a></div>
-						
 					</section>
 				</div>
-
 			</article>
 		</div>
 	</div>
@@ -91,7 +81,7 @@
 					</section>
 					-->
 					<section class="col3 pad_left2">
-						<h4>Contactanos</h4>
+						<h4>Contacto</h4>
 						<ul class="address">
 							<li><span>Pais:</span>Colombia</li>
 							<li><span>Ciudad:</span>Santiago de Cali</li>
@@ -141,5 +131,3 @@
 </script>
 </body>
 </html>
-
-

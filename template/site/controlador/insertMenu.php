@@ -13,7 +13,7 @@
 			$active_torneo = $code_active;
 		}else if( ($pagename=="juez.php") || ($pagename=="administrador.php") || ($pagename=="jugador.php")
 				||($pagename=="asignarJuezPartido.php")||($pagename=="crearTorneo.php")||($pagename=="gestionarCronograma.php")
-				||($pagename=="ingresarJuez.php")||($pagename=="asignarJuezPartido.php")){
+				||($pagename=="ingresarJuez.php")||($pagename=="asignarJuezPartido.php") || ($pagename="registrarTorneoJugador.php")){
 			$active_settings = $code_active;
 		}else if($pagename=="login.php"){
 			$active_login = $code_active;
@@ -34,12 +34,7 @@
 							$output .= '<li id="nav3" '.$active_settings.'><a href="../vista/juez.php">Juez<span>gestione su cuenta</span></a></li>';
 						}
 						if($_SESSION["autentificado"] == "si"){
-							if($_SESSION["rol"] == "jugador"){
-								$output .= '<li id="nav4" '.$active_register.'><a href="../vista/registrarTorneojugador.php">Participar<span>en un torneo</span></a></li>';
-								$output .= '<li id="nav5" > <a href="../controlador/salir.php">'.$_SESSION["username"].'<span>Desconectarme</span></a></li>';
-							}else {
-								$output .= '<li id="nav5" > <a href="../controlador/salir.php">'.$_SESSION["username"].'<span>Desconectarme</span></a></li>';
-							}
+							$output .= '<li id="nav5" > <a href="../controlador/salir.php">'.$_SESSION["username"].'<span>Desconectarme</span></a></li>';							
 						}else{
 							$output .= '<li id="nav4" '.$active_register.'><a href="../vista/registrarJugador.php">Registrate<span>para participar</span></a></li>
 								      <li id="nav6" '.$active_login.'><a href="../vista/login.php">Identificate<span>si eres miembro</span></a></li>';		
