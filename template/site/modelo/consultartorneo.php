@@ -1,6 +1,7 @@
 <?php
 
-		include("../controlador/fachada.php");		
+		include("../controlador/fachada.php");	
+		$fecha_actual=date("d/m/Y");
 		$instancia = new fachada();
 		$db = $instancia->conect();
 		$collectionTorneo= $db->torneo;
@@ -12,4 +13,6 @@
 		foreach($cursor as $r){
 		   var_dump($r);
 		}
+		
+		echo $fecha_actual;
 ?>
