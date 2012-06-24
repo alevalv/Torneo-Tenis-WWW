@@ -6,7 +6,7 @@
 		$db = $instancia->conect();
 		$collectionTorneo= $db->torneo;
 		$collection_torneos= $db->torneo;
-		$cursor=$collection_torneos->find();
+		$cursor=$collection_torneos->find('torneo_fecha_inicio' => ('$gt' => $fecha_actual));
 		
 		var_dump($cursor);
 		
