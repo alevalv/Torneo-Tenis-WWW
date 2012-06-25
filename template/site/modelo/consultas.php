@@ -13,11 +13,11 @@
 		$instancia = new fachada();
 		$db = $instancia->conect();
 		$collectionTorneo= $db->torneo;
-		$collectionPartidos_torneos= $db->partidos_torneos;
+		
 		
 		
 		//codigo de los torneos con cronograma
-		//$result = $collectionPartidos_torneos->find()->fields(array("registrados_torneo_codigo" => true));
+		return  $collectionTorneo->find()->fields(array("tiene_cronograma" => "no"));
 		
 			
 	}
