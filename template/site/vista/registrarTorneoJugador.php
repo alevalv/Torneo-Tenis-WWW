@@ -53,14 +53,23 @@
 <!-- content -->
 			<article id="content">
 				<div class="wrapper">
-					<section class="cols">
-						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">1</span>Torneo 1</h3>
-							<figure><img src="images/page4_img1.jpg" alt=""></figure>
-							<p class="pad_bot1">algo noc.</p>
-							<p><a href="#" class="link1">Jugar</a></p>							
-						</div>
-					</section>
+                                    <section class="cols">
+                                        <div  class="wrapper">
+                                            <span>Seleccione Torneo:</span>
+                                            <select name ="combo">
+                                                <?php
+                                                include("../modelo/consultas.php");
+                                                $cursor = consultarTorneosDisponibles();
+                                                foreach ($cursor as $obj) {
+                                                    
+                                                var_dump($obj);
+
+                                                    // echo '<option value= "' . $obj["_id"] . '">' . $obj["torneo_nombre"] . '</option>' . "\n";
+                                                }
+                                                ?>
+                                            </select>
+                                        </div>
+                                    </section>
 				</div>
 			</article>
 		</div>

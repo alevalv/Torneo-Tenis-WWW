@@ -52,7 +52,7 @@ comprobarSesion($pagename);
                 <article id="content">
                     <div class="wrapper">
                         <section class="col1">
-                            <h2 class="under">Generar Cronograma (acomodar campos)</h2>
+                            <h2 class="under">Generar Cronograma </h2>
                             <form id="registroJugador" action="../modelo/generarCronograma.php" method="post">
                                 <div>
 
@@ -62,11 +62,9 @@ comprobarSesion($pagename);
                                             <?php
                                             include("../modelo/consultas.php");
                                             $cursor = consultarTorneoSinCronograma();
-
-
                                             foreach ($cursor as $obj) {
 
-                                               echo '<option value= "' . $obj["_id"] . '">' . $obj["torneo_nombre"] . '</option>';
+                                               echo '<option value= "' . $obj["_id"] . '">' . $obj["torneo_nombre"] . '</option>'."\n";
                                             }
                                             ?>
                                         </select>
@@ -79,13 +77,8 @@ comprobarSesion($pagename);
 
                                     </div>
 
-
-
-
-
-
-                                    <a href="#" onClick="document.getElementById('registroJugador').submit()">Enviar</a>
-                                    <a href="#" onClick="document.getElementById('registroJugador').reset()">Limpiar</a>
+                                    <a href="#" onClick="submit()">Generar Cronograma</a>
+                                  
                                 </div>
                             </form>
                         </section>
