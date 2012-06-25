@@ -1,9 +1,8 @@
 <?php
 		include("../modelo/consultas.php");
 		try{
-		$cursor = consultarJugadoresCategoriaOrdenadosRanking("novato",125632
-
-);
+		$cursor = consultarTorneoSinCronograma();
+			
 
 		
 
