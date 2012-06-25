@@ -53,6 +53,13 @@
 					<section class="col1">
 						<h2 class="under">Crear Torneo</h2>
 						<form id="registroJugador" action="../modelo/registrarTorneo.php" method="post">
+						<?php
+							if($_GET["error"]=="si"){
+								echo 	'<div id="errorMensage">
+											Error al crear el torneo
+										</div>';
+							}
+							?>
 						<div>
 							<div  class="wrapper">
 								<span>Ubicación del Torneo:</span>
