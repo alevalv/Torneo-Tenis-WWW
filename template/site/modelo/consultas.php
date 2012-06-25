@@ -23,8 +23,8 @@
                 
                 echo date('m');
 		
-		$result = $collectionTorneo->find(array("torneo_fecha_inicio_dia" => array('$gte' => 5 ) ,
-                    "torneo_fecha_inicio_mes" => array('$gte' => 6 ),"torneo_fecha_inicio_anio" => array('$gte' => 5 ) ));
+		$result = $collectionTorneo->find(array("torneo_fecha_inicio_dia" => array('$gte' => date('d') ) ,
+                    "torneo_fecha_inicio_mes" => array('$gte' => date('m') ),"torneo_fecha_inicio_anio" => array('$gte' => date('y') ) ));
 		
 		//codigo de los torneos con cronograma
 		//var_dump($result);

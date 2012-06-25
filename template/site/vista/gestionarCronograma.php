@@ -77,7 +77,7 @@ comprobarSesion($pagename);
 
                                     </div>
 
-                                    <a href="#" onClick="submit()">Generar Cronograma</a>
+                                    <a href="#" onClick="submit()">Generar</a>
                                   
                                 </div>
                             </form>
