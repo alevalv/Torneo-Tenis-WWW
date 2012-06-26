@@ -52,7 +52,13 @@
 				<div class="wrapper">
 					<section class="col1">
 						<h2 class="under">Iniciar Sesion</h2>
-						<form id="registroJugador" action="../modelo/autenticar.php" method="POST">
+							<?php
+								if(isset($_GET)){
+									echo '<form id="registroJugador" action="../modelo/autenticar.php?pagereturn='.$_GET["pagereturn"].' " method="POST">';
+								}else{
+									echo '<form id="registroJugador" action="../modelo/autenticar.php" method="POST">';
+								}
+							?>					
 							<?php
 							if($_GET["errorusuario"]=="si"){
 								echo 	'<div id="errorMensage">

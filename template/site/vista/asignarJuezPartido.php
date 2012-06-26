@@ -53,6 +53,18 @@
 					<section class="col1">
 						<h2 class="under">Asignar Juez (acomodar campos)</h2>
 						<form id="registroJugador" action="../modelo/asiganarPartidoJuez.php" method="post">
+						<?php
+							if($_GET["errorinsert"]=="si"){
+								echo 	'<div id="errorMensage">
+											Error al asignar el partido
+										</div>';
+							}else if($_GET["sussesinsert"]=="si"){
+								echo 	'<div id="sussesMensage">
+											Registro realizado Correctamente
+										</div>';
+							}
+						?>
+						<div id="errorMensage" name="div-validar"> </div>
 						<div>
 							<div  class="wrapper">
 								<span>Cedula:</span>

@@ -7,13 +7,13 @@
 		$collection= new MongoCollection($db, 'juez');
 		$newUser = array("juez_codigo" => $_POST['juez_codigo'], "juez_username" => $_POST['juez_username'], "juez_password" => $_POST['juez_password'], "juez_nombre" => $_POST['juez_nombre'],"juez_fecha_nacimiento" => $_POST['juez_fecha_nacimiento']);
 		$collection->insert($newUser);
-		header("Location: ../vista/index.php");
+		header("Location: ../vista/ingresarJuez.php?sussesinsert=si");
 		exit();
 		}
 		catch (Exception $e) {
 			//echo 'Caught exception: ',  $e->getMessage(), "\n";
 		}
 	}
-		header("Location: ../vista/ingresarJuez.php?errorusuario=si");
+		header("Location: ../vista/ingresarJuez.php?errorinsert=si");
 
 ?>

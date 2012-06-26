@@ -53,6 +53,18 @@
 					<section class="col1">
 						<h2 class="under">Registrar Juez</h2>
 						<form id="registroJugador" action="../modelo/registrarJuez.php" method="post">
+						<?php
+							if($_GET["errorinsert"]=="si"){
+								echo 	'<div id="errorMensage">
+											Error al registrar el Juez
+										</div><p><br></p>';
+							}else if($_GET["sussesinsert"]=="si"){
+								echo 	'<div id="sussesMensage">
+											Registro realizado Correctamente
+										</div><p><br></p>';
+							}
+						?>
+						<div id="errorMensage" name="div-validar"> </div>
 						<div>
 							<div  class="wrapper">
 								<span>Cedula:</span>

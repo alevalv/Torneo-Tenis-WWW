@@ -54,6 +54,18 @@
 						<h2 class="under">Registrarse</h2>
 						<a href="registrarPareja.php"><h3>Registrarse como Pareja (Aqui)</h3></a>
 						<form id="registroJugador" action="../modelo/guardarJugador.php" method="post">
+						<?php
+							if($_GET["errorinsert"]=="si"){
+								echo 	'<div id="errorMensage">
+											Error al insertar el Jugador
+										</div><p><br></p>';
+							}else if($_GET["sussesinsert"]=="si"){
+								echo 	'<div id="sussesMensage">
+											Registro realizado Correctamente
+										</div><p><br></p>';
+							}
+						?>
+						<div id="errorMensage" name="div-validar"> </div>
 						<div>
 							<div  class="wrapper">
 								<span>Cedula:</span>
