@@ -21,10 +21,16 @@
 		$db = $instancia->conect();
 		$collectionTorneo= $db->torneo;
                 
-                echo date('m');
-		
-		$result = $collectionTorneo->find(array("torneo_fecha_inicio_dia" => array('$gte' => date('d') ) ,
-                    "torneo_fecha_inicio_mes" => array('$gte' => date('m') ),"torneo_fecha_inicio_anio" => array('$gte' => date('y') ) ));
+                
+                $dia = (int) date('d');
+                $mes = (int) date('m');
+                $anio = (int) date('y');
+		echo $dia.'-'.$mes.'-'.$anio;
+		$result = $collectionTorneo->find(array('$or' => array(array("torneo_fecha_inicio_anio" => array('$gte' => $anio )  )   )      ));
+                
+              //  "torneo_fecha_inicio_mes" => array('$gte' => $mes ),"torneo_fecha_inicio_anio" => array('$gte' => $anio )  ,
+                
+                //$db->users->find(array('$or' => array(array("a" => 1), array("b" => 2) )));
 		
 		//codigo de los torneos con cronograma
 		//var_dump($result);

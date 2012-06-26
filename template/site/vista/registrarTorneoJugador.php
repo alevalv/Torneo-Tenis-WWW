@@ -55,7 +55,7 @@ comprobarSesion($pagename);
                 <article id="content">
                     <div class="wrapper">
                         <section class="cols">
-                            <form  action="../modelo/generarCronograma.php" method="post">
+                            <form  id="registroJugador"  action="../modelo/guardarInscrito.php" method="post">
                                 <div>
 
                                     <div  class="wrapper">
@@ -66,7 +66,7 @@ comprobarSesion($pagename);
                                             $cursor = consultarTorneosDisponibles();
                                             foreach ($cursor as $obj) {
 
-                                                echo '<option value= "' . $obj["_id"] . '">' . $obj["torneo_nombre"] . '</option>' . "\n";
+                                                echo  '<option value= "' . $obj["_id"] . '">' . $obj["torneo_nombre"] . '</option>' . "\n";
                                             }
                                             ?>
                                         </select>
