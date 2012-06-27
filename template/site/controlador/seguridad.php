@@ -63,7 +63,7 @@ function comprobarSesion($pagename){
 			
 			if($_SESSION["rol"] == "jugador"){
 				
-				if(($pagename == "jugador.php")|| ($pagename="registrarTorneoJugador.php")){
+				if(($pagename == "jugador.php")|| ($pagename=="registrarTorneoJugador.php")){
 					return 1;
 
 				}

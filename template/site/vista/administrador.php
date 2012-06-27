@@ -82,7 +82,7 @@
 					
 					<section class="cols pad_left1">
 						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">3</span>Asigar Juez </span>a Partido</span></h3>
+							<h3><span class="dropcap">3</span>Asigar Juez <span>a Partido</span></h3>
 							<figure><img src="images/page4_img5.jpg" alt=""></figure>
 							<p class="pad_bot1">Gestiona los jueces y asignalos a los partidos que sean necesarios.</p>
 							<a href="../vista/asignarJuezPartido.php" class="link1">Asignar</a>
