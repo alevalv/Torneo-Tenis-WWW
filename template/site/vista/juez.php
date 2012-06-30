@@ -56,10 +56,10 @@
 				<div class="wrapper">
 					<section class="cols">
 						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">1</span>(cambiar esto))</h3>
-							<figure><img src="images/page4_img1.jpg" alt=""></figure>
-							<p class="pad_bot1">Aqui puede relizar la creación de un torneo de tennis.</p>
-							<a href="../vista/crearTorneo.php" class="link1">Crear Torneo</a>
+							<h3><span class="dropcap">1</span>Datos</h3>
+							<figure><img src="images/a.jpg" alt=""></figure>
+							<p class="pad_bot1">Mira y actualiza tus datos personales.</p>
+							<a href="../vista/editarJuez.php" class="link1">Editar</a>
 						</div>
 						<!--<div class="wrapper">
 							<h3><span class="dropcap">4</span>Ingresar Juez</h3>
@@ -71,11 +71,12 @@
 					</section>
 					<section class="cols pad_left1">
 						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">2</span>Ingresar Juez</h3>
-							<figure><img src="images/page4_img3.jpg" alt=""></figure>
-							<p class="pad_bot1">En esta sección se desplegara un formulario para el ingreso de jueces oficiales para los diferentes torneos que se realicen.</p>
-							<a href="../vista/ingresarJuez.php" class="link1">Ingresar un Juez</a>
+							<h3><span class="dropcap">2</span>Consultar Partido</h3>
+							<figure><img src="images/a.jpg" alt=""></figure>
+							<p class="pad_bot1">Busca los partidos a los que has sido asignado.</p>
+							<a href="../vista/mostrarPartidosJuez.php" class="link1">Ver partidos</a>
 						</div>
+						
 						<!--<div class="wrapper">
 							<h3><span class="dropcap">5</span>Product name</h3>
 							<figure><img src="images/page4_img4.jpg" alt=""></figure>
@@ -86,12 +87,14 @@
 					</section>
 					
 					<section class="cols pad_left1">
-						<div class="wrapper pad_bot2">
+						<!--<div class="wrapper pad_bot2">
 							<h3><span class="dropcap">3</span>Asigar Juez a Partido</h3>
 							<figure><img src="images/page4_img5.jpg" alt=""></figure>
 							<p class="pad_bot1">Gestiona los jueces y asignalos a los partidos que sean necesarios.</p>
 							<a href="../vista/asignarJuezPartido.php" class="link1">Asignar</a>
-						</div><!--
+						</div>
+						-->
+						<!--
 						<div class="wrapper">
 							<h3><span class="dropcap">6</span>Product name</h3>
 							<figure><img src="images/page4_img6.jpg" alt=""></figure>

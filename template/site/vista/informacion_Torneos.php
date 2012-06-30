@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Gestión Administrador</title>
+<title>Torneos</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
@@ -54,56 +54,9 @@
 <!-- content -->
 			<article id="content">
 				<div class="wrapper">
-					<section class="cols">
-						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">1</span>Esto se contruye mostrando los torneos (macro)que ahi</h3>
-							<figure><img src="images/cup.gif" alt=""></figure>
-							<p class="pad_bot1">Aqui se va listando las diferentes modalidaes que estan jugando.</p>
-							<form id="registroJugador" action="../vista/crearTorneo.php?modalidad1" method="get">
-								<a href="#" onClick="document.getElementById('registroJugador').submit()">Enviar</a>							
-							</form>
-							<form id="registroJugador" action="../vista/crearTorneo.php?modalidad2" method="get">
-								<a href="#" onClick="document.getElementById('registroJugador').submit()">Enviar</a>							
-							</form>
-						</div>
-						<!--<div class="wrapper">
-							<h3><span class="dropcap">4</span>Ingresar Juez</h3>
-							<figure><img src="images/page4_img2.jpg" alt=""></figure>
-							<p class="pad_bot1">En esta sección se desplegara un formulario para el ingreso de jueces oficiales para los diferentes torneos que se realicen y la asignación de estos.</p>
-							<a href="#" class="link1">Ingresar un Juez</a>
-						</div>
-						-->
-					</section>
-					<section class="cols pad_left1">
-						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">2</span>Ingresar Juez</h3>
-							<figure><img src="images/page4_img3.jpg" alt=""></figure>
-							<p class="pad_bot1">En esta sección se desplegara un formulario para el ingreso de jueces oficiales para los diferentes torneos que se realicen.</p>
-							<a href="../vista/ingresarJuez.php" class="link1">Ingresar un Juez</a>
-						</div>
-						<!--<div class="wrapper">
-							<h3><span class="dropcap">5</span>Product name</h3>
-							<figure><img src="images/page4_img4.jpg" alt=""></figure>
-							<p class="pad_bot1">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-							<a href="#" class="link1">Read More</a>
-						</div>
-						-->						
-					</section>
-					
-					<section class="cols pad_left1">
-						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">3</span>Asigar Juez </span>a Partido</span></h3>
-							<figure><img src="images/page4_img5.jpg" alt=""></figure>
-							<p class="pad_bot1">Gestiona los jueces y asignalos a los partidos que sean necesarios.</p>
-							<a href="../vista/asignarJuezPartido.php" class="link1">Asignar</a>
-						</div><!--
-						<div class="wrapper">
-							<h3><span class="dropcap">6</span>Product name</h3>
-							<figure><img src="images/page4_img6.jpg" alt=""></figure>
-							<p class="pad_bot1">Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-							<a href="#" class="link1">Read More</a>
-						</div> 
-					</section>-->
+					<?php 
+					//codigo para mostrar los torneos que se juegan
+					?>
 				</div>
 
 			</article>

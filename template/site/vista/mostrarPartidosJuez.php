@@ -1,25 +1,21 @@
-<?php //include("../controlador/seguridad.php");
-	$pagename="informacion_Torneos.php";
+<?php include ("../controlador/seguridad.php");
+	$pagename="mostrarPartidosJuez.php";
 	comprobarSesion($pagename);
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Torneos</title>
+<title>Ver Partidos Asignados Juez</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-<link rel="stylesheet" href="css/table.css" type="text/css" media="all">
-
 <script type="text/javascript" src="js/jquery-1.6.js" ></script>
 <script type="text/javascript" src="js/cufon-yui.js"></script>
 <script type="text/javascript" src="js/cufon-replace.js"></script>
 <script type="text/javascript" src="js/Swis721_Cn_BT_400.font.js"></script>
 <script type="text/javascript" src="js/Swis721_Cn_BT_700.font.js"></script>
 <script type="text/javascript" src="js/tabs.js"></script>
-
-<link href="css/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
 
   <!--[if lt IE 9]>
   	<script type="text/javascript" src="js/html5.js"></script>
@@ -57,46 +53,11 @@
 		<div class="main">
 <!-- content -->
 			<article id="content">
-				<h5>Nombre Torneo: Categoria</h5>
-				<div class="wrapper tabs">
-					<h3> Rondas: </h3>
-					<ul class="nav">
-						<li class="selected"><a href="#tab1">R1</a></li>
-						<li><a href="#tab2">R2</a></li>
-						<li><a href="#tab3">R3</a></li>
-						<li><a href="#tab4">R4</a></li>
-						<li><a href="#tab5">R5</a></li>
-						<li><a href="#tab6">R6</a></li>
-					</ul>
-					<p> <br></p>
-					<div class="tab-content" id="tab1">
-						<p> <br> </p><h1> Mostrar los partidos de esta fase</h1><p> <br> </p>
-						<table cellspacing="0" cellpadding="0">
-							<col style="width: 200px" />
-							<col style="width: 100px" span="3" />
-							<tr>
-								<th >Jugadores</th>
-								<th >Game 1</th>
-								<th >Game 2</th>
-								<th >Game 3</th>
-							</tr>
-							<tr class="winner">
-								<td>Nombre 1</td>
-								<td>6</td>
-								<td>1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Nombre 2</td>
-								<td>4</td>
-								<td>6</td>
-								<td>5</td>
-							</tr>							
-						</table>						
-					</div>
-					<div class="tab-content" id="tab2">
-						<p> <br> </p><h1> Mostrar los partidos de esta fase</h1><p> <br> </p>
-					</div>
+				<div class="wrapper">
+					<?php
+					//codigo para mostrar los partidos
+					
+					?>
 				</div>
 			</article>
 		</div>
@@ -117,7 +78,7 @@
 					</section>
 					-->
 					<section class="col3 pad_left2">
-						<h4>Contacto</h4>
+						<h4>Contactanos</h4>
 						<ul class="address">
 							<li><span>Pais:</span>Colombia</li>
 							<li><span>Ciudad:</span>Santiago de Cali</li>
@@ -162,9 +123,8 @@
 <script type="text/javascript"> Cufon.now(); </script>
 <script>
 	$(document).ready(function() {
-		tabs.init();
+		//tabs.init();
 	})
 </script>
 </body>
 </html>
-

@@ -30,7 +30,7 @@ db.jugador.insert({'jugador_codigo': '8796','jugador_cedula1': '67678','jugador_
 
 
 ##existe un usuario admin en la coleccion admin
-db.admin.insert({'admin_username' : 'admin', 'admin_password' : '12345'}})
+db.admin.insert({'admin_username' : 'admin', 'admin_password' : '12345'})
 
 
 ####DOCUMENTOS CON FORMATO JSON PARA CONSULTAS INSERT Y REMOVE ETC.
