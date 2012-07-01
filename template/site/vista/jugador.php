@@ -56,10 +56,10 @@
 				<div class="wrapper">
 					<section class="cols">
 						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">1</span>Inscribete</h3>
-							<figure><img src="images/page4_img1.jpg" alt=""></figure>
-							<p class="pad_bot1">Registrate en un torneo para poder participar.</p>
-							<a href="../vista/registrarTorneoJugador.php" class="link1">Jugar Torneo</a>
+							<h3><span class="dropcap">1</span>Actualizar</h3>
+							<figure><img src="images/a.jpg" alt=""></figure>
+							<p class="pad_bot1">Edita tus datos basicos.</p>
+							<a href="../vista/editarJugador.php" class="link1">Actualizar</a>
 						</div>
 						<!--<div class="wrapper">
 							<h3><span class="dropcap">4</span>Ingresar Juez</h3>
@@ -70,13 +70,13 @@
 						-->
 					</section>
 					<section class="cols pad_left1">
-						<!--<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">2</span>Ingresar Juez</h3>
-							<figure><img src="images/page4_img3.jpg" alt=""></figure>
-							<p class="pad_bot1">En esta sección se desplegara un formulario para el ingreso de jueces oficiales para los diferentes torneos que se realicen.</p>
-							<a href="../vista/ingresarJuez.php" class="link1">Ingresar un Juez</a>
+						<div class="wrapper pad_bot2">
+							<h3><span class="dropcap">2</span>Inscribete</h3>
+							<figure><img src="images/page4_img1.jpg" alt=""></figure>
+							<p class="pad_bot1">Registrate en un torneo para poder participar.</p>
+							<a href="../vista/registrarTorneoJugador.php" class="link1">Jugador Torneo</a>
 						</div>
-						--><!--<div class="wrapper">
+						<!--<div class="wrapper">
 							<h3><span class="dropcap">5</span>Product name</h3>
 							<figure><img src="images/page4_img4.jpg" alt=""></figure>
 							<p class="pad_bot1">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>

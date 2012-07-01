@@ -3,7 +3,7 @@
 	comprobarSesion($pagename);
 	include("../modelo/consultarJugador.php");
 	session_start();
-	$data = consultarJugadorUsername($_SESSION["username"]);
+	$data = consultarJugadorUsernameCall($_SESSION["username"]);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -71,7 +71,7 @@
 						<div>
 							<div  class="wrapper">
 								<span>Cedula:</span>
-								<input type="text" name="jugador_codigo" class="input" value="<?php echo $data['jugador_nombre1'];?>" readonly="readonly">
+								<input type="text" name="jugador_codigo" class="input" value="<?php echo $data['jugador_codigo'];?>" readonly="readonly">
 							</div>
 							<div  class="wrapper">
 								<span>Nombre Completo:</span>
@@ -94,7 +94,7 @@
 							</div>
 							<div  class="wrapper">
 								<span>Confirmar Contraseña:</span>
-								<input type="password" name="jugador_password_confirmation" class="input" value="<?php echo $data['juez_password'];?>">
+								<input type="password" name="jugador_password_confirmation" class="input" value="<?php echo $data['jugador_password'];?>">
 							</div>							
 							<a href="#" onClick="document.getElementById('registroJugador').submit()">Actualizar</a>
 							<a href="#" onClick="document.getElementById('registroJugador').reset()">Limpiar</a>

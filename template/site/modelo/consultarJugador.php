@@ -2,7 +2,7 @@
 
 <?php
 
-function consultarJugadorUserName($user) {
+function consultarJugadorUserName($user){
     include("../controlador/fachada.php");
     $instancia = new fachada();
     $db = $instancia->conect();
@@ -15,7 +15,7 @@ function consultarJugadorUserName($user) {
     return $result;
 }
 
-function consultarJugadorUsername($name){
+function consultarJugadorUsernameCall($name){
 	$result_query = consultarJugadorUserName($name);
 	$result;
 	foreach ($result_query as $doc) {
