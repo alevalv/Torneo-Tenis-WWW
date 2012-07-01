@@ -1,14 +1,14 @@
 <?php include ("../controlador/seguridad.php");
-	$pagename="editarJuez.php";
+	$pagename="editarJugador.php";
 	comprobarSesion($pagename);
-	include("../modelo/consultaJuez.php");
+	include("../modelo/consultarJugador.php");
 	session_start();
-	$data = consultarJuezUserName($_SESSION["username"]);
+	$data = consultarJugadorUsername($_SESSION["username"]);
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Editar Juez</title>
+<title>Editar Jugador</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
@@ -55,11 +55,11 @@
 				<div class="wrapper">
 					<section class="col1">
 						<h2 class="under">Actualizar Datos</h2>
-						<form id="registroJugador" action="../modelo/actualizarJuez.php" method="post">
+						<form id="registroJugador" action="../modelo/actualizarJugador.php" method="post">
 						<?php
 							if($_GET["errorinsert"]=="si"){
 								echo 	'<div id="errorMensage">
-											Error al actualizar los datos del Juez
+											Error al actualizar los datos del Jugador
 										</div><p><br></p>';
 							}else if($_GET["sussesinsert"]=="si"){
 								echo 	'<div id="sussesMensage">
@@ -71,27 +71,30 @@
 						<div>
 							<div  class="wrapper">
 								<span>Cedula:</span>
-								<input type="text" name="juez_codigo" class="input" value="<?php echo $data['juez_codigo'];?>" readonly="readonly">
+								<input type="text" name="jugador_codigo" class="input" value="<?php echo $data['jugador_nombre1'];?>" readonly="readonly">
 							</div>
 							<div  class="wrapper">
 								<span>Nombre Completo:</span>
-								<input type="text" name="juez_nombre" class="input" value="<?php echo $data['juez_nombre'];?>">
+								<input type="text" name="jugador_nombre" class="input" value="<?php echo $data['jugador_nombre1'];?>" >
+							</div>
+							<div  class="wrapper">
+								<span>Sexo:</span><br /><br />
+								<div class="radios">
+									<input type="radio" name="jugador_sexo" value="M" class="input" <?php if($data['jugador_sexo1']=="M") echo "CHECKED";?> >Masculino<br />
+									<input type="radio" name="jugador_sexo" value="F" class="input" <?php if($data['jugador_sexo1']=="F") echo "CHECKED";?> >Femenino<br />
+								</div>
 							</div>
 							<div  class="wrapper">
 								<span>Nombre de Usuario:</span>
-								<input type="text" name="juez_username" class="input" value="<?php echo $data['juez_username'];?>">
+								<input type="text" name="jugador_username" class="input" value="<?php echo $data['jugador_username'];?>">
 							</div>
 							<div  class="wrapper">
-								<span>Fecha de Nacimiento:</span>
-								<input type="text" name="juez_fecha_nacimiento" class="input" value="<?php echo $data['juez_fecha_nacimiento'];?>">
-							</div>
-							<div  class="wrapper">
-								<span>Contraseña Nueva:</span>
-								<input type="password" name="juez_password" class="input" value="<?php echo $data['juez_password'];?>">
+								<span>Contraseña:</span>
+								<input type="password" name="jugador_password" class="input" value="<?php echo $data['jugador_password'];?>">
 							</div>
 							<div  class="wrapper">
 								<span>Confirmar Contraseña:</span>
-								<input type="password" name="juez_password_confirmation" class="input" value="<?php echo $data['juez_password'];?>">
+								<input type="password" name="jugador_password_confirmation" class="input" value="<?php echo $data['juez_password'];?>">
 							</div>							
 							<a href="#" onClick="document.getElementById('registroJugador').submit()">Actualizar</a>
 							<a href="#" onClick="document.getElementById('registroJugador').reset()">Limpiar</a>

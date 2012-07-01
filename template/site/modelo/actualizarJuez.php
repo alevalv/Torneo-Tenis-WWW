@@ -7,13 +7,13 @@
 		$collection= new MongoCollection($db, 'juez');
 		$newUser = array("juez_codigo" => $_POST['juez_codigo'], "juez_username" => $_POST['juez_username'], "juez_password" => $_POST['juez_password'], "juez_nombre" => $_POST['juez_nombre'],"juez_fecha_nacimiento" => $_POST['juez_fecha_nacimiento']);
 		$collection->update(array("juez_codigo" => $_POST['juez_codigo']), $newUser, array("upsert" => false));
-		header("Location: ../vista/actualizarJuez.php?sussesinsert=si");
+		header("Location: ../vista/editarJuez.php?sussesinsert=si");
 		exit();
 		}
 		catch (Exception $e) {
 			//echo 'Caught exception: ',  $e->getMessage(), "\n";
 		}
 	}
-		header("Location: ../vista/actualizarJuez.php?errorinsert=si");
+		header("Location: ../vista/editarJuez.php?errorinsert=si");
 
 ?>

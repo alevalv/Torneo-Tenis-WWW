@@ -12,7 +12,8 @@ function consultarJuezUserName($juez) {
 		$result = $doc;
 		break;
     }
-        
+    //echo $result["juez_username"];
     return $result;
 }
+//consultarJuezUserName("alvaro");
 ?>

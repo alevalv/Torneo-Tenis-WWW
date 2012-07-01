@@ -15,6 +15,17 @@ function consultarJugadorUserName($user) {
     return $result;
 }
 
+function consultarJugadorUsername($name){
+	$result_query = consultarJugadorUserName($name);
+	$result;
+	foreach ($result_query as $doc) {
+		$result = $doc;
+		break;
+    }
+    //echo $result["juez_username"];
+    return $result;
+}
+
 function insertarInscritoBD($id_jugador, $id_torneo) {
     
     $instancia = new fachada();
