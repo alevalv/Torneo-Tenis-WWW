@@ -1,6 +1,13 @@
 <?php include ("../controlador/seguridad.php");
 	$pagename="jugador.php";
 	comprobarSesion($pagename);
+	//para saber si es pareja o no
+	$varlink = "../vista/editarJugador.php";
+	session_start();
+	if($_SESSION["pareja"]){
+		$varlink ="../vista/editarPareja.php";
+	}
+							
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -58,8 +65,8 @@
 						<div class="wrapper pad_bot2">
 							<h3><span class="dropcap">1</span>Actualizar</h3>
 							<figure><img src="images/a.jpg" alt=""></figure>
-							<p class="pad_bot1">Edita tus datos basicos.</p>
-							<a href="../vista/editarJugador.php" class="link1">Actualizar</a>
+							<p class="pad_bot1">Edita tus datos basicos.</p>														
+							<a href="<?php echo $varlink; ?>" class="link1">Actualizar</a>
 						</div>
 						<!--<div class="wrapper">
 							<h3><span class="dropcap">4</span>Ingresar Juez</h3>

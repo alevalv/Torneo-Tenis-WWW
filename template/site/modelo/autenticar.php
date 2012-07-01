@@ -54,6 +54,13 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 			$_SESSION["autentificado"]= "si";
 			$_SESSION["username"]= $_POST['username'];
 			$_SESSION["rol"]= "jugador";
+			$result->next();
+			$data=$result->current();
+			if($data["jugador_es_pareja"]){
+				$_SESSION["pareja"]=true;				
+			}else{
+				$_SESSION["pareja"]=false;
+			}
 		}else{
 			header("Location: ../vista/login.php?errorusuario=si");
 			exit();

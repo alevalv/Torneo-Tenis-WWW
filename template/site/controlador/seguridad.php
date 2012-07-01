@@ -63,11 +63,15 @@ function comprobarSesion($pagename){
 			
 			if($_SESSION["rol"] == "jugador"){
 				
-				if(($pagename == "jugador.php")|| ($pagename=="registrarTorneoJugador.php") || ($pagename=="editarJugador.php")
-				|| ($pagename=="editarPareja.php")){
+				if($_SESSION["pareja"] && ($pagename=="editarPareja.php")){
+					return 1;
+				}else if((!$_SESSION["pareja"]) && ($pagename=="editarJugador.php")){
+					return 1;
+				}else if(($pagename == "jugador.php")|| ($pagename=="registrarTorneoJugador.php")){
 					return 1;
 
 				}
+				
 				//No se puede acceder no tiene privilegios alguna pagina de error
 				header("Location: ../vista/errorPrivilegios.php");
 				return 1;

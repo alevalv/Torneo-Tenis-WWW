@@ -7,7 +7,7 @@
 		$collection= new MongoCollection($db, 'jugador');
 		$newUser = array("jugador_codigo" => $_POST['jugador_codigo'], "jugador_username" => $_POST['jugador_username'], "jugador_password" => $_POST['jugador_password'], "jugador_nombre1" => $_POST['jugador_nombre'], "jugador_sexo1" => $_POST['jugador_sexo']);
 			
-		$collection->update(array("jugador_codigo" => $_POST['jugador_codigo']), $newUser, array("upsert" => false));
+		//$collection->update(array("jugador_codigo" => $_POST['jugador_codigo']), array("set" => $newUser), array("upsert" => false));
 		header("Location: ../vista/editarJugador.php?sussesinsert=si");
 		exit();
 		}

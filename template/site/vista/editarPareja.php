@@ -1,11 +1,14 @@
 <?php include ("../controlador/seguridad.php");
-	$pagename="registrarPareja.php";
+	$pagename="editarPareja.php";
 	comprobarSesion($pagename);
+	include("../modelo/consultarJugador.php");
+	session_start();
+	$data = consultarJugadorUsernameCall($_SESSION["username"]);
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<title>Registrarse</title>
+<title>Editar Jugador</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
@@ -51,18 +54,17 @@
 			<article id="content">
 				<div class="wrapper">
 					<section class="col1">
-						<h2 class="under">Registrarse</h2>
-						<a href="registrarJugador.php"><h3>Registrarse Individualmente (Aqui)</h3></a>
-						<form id="registroJugador" action="../modelo/guardarPareja.php" method="post">
+						<h2 class="under">Actualizar Datos</h2>
+						<form id="registroJugador" action="../modelo/actualizarPareja.php" method="post">
 						<?php
 							if($_GET["errorinsert"]=="si"){
 								echo 	'<div id="errorMensage">
-											Error al insertar la Pareja
+											Error al actualizar los datos del Jugador
 										</div><p><br></p>';
 							}else if($_GET["sussesinsert"]=="si"){
 								echo 	'<div id="sussesMensage">
-											Registro realizado Correctamente
-										</div><p><br></p>';										
+											Edición correcta
+										</div><p><br></p>';
 							}
 						?>
 						<div id="errorMensage" name="div-validar"> </div>
@@ -70,54 +72,48 @@
 							<h3 class="under">Jugador 1</h3>
 							<div  class="wrapper">
 								<span>Cedula:</span>
-								<input type="text" name="jugador_cedula1" class="input" >
+								<input type="text" name="jugador_cedula1" class="input" value="<?php echo $data['jugador_cedula1'];?>" >
 							</div>
 							<div  class="wrapper">
 								<span>Nombre Completo:</span>
-								<input type="text" name="jugador_nombre1" class="input" >
+								<input type="text" name="jugador_nombre1" class="input" value="<?php echo $data['jugador_nombre1'];?>">
 							</div>
 							<div  class="wrapper">
 								<span>Sexo:</span><br /><br />
 								<div class="radios">
-									<input type="radio" name="jugador_sexo1" value="M" class="input" >Masculino<br />
-									<input type="radio" name="jugador_sexo1" value="F" class="input" CHECKED>Femenino<br />
+									<input type="radio" name="jugador_sexo1" value="M" class="input" <?php if($data['jugador_sexo1']=="M") echo "CHECKED";?> >Masculino<br />
+									<input type="radio" name="jugador_sexo1" value="F" class="input" <?php if($data['jugador_sex1']=="F") echo "CHECKED";?> >Femenino<br />
 								</div>
 							</div>
 							<h3 class="under">Jugador 2</h3>
 							<div  class="wrapper">
 								<span>Cedula:</span>
-								<input type="text" name="jugador_cedula2" class="input" >
+								<input type="text" name="jugador_cedula2" class="input" value="<?php echo $data['jugador_cedula2'];?>" >
 							</div>
 							<div  class="wrapper">
 								<span>Nombre Completo:</span>
-								<input type="text" name="jugador_nombre2" class="input" >
+								<input type="text" name="jugador_nombre2" class="input" value="<?php echo $data['jugador_nombre2'];?>">
 							</div>
 							<div  class="wrapper">
 								<span>Sexo:</span><br /><br />
 								<div class="radios">
-									<input type="radio" name="jugador_sexo2" value="M" class="input" >Masculino<br />
-									<input type="radio" name="jugador_sexo2" value="F" class="input" CHECKED>Femenino<br />
+									<input type="radio" name="jugador_sexo2" value="M" class="input" <?php if($data['jugador_sexo2']=="M") echo "CHECKED";?> >Masculino<br />
+									<input type="radio" name="jugador_sexo2" value="F" class="input" <?php if($data['jugador_sexo2']=="F") echo "CHECKED";?> >Femenino<br />
 								</div>
 							</div>
 							<div  class="wrapper">
 								<span>Nombre de Usuario:</span>
-								<input type="text" name="jugador_username" class="input" >
+								<input type="text" name="jugador_username" class="input" value="<?php echo $data['jugador_username'];?>" >
 							</div>
 							<div  class="wrapper">
 								<span>Contraseña:</span>
-								<input type="password" name="jugador_password" class="input" >
+								<input type="password" name="jugador_password" class="input" value="<?php echo $data['jugador_password'];?>" >
 							</div>
 							<div  class="wrapper">
-								<span>Categoría Inicial:</span><br /><br />
-								<div class="radios">
-									<input type="radio" name="jugador_categoria" value="Categoria 1" class="input" >Categoría 1<br />
-									<input type="radio" name="jugador_categoria" value="Categoria 2" class="input" >Categoría 2<br />
-									<input type="radio" name="jugador_categoria" value="Categoria 3" class="input" >Categoría 3<br />
-									<input type="radio" name="jugador_categoria" value="Categoria 4" class="input" >Categoría 4<br />
-									<input type="radio" name="jugador_categoria" value="Novato" checked class="input" >Novato
-								</div>
-							</div>
-							<a href="#" onClick="document.getElementById('registroJugador').submit()">Enviar</a>
+								<span>Confirmar Contraseña:</span>
+								<input type="password" name="jugador_password_confirmation" class="input" value="<?php echo $data['jugador_password'];?>">
+							</div>							
+							<a href="#" onClick="document.getElementById('registroJugador').submit()">Actualizar</a>
 							<a href="#" onClick="document.getElementById('registroJugador').reset()">Limpiar</a>
 						</div>
 					</form>
@@ -143,7 +139,7 @@
 		<div class="main">
 			<article id="content2">
 				<div class="wrapper">
-				 <!--
+					<!--
 					<section class="col3">
 						<h4>Why Us?</h4>
 						<ul class="list1">
@@ -155,7 +151,7 @@
 					</section>
 					-->
 					<section class="col3 pad_left2">
-						<h4>Contacto</h4>
+						<h4>Contactanos</h4>
 						<ul class="address">
 							<li><span>Pais:</span>Colombia</li>
 							<li><span>Ciudad:</span>Santiago de Cali</li>
@@ -200,8 +196,9 @@
 <script type="text/javascript"> Cufon.now(); </script>
 <script>
 	$(document).ready(function() {
-		tabs.init();
+		//tabs.init();
 	})
 </script>
 </body>
 </html>
+
