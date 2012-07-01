@@ -80,7 +80,7 @@
 							</div>
 							<div  class="wrapper">
 								<span>Contraseña:</span>
-								<input type="password" name="jugador_password" class="input" >
+								<input type="password" name="juez_password" class="input" >
 							</div>
 							<div  class="wrapper">
 								<span>Fecha de Nacimiento:</span>
