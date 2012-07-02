@@ -4,7 +4,7 @@ db.torneo.insert({ 'torneo_lugar': 'Canchas Municipales' , 'torneo_nombre': 'Min
 db.torneo.insert({ 'torneo_lugar': 'Canchas univalle ' , 'torneo_nombre': 'Mini Copa Fenalco ', 'torneo_num_canchas': 5 , 'torneo_num_jugadores': 15 , 'torneo_jugadores_registrados': 10 , 'torneo_fecha_inicio_dia': 12,'torneo_fecha_inicio_mes': 6 ,'torneo_fecha_inicio_anio':2012  , 'torneo_fecha_fin_dia': 12 ,'torneo_fecha_fin_mes': 7 ,'torneo_fecha_fin_anio':2012  , 'torneo_categoria': 'Categoria 2' , 'torneo_modalidad': 'single_masculino', 'tiene_cronograma' :'no'})
 
 #insert para la inscripcion
-db.inscritos_torneos.insert({'jugador_id': 'j1234', 'torneo_id': '12345' , })
+db.inscritos_torneos.insert({'jugador_id': 'j1234', 'torneo_id': '12345' , 'categoria_modalidad_id' })
 
 
 
