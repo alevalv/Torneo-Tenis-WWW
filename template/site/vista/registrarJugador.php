@@ -69,26 +69,26 @@
 						<div>
 							<div  class="wrapper">
 								<span>Cedula:</span>
-								<input type="text" name="jugador_codigo" class="input" pattern="[0-9]{1,}" title="Minimo 1 numero">
+								<input type="text" name="jugador_codigo" class="input" pattern="[0-9]{1,}" title="Minimo 1 numero" required>
 							</div>
 							<div  class="wrapper">
 								<span>Nombre Completo:</span>
-								<input type="text" name="jugador_nombre" class="input" pattern=".{5,}" title="Minimo 5 caracteres">
+								<input type="text" name="jugador_nombre" class="input" pattern=".{5,}" title="Minimo 5 caracteres" required>
 							</div>
 							<div  class="wrapper">
 								<span>Sexo:</span><br /><br />
 								<div class="radios">
-									<input type="radio" name="jugador_sexo" value="M" class="input" CHECKED> Masculino<br />
-									<input type="radio" name="jugador_sexo" value="F" class="input" >Femenino<br />
+									<input type="radio" name="jugador_sexo" value="M" class="input" CHECKED required> Masculino<br />
+									<input type="radio" name="jugador_sexo" value="F" class="input" required>Femenino<br />
 								</div>
 							</div>
 							<div  class="wrapper">
 								<span>Nombre de Usuario:</span>
-								<input type="text" name="jugador_username" class="input" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" title="Unicamente caracteres alfanumericos (a-z 0-9). Entre 2 a 20 caracteres.">
+								<input type="text" name="jugador_username" class="input" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" title="Unicamente caracteres alfanumericos (a-z 0-9). Entre 2 a 20 caracteres." required>
 							</div>
 							<div  class="wrapper">
 								<span>Contraseña:</span>
-								<input type="password" name="jugador_password" class="input" >
+								<input type="password" name="jugador_password" class="input" required>
 							</div>
 							<div  class="wrapper">
 								<span>Categoría Inicial:</span><br /><br />
