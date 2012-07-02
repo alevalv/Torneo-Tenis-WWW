@@ -31,7 +31,7 @@
                     array(
                         array("torneo_fecha_inicio_anio" => array('$gt' => $anio )  ) ,
                         array("torneo_fecha_inicio_anio" => array('$gte' => $anio ) , "torneo_fecha_inicio_mes" => array('$gt' => $mes ) ),
-                        array("torneo_fecha_inicio_anio" => array('$gte' => $anio ) , "torneo_fecha_inicio_mes" => array('$gte' => $mes ), "torneo_fecha_inicio_dia" => array('$gt' => $dia ) )
+                        array("torneo_fecha_inicio_anio" => array('$gte' => $anio ) , "torneo_fecha_inicio_mes" => array('$gte' => $mes ), "torneo_fecha_inicio_dia" => array('$gte' => $dia ) )
                         
                         )
                     

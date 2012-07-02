@@ -49,8 +49,12 @@ function insertarInscritoBD($id_jugador, $id_torneo) {
 		
                 
 		//codigo de los torneos con cronograma
-		//var_dump($result);
-		return !empty($result);
+		var_dump($result);
+                
+                $count= $result->count();
+                echo ' valor de verdad:'.$count!=0;
+                
+		return $count!=0;//$result->hashNext();
 		
 			
 	}

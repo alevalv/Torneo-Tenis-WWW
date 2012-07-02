@@ -26,8 +26,8 @@
                             "torneo_fecha_inicio_anio" => $anio,
                             "tiene_cronograma" => "no" );
 			$collection->insert($newUser);
-			//header("Location: ../vista/crearTorneo.php?sussesinsert=si");
-			//exit();
+			header("Location: ../vista/crearTorneo.php?sussesinsert=si");
+			exit();
 		}catch (Exception $e) {
 			echo 'Caught exception: ',  $e->getMessage(), "\n";
 		}

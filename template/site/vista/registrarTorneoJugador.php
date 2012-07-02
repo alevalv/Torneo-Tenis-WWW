@@ -55,7 +55,21 @@ comprobarSesion($pagename);
                 <article id="content">
                     <div class="wrapper">
                         <section class="cols">
+                            
+                            <h2 class="under">Inscripci&oacuten</h2>
                             <form  id="registroJugador"  action="../modelo/guardarInscrito.php" method="post">
+                                
+                                <?php
+							if($_GET["sussesinsert"]=="no"){
+								echo 	'<div id="errorMensage">
+											Ya esta Incrito en el torneo.
+										</div><p><br></p>';
+							}else if($_GET["sussesinsert"]=="si"){
+								echo 	'<div id="sussesMensage">
+											Inscripci&oacuten realizada Correctamente.
+										</div><p><br></p>';
+							}
+                                ?>
                                 <div>
 
                                     <div  class="wrapper">

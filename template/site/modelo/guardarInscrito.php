@@ -21,7 +21,8 @@
         
         if($isInscrito ) {
             
-            exit( '¡Ya esta inscrito en el torneo!!! ');
+            header("Location: ../vista/registrarTorneoJugador.php?sussesinsert=no");
+            exit();
             
             
         };
@@ -41,7 +42,8 @@
 
         //$newUser = array('jugador_id'=> $result['_id'], 'torneo_id' => $combo );
         //$collection->insert($newUser);
-        header("Location: ../vista/jugador.php");
+        
+        header("Location: ../vista/registrarTorneoJugador.php?sussesinsert=si");
     } catch (Exception $e) {
         echo 'Caught exception: ', $e->getMessage(), "\n";
     }
