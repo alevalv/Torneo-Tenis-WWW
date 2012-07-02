@@ -26,12 +26,12 @@ function consultarJugadorUsernameCall($name){
     return $result;
 }
 
-function insertarInscritoBD($id_jugador, $id_torneo) {
+function insertarInscritoBD($id_jugador, $id_torneo,$categoria_modalidad ) {
     
     $instancia = new fachada();
 		$db = $instancia->conect();
 		$collection= new MongoCollection($db, 'inscritos_torneos');
-		$newUser = array('jugador_id'=>$id_jugador ,'torneo_id' => $id_torneo);
+		$newUser = array('jugador_id'=>$id_jugador ,'torneo_id' => $id_torneo,'idcategoria_modalidad' => $categoria_modalidad  );
                 $collection->insert($newUser);
     //codigo de los torneos con cronograma
     //var_dump($result);

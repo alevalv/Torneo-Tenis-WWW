@@ -14,6 +14,8 @@
            foreach ($result as $obj) {
 
             $idJugador=$obj['_id'];
+            $categoria_modalidad=$obj['idcategoria_modalidad'];
+            
         }
         
         $isInscrito=consultarTorneoJugadorInscrito($idJugador,$combo);
@@ -28,12 +30,12 @@
         };
         
 
-
+        
         
        
         
         
-        $info = insertarInscritoBD($idJugador,$combo);
+        $info = insertarInscritoBD($idJugador,$combo,$categoria_modalidad);
         //exit( 'Inscripcion finalizada.');
         
         //$instancia = new fachada();

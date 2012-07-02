@@ -78,8 +78,8 @@
 							<div  class="wrapper">
 								<span>Sexo:</span><br /><br />
 								<div class="radios">
-									<input type="radio" name="jugador_sexo" value="M" class="input" >Masculino<br />
-									<input type="radio" name="jugador_sexo" value="F" class="input" CHECKED>Femenino<br />
+									<input type="radio" name="jugador_sexo" value="M" class="input" CHECKED> Masculino<br />
+									<input type="radio" name="jugador_sexo" value="F" class="input" >Femenino<br />
 								</div>
 							</div>
 							<div  class="wrapper">
