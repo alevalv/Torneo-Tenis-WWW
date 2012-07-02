@@ -100,7 +100,7 @@
 									<input type="radio" name="jugador_categoria" value="Novato" checked class="input" >Novato
 								</div>
 							</div>
-							<a href="#" onClick="document.getElementById('registroJugador').submit()">Enviar</a>
+							<input type="submit" value="Enviar">
 							<a href="#" onClick="document.getElementById('registroJugador').reset()">Limpiar</a>
 						</div>
 					</form>
