@@ -9,7 +9,7 @@
         echo '<p>'.'entre'.$partidos.$combo.'</p>';
         
         $arraySubTorneos = generarArraySubTorneos($combo);// en este array tendremos el id del subtorneo y tendremos 'si' si supero el minimo de jugadores y no de los contrario 
-        
+        var_dump($arraySubTorneos);
         
     } catch (Exception $e) {
         echo 'Caught exception: ', $e->getMessage(), "\n";
