@@ -72,7 +72,7 @@ comprobarSesion($pagename);
                                         </select>
                                     </div>
 
-                                    <a href="#" onClick="submit()">Enviar</a>
+                                    <a href="#" onClick="document.getElementById('registroJugador').submit()">Enviar</a>
 
                                 </div>
                             </form>

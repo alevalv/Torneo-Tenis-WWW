@@ -28,7 +28,7 @@ function comprobarSesion($pagename){
 			return 3;			
 		}
 		//si no existe, envio a la página de autentificacion
-		header("Location: ../vista/login.php");
+		header('Location: ../vista/login.php?pagereturn='.$pagename);
 		//ademas salgo de este script    
 		return 0;
     }else{// si nos registramos
@@ -43,35 +43,39 @@ function comprobarSesion($pagename){
 				|| ($pagename == "asignarJuezPartido.php"))){
 					return 1;
 
-				}else{
-					//No se puede acceder no tiene privilegios alguna pagina de error
-					header("Location: ../vista/errorPrivilegios.php");
-					return 1;
 				}
+				//No se puede acceder no tiene privilegios alguna pagina de error
+				header("Location: ../vista/errorPrivilegios.php");
+				return 1;
+				
 			}
 			if($_SESSION["rol"] == "juez"){
 				
-				if($pagename == "juez.php") {
-					return 1;
-
-				}else{
-					//No se puede acceder no tiene privilegios alguna pagina de error
-					
-					header("Location: ../vista/errorPrivilegios.php");
+				if(($pagename == "juez.php") || $pagename == "editarJuez.php") {
 					return 1;
 				}
+				//No se puede acceder no tiene privilegios alguna pagina de error
+				
+				header("Location: ../vista/errorPrivilegios.php");
+				return 1;			
+				
 			}
 			
 			if($_SESSION["rol"] == "jugador"){
 				
-				if(($pagename == "jugador.php")|| ($pagename="registrarTorneoJugador.php")){
+				if($_SESSION["pareja"] && ($pagename=="editarPareja.php")){
+					return 1;
+				}else if((!$_SESSION["pareja"]) && ($pagename=="editarJugador.php")){
+					return 1;
+				}else if(($pagename == "jugador.php")|| ($pagename=="registrarTorneoJugador.php")){
 					return 1;
 
-				}else{
-					//No se puede acceder no tiene privilegios alguna pagina de error
-					header("Location: ../vista/errorPrivilegios.php");
-					return 1;
 				}
+				
+				//No se puede acceder no tiene privilegios alguna pagina de error
+				header("Location: ../vista/errorPrivilegios.php");
+				return 1;
+				
 			}
 			
 			if($_SESSION["rol"] == "juezmovil"){
@@ -86,17 +90,17 @@ function comprobarSesion($pagename){
 				|| ($pagename == "aplicacion-movil/resultados.php")){
 					return 3;
 
-				}else{
-					//No se puede acceder no tiene privilegios alguna pagina de error
-					//header("Location: ../aplicacion-movil/index.php");
-					//location.href='../aplicacion-movil/index.php';
-					echo '<html><body><script type="text/javascript">window.location="../aplicacion-movil/index.php";</script></body> </html>';
-					return 1;
 				}
+				//No se puede acceder no tiene privilegios alguna pagina de error
+				//header("Location: ../aplicacion-movil/index.php");
+				//location.href='../aplicacion-movil/index.php';
+				echo '<html><body><script type="text/javascript">window.location="../aplicacion-movil/index.php";</script></body> </html>';
+				return 1;
+				
 			}
-		
+			
 		}
-    return 2;
-}
+		return 2;
+	}
     
 ?> 

@@ -7,7 +7,12 @@ class fachada
   	
   	//echo "<p>Application Name: {$env['DOTCLOUD_PROJECT']}</p>\n";
   	try{
-  	  	$conn = new Mongo("{$env['DOTCLOUD_DATA_MONGODB_URL']}");
+  	  	$conn;
+		if(isset($env)){
+			$conn = new Mongo("{$env['DOTCLOUD_DATA_MONGODB_URL']}");
+		}else{
+			$conn = new Mongo();		
+		}
   	  	$db = $conn->torneotenis;
   	  	
   	  	return $db;

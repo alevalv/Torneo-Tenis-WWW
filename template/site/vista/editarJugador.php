@@ -1,51 +1,46 @@
-<?php //include("../controlador/seguridad.php");
-	$pagename="informacion_Torneos.php";
+<?php include ("../controlador/seguridad.php");
+	$pagename="editarJugador.php";
 	comprobarSesion($pagename);
+	include("../modelo/consultarJugador.php");
+	session_start();
+	$data = consultarJugadorUsernameCall($_SESSION["username"]);
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Torneos</title>
+<title>Editar Jugador</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-<link rel="stylesheet" href="css/table.css" type="text/css" media="all">
-
 <script type="text/javascript" src="js/jquery-1.6.js" ></script>
 <script type="text/javascript" src="js/cufon-yui.js"></script>
 <script type="text/javascript" src="js/cufon-replace.js"></script>
 <script type="text/javascript" src="js/Swis721_Cn_BT_400.font.js"></script>
 <script type="text/javascript" src="js/Swis721_Cn_BT_700.font.js"></script>
 <script type="text/javascript" src="js/tabs.js"></script>
-
-<link href="css/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
-
-  <!--[if lt IE 9]>
+<!--[if lt IE 9]>
   	<script type="text/javascript" src="js/html5.js"></script>
 	<style type="text/css">
 		.bg{ behavior: url(js/PIE.htc); }
 	</style>
-  <![endif]-->
-	<!--[if lt IE 7]>
+<![endif]-->
+<!--[if lt IE 7]>
 		<div style=' clear: both; text-align:center; position: relative;'>
 			<a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0"  alt="" /></a>
 		</div>
-	<![endif]-->
-
+<![endif]-->
 </head>
-
-<body id="page4">
+<body id="page5">
 	<div class="body1">
 	<div class="body2">
 	<div class="body5">
 		<div class="main">
 <!-- header -->
 			<header>
-				<?php 
+				<?php 					
 					include("../controlador/insertMenu.php");
-					$var = insertar_menus($pagename);
-					echo $var;
+					echo insertar_menus($pagename);
 				?>
 			</header><div class="ic">More Website Templates  at TemplateMonster.com!</div>
 <!-- header end-->
@@ -57,47 +52,69 @@
 		<div class="main">
 <!-- content -->
 			<article id="content">
-				<h5>Nombre Torneo: Categoria</h5>
-				<div class="wrapper tabs">
-					<h3> Rondas: </h3>
-					<ul class="nav">
-						<li class="selected"><a href="#tab1">R1</a></li>
-						<li><a href="#tab2">R2</a></li>
-						<li><a href="#tab3">R3</a></li>
-						<li><a href="#tab4">R4</a></li>
-						<li><a href="#tab5">R5</a></li>
-						<li><a href="#tab6">R6</a></li>
-					</ul>
-					<p> <br></p>
-					<div class="tab-content" id="tab1">
-						<p> <br> </p><h1> Mostrar los partidos de esta fase</h1><p> <br> </p>
-						<table cellspacing="0" cellpadding="0">
-							<col style="width: 200px" />
-							<col style="width: 100px" span="3" />
-							<tr>
-								<th >Jugadores</th>
-								<th >Game 1</th>
-								<th >Game 2</th>
-								<th >Game 3</th>
-							</tr>
-							<tr class="winner">
-								<td>Nombre 1</td>
-								<td>6</td>
-								<td>1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Nombre 2</td>
-								<td>4</td>
-								<td>6</td>
-								<td>5</td>
-							</tr>							
-						</table>						
-					</div>
-					<div class="tab-content" id="tab2">
-						<p> <br> </p><h1> Mostrar los partidos de esta fase</h1><p> <br> </p>
-					</div>
+				<div class="wrapper">
+					<section class="col1">
+						<h2 class="under">Actualizar Datos</h2>
+						<form id="registroJugador" action="../modelo/actualizarJugador.php" method="post">
+						<?php
+							if($_GET["errorinsert"]=="si"){
+								echo 	'<div id="errorMensage">
+											Error al actualizar los datos del Jugador
+										</div><p><br></p>';
+							}else if($_GET["sussesinsert"]=="si"){
+								echo 	'<div id="sussesMensage">
+											Edición correcta
+										</div><p><br></p>';
+							}
+						?>
+						<div id="errorMensage" name="div-validar"> </div>
+						<div>
+							<div  class="wrapper">
+								<span>Cedula:</span>
+								<input type="text" name="jugador_codigo" class="input" value="<?php echo $data['jugador_codigo'];?>" readonly="readonly">
+							</div>
+							<div  class="wrapper">
+								<span>Nombre Completo:</span>
+								<input type="text" name="jugador_nombre" class="input" value="<?php echo $data['jugador_nombre1'];?>" >
+							</div>
+							<div  class="wrapper">
+								<span>Sexo:</span><br /><br />
+								<div class="radios">
+									<input type="radio" name="jugador_sexo" value="M" class="input" <?php if($data['jugador_sexo1']=="M") echo "CHECKED";?> >Masculino<br />
+									<input type="radio" name="jugador_sexo" value="F" class="input" <?php if($data['jugador_sexo1']=="F") echo "CHECKED";?> >Femenino<br />
+								</div>
+							</div>
+							<div  class="wrapper">
+								<span>Nombre de Usuario:</span>
+								<input type="text" name="jugador_username" class="input" value="<?php echo $data['jugador_username'];?>">
+							</div>
+							<div  class="wrapper">
+								<span>Contraseña:</span>
+								<input type="password" name="jugador_password" class="input" value="<?php echo $data['jugador_password'];?>">
+							</div>
+							<div  class="wrapper">
+								<span>Confirmar Contraseña:</span>
+								<input type="password" name="jugador_password_confirmation" class="input" value="<?php echo $data['jugador_password'];?>">
+							</div>							
+							<a href="#" onClick="document.getElementById('registroJugador').submit()">Actualizar</a>
+							<a href="#" onClick="document.getElementById('registroJugador').reset()">Limpiar</a>
+						</div>
+					</form>
+					</section>
+					<section class="col2 pad_left1">
+						<h2 class="under">Contactar</h2>
+						<div id="address"><span>Pais:<br>
+								Ciudad:<br>
+								Telefono:<br>
+								Email:</span>
+								Colombia<br>
+								Santiago de Cali<br>
+								605 45 78<br>
+								<a href="mailto:" class="color2">webtennis@mail.com</a></div>
+						
+					</section>
 				</div>
+
 			</article>
 		</div>
 	</div>
@@ -117,7 +134,7 @@
 					</section>
 					-->
 					<section class="col3 pad_left2">
-						<h4>Contacto</h4>
+						<h4>Contactanos</h4>
 						<ul class="address">
 							<li><span>Pais:</span>Colombia</li>
 							<li><span>Ciudad:</span>Santiago de Cali</li>
@@ -162,9 +179,8 @@
 <script type="text/javascript"> Cufon.now(); </script>
 <script>
 	$(document).ready(function() {
-		tabs.init();
+		//tabs.init();
 	})
 </script>
 </body>
 </html>
-

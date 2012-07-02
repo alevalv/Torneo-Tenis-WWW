@@ -25,6 +25,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 				exit();
 			}
 		}
+		exit();
 	}else{
 		$colection_Admin = $db->admin;	 
 		$usr_Admin = array( "admin_username" => $_POST['username'] , "admin_password" => $_POST['password']);	 
@@ -43,23 +44,32 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 			$_SESSION["autentificado"]= "si";
 			$_SESSION["username"]= $_POST['username'];
 			$_SESSION["rol"]= "admin";
-
-			header ("Location: ../vista/index.php");		 
 		}else if($result_Juez->count()!=0){
 			session_start();
 			$_SESSION["autentificado"]= "si";
 			$_SESSION["username"]= $_POST['username'];
 			$_SESSION["rol"]= "juez";
-			header ("Location: ../vista/index.php");
 		}else if($result->count()!=0){
 			session_start();
 			$_SESSION["autentificado"]= "si";
 			$_SESSION["username"]= $_POST['username'];
 			$_SESSION["rol"]= "jugador";
-			header ("Location: ../vista/index.php");
+			$result->next();
+			$data=$result->current();
+			if($data["jugador_es_pareja"]){
+				$_SESSION["pareja"]=true;				
+			}else{
+				$_SESSION["pareja"]=false;
+			}
 		}else{
 			header("Location: ../vista/login.php?errorusuario=si");
+			exit();
 		}
+		if(isset($_GET['pagereturn'])){
+				header ("Location: ../vista/".$_GET['pagereturn']);
+			}else{
+				header ("Location: ../vista/index.php");		 
+			}	
 		 
 	 }
 }

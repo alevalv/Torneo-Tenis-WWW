@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Crear Torneo</title>
+<title>Crear Juez</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
@@ -53,6 +53,18 @@
 					<section class="col1">
 						<h2 class="under">Registrar Juez</h2>
 						<form id="registroJugador" action="../modelo/registrarJuez.php" method="post">
+						<?php
+							if($_GET["errorinsert"]=="si"){
+								echo 	'<div id="errorMensage">
+											Error al registrar el Juez
+										</div><p><br></p>';
+							}else if($_GET["sussesinsert"]=="si"){
+								echo 	'<div id="sussesMensage">
+											Registro realizado Correctamente
+										</div><p><br></p>';
+							}
+						?>
+						<div id="errorMensage" name="div-validar"> </div>
 						<div>
 							<div  class="wrapper">
 								<span>Cedula:</span>
@@ -68,7 +80,7 @@
 							</div>
 							<div  class="wrapper">
 								<span>Contraseña:</span>
-								<input type="password" name="jugador_password" class="input" >
+								<input type="password" name="juez_password" class="input" >
 							</div>
 							<div  class="wrapper">
 								<span>Fecha de Nacimiento:</span>

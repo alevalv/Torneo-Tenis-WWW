@@ -54,12 +54,17 @@
 						<h2 class="under">Crear Torneo</h2>
 						<form id="registroJugador" action="../modelo/registrarTorneo.php" method="post">
 						<?php
-							if($_GET["error"]=="si"){
+							if($_GET["errorinsert"]=="si"){
 								echo 	'<div id="errorMensage">
-											Error al crear el torneo
-										</div>';
+											Error al crear torneo
+										</div><p><br></p>';
+							}else if($_GET["sussesinsert"]=="si"){
+								echo 	'<div id="sussesMensage">
+											Registro realizado Correctamente
+										</div><p><br></p>';
 							}
-							?>
+						?>
+						<div id="errorMensage" name="div-validar"> </div>
 						<div>
 							<div  class="wrapper">
 								<span>Ubicación del Torneo:</span>

@@ -53,7 +53,19 @@
 					<section class="col1">
 						<h2 class="under">Registrarse</h2>
 						<a href="registrarJugador.php"><h3>Registrarse Individualmente (Aqui)</h3></a>
-						<form id="registroJugador" action="../modelo/guardarJugador.php" method="post">
+						<form id="registroJugador" action="../modelo/guardarPareja.php" method="post">
+						<?php
+							if($_GET["errorinsert"]=="si"){
+								echo 	'<div id="errorMensage">
+											Error al insertar la Pareja
+										</div><p><br></p>';
+							}else if($_GET["sussesinsert"]=="si"){
+								echo 	'<div id="sussesMensage">
+											Registro realizado Correctamente
+										</div><p><br></p>';										
+							}
+						?>
+						<div id="errorMensage" name="div-validar"> </div>
 						<div>
 							<h3 class="under">Jugador 1</h3>
 							<div  class="wrapper">

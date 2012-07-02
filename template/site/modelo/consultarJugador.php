@@ -2,7 +2,7 @@
 
 <?php
 
-function consultarJugadorUserName($user) {
+function consultarJugadorUserName($user){
     include("../controlador/fachada.php");
     $instancia = new fachada();
     $db = $instancia->conect();
@@ -12,6 +12,17 @@ function consultarJugadorUserName($user) {
 
     //codigo de los torneos con cronograma
     //var_dump($result);
+    return $result;
+}
+
+function consultarJugadorUsernameCall($name){
+	$result_query = consultarJugadorUserName($name);
+	$result;
+	foreach ($result_query as $doc) {
+		$result = $doc;
+		break;
+    }
+    //echo $result["juez_username"];
     return $result;
 }
 
