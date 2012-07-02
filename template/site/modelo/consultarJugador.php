@@ -37,4 +37,23 @@ function insertarInscritoBD($id_jugador, $id_torneo) {
     //var_dump($result);
     return 0;
 }
+
+   function  consultarTorneoJugadorInscrito($idJugador, $id_torneo) 
+                {
+				
+		$instancia = new fachada();
+		$db = $instancia->conect();
+		$collectionTorneo= $db->inscritos_torneos;
+		
+		$result = $collectionTorneo->find(array("jugador_id" =>$idJugador , "torneo_id" => $id_torneo ));
+		
+                
+		//codigo de los torneos con cronograma
+		//var_dump($result);
+		return !empty($result);
+		
+			
+	}
+
+
 ?>

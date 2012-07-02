@@ -24,9 +24,23 @@
                 
                 $dia = (int) date('d');
                 $mes = (int) date('m');
-                $anio = (int) date('y');
+                $anio = (int) date('Y');
 		echo $dia.'-'.$mes.'-'.$anio;
-		$result = $collectionTorneo->find(array('$or' => array(array("torneo_fecha_inicio_anio" => array('$gte' => $anio )  )   )      ));
+		$result = $collectionTorneo->find(array(
+                    '$or' => 
+                    array(
+                        array("torneo_fecha_inicio_anio" => array('$gt' => $anio )  ) ,
+                        array("torneo_fecha_inicio_anio" => array('$gte' => $anio ) , "torneo_fecha_inicio_mes" => array('$gt' => $mes ) ),
+                        array("torneo_fecha_inicio_anio" => array('$gte' => $anio ) , "torneo_fecha_inicio_mes" => array('$gte' => $mes ), "torneo_fecha_inicio_dia" => array('$gt' => $dia ) )
+                        
+                        )
+                    
+                    
+                    //array(array("torneo_fecha_inicio_anio" => array('$gte' => $anio ) , "torneo_fecha_inicio_mes" => array('$gte' => $mes ), "torneo_fecha_inicio_dia" => array('$gte' => $dia ) )  )
+                     
+                    
+                    )  
+                        );
                 
               //  "torneo_fecha_inicio_mes" => array('$gte' => $mes ),"torneo_fecha_inicio_anio" => array('$gte' => $anio )  ,
                 
@@ -38,6 +52,11 @@
 		
 			
 	}
+        
+     
+        
+        
+        
         
         
 ?>

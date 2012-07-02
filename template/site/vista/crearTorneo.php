@@ -76,13 +76,13 @@
 							</div>
 							<div  class="wrapper">
 								<span>Número de Canchas:</span>
-								<input type="text" name="torneo_num_canchas" class="input" >
+								<input type="number" name="torneo_num_canchas" class="input" min="1">
 							</div>
 							<div  class="wrapper">
 								<span>Número de Jugadores:</span>
-								<input type="text" name="torneo_num_jugadores" class="input" >
+								<input type="number" name="torneo_num_jugadores" class="input"  min="2" >
 							</div>
-							<div  class="wrapper">
+							<!-- <div  class="wrapper">
 								<span>Día de Inicio:</span>
 								<input type="text" name="torneo_fecha_inicio_dia" class="input" >
 							</div>
@@ -102,9 +102,10 @@
 								<span>Mes de Finalización:</span>
 								<input type="text" name="torneo_fecha_fin_mes" class="input" >
 							</div>
+                                                        -->
 							<div  class="wrapper">
-								<span>Año de Finalización:</span>
-								<input type="text" name="torneo_fecha_fin_anio" class="input" >
+								<span>Fecha de Inicio:</span>
+								<input type="Date" name="torneo_fecha_inicio" class="input" >
 							</div>
 							<a href="#" onClick="document.getElementById('registroJugador').submit()">Enviar</a>
 							<a href="#" onClick="document.getElementById('registroJugador').reset()">Limpiar</a>
