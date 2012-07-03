@@ -6,10 +6,6 @@
         <meta charset="utf-8">
         
         
-        
-        <link rel="stylesheet" href="../vista/css/reset.css" type="text/css" media="all">
-        <link rel="stylesheet" href="../vista/css/layout.css" type="text/css" media="all">
-        <link rel="stylesheet" href="../vista/css/style.css" type="text/css" media="all">
         <link rel="stylesheet" href="../vista/css/table.css" type="text/css" media="all">
     
         
@@ -24,7 +20,7 @@
         
         $partidos = $_POST["partidos"];
         $combo = $_POST["combo"];
-       
+        echo '<p>'.'entre'.$partidos.$combo.'</p>';
         
         $arraySubTorneos = generarArraySubTorneos($combo);// en este array tendremos el id del subtorneo y tendremos 'si' si supero el minimo de jugadores y no de los contrario 
         
@@ -40,9 +36,8 @@
                                                     
                                                         <br> 
                                                     </p>
-						<table cellspacing="0" cellpadding="0">
-							<col style="width: 200px" />
-							<col style="width: 100px" span="3" />
+						<table >
+							
 							<tr>
 								<th >Categoria/Modalidad</th>
 								<th >Inscritos</th>
