@@ -71,29 +71,29 @@
 						<div>
 							<div  class="wrapper">
 								<span>Cedula:</span>
-								<input type="text" name="juez_codigo" class="input" value="<?php echo $data['juez_codigo'];?>" readonly="readonly">
+								<input type="text" name="juez_codigo" class="input" value="<?php echo $data['juez_codigo'];?>" readonly="readonly" required>
 							</div>
 							<div  class="wrapper">
 								<span>Nombre Completo:</span>
-								<input type="text" name="juez_nombre" class="input" value="<?php echo $data['juez_nombre'];?>">
+								<input type="text" name="juez_nombre" class="input" value="<?php echo $data['juez_nombre'];?>" pattern=".{5,}" title="Minimo 5 caracteres" required>
 							</div>
 							<div  class="wrapper">
 								<span>Nombre de Usuario:</span>
-								<input type="text" name="juez_username" class="input" value="<?php echo $data['juez_username'];?>">
+								<input type="text" name="juez_username" class="input" value="<?php echo $data['juez_username'];?>" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" title="Unicamente caracteres alfanumericos (a-z 0-9). Entre 2 a 20 caracteres." required>
 							</div>
 							<div  class="wrapper">
 								<span>Fecha de Nacimiento:</span>
-								<input type="text" name="juez_fecha_nacimiento" class="input" value="<?php echo $data['juez_fecha_nacimiento'];?>">
+								<input type="date" name="juez_fecha_nacimiento" class="input" value="<?php echo $data['juez_fecha_nacimiento'];?>" required>
 							</div>
 							<div  class="wrapper">
 								<span>Contraseña Nueva:</span>
-								<input type="password" name="juez_password" class="input" value="<?php echo $data['juez_password'];?>">
+								<input type="password" name="juez_password" class="input" value="<?php echo $data['juez_password'];?>" required>
 							</div>
 							<div  class="wrapper">
 								<span>Confirmar Contraseña:</span>
-								<input type="password" name="juez_password_confirmation" class="input" value="<?php echo $data['juez_password'];?>">
+								<input type="password" name="juez_password_confirmation" class="input" value="<?php echo $data['juez_password'];?>" required>
 							</div>							
-							<a href="#" onClick="document.getElementById('registroJugador').submit()">Actualizar</a>
+							<input type="submit" value="Enviar" class="submitbutton">
 							<a href="#" onClick="document.getElementById('registroJugador').reset()">Limpiar</a>
 						</div>
 					</form>

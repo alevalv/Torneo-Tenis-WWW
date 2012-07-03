@@ -68,25 +68,25 @@
 						<div>
 							<div  class="wrapper">
 								<span>Cedula:</span>
-								<input type="text" name="juez_codigo" class="input" >
+								<input type="text" name="juez_codigo" class="input" pattern="[0-9]{1,}" title="Minimo 1 numero" required>
 							</div>
 							<div  class="wrapper">
 								<span>Nombre Completo:</span>
-								<input type="text" name="juez_nombre" class="input" >
+								<input type="text" name="juez_nombre" class="input" pattern=".{5,}" title="Minimo 5 caracteres" required>
 							</div>
 							<div  class="wrapper">
 								<span>Nombre de Usuario:</span>
-								<input type="text" name="juez_username" class="input" >
+								<input type="text" name="juez_username" class="input" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" title="Unicamente caracteres alfanumericos (a-z 0-9). Entre 2 a 20 caracteres." required>
 							</div>
 							<div  class="wrapper">
 								<span>Contraseña:</span>
-								<input type="password" name="juez_password" class="input" >
+								<input type="password" name="juez_password" class="input" required>
 							</div>
 							<div  class="wrapper">
 								<span>Fecha de Nacimiento:</span>
-								<input type="date" name="juez_fecha_nacimiento" class="input" >
+								<input type="date" name="juez_fecha_nacimiento" class="input" required>
 							</div>
-							<a href="#" onClick="document.getElementById('registroJugador').submit()">Enviar</a>
+							<input type="submit" value="Enviar" class="submitbutton">
 							<a href="#" onClick="document.getElementById('registroJugador').reset()">Limpiar</a>
 						</div>
 					</form>
