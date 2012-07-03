@@ -1,7 +1,7 @@
 <?php include ("../controlador/seguridad.php");
 	comprobarSesion("aplicacion-movil/resultados.php");
 	include("../modelo/consultarPartido.php");
-	$data = consultarPartido($_GET['partidoid']);
+	$data = consultarPartido($_GET['partidoid'], $_SESSION['juez_codigo']);
 ?><!DOCTYPE html>
 <html>
     <head>
