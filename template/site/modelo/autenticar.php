@@ -14,7 +14,10 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 				session_start();
 				$_SESSION["autentificado"]= "si";
 				$_SESSION["username"]= $_POST['username'];
-				$_SESSION["rol"]= "juezmovil";				
+				$_SESSION["rol"]= "juezmovil";
+				foreach($result_Juez as $unJuez){
+					$_SESSION["juez_codigo"]=$unJuez['juez_codigo'];
+				}
 				echo '<html><body><script type="text/javascript"> window.location="../aplicacion-movil/partido.php";</script></body> </html>';
 				//header ("Location: ../aplicacion-movil/partido.php");
 				exit();
