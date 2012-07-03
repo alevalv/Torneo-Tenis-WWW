@@ -72,11 +72,11 @@
 							<h3 class="under">Jugador 1</h3>
 							<div  class="wrapper">
 								<span>Cedula:</span>
-								<input type="text" name="jugador_cedula1" class="input" value="<?php echo $data['jugador_cedula1'];?>" >
+								<input type="text" name="jugador_cedula1" class="input" value="<?php echo $data['jugador_cedula1'];?>" pattern="[0-9]{1,}" title="Minimo 1 numero" required>
 							</div>
 							<div  class="wrapper">
 								<span>Nombre Completo:</span>
-								<input type="text" name="jugador_nombre1" class="input" value="<?php echo $data['jugador_nombre1'];?>">
+								<input type="text" name="jugador_nombre1" class="input" value="<?php echo $data['jugador_nombre1'];?>" pattern=".{5,}" title="Minimo 5 caracteres" required>
 							</div>
 							<div  class="wrapper">
 								<span>Sexo:</span><br /><br />
@@ -88,11 +88,11 @@
 							<h3 class="under">Jugador 2</h3>
 							<div  class="wrapper">
 								<span>Cedula:</span>
-								<input type="text" name="jugador_cedula2" class="input" value="<?php echo $data['jugador_cedula2'];?>" >
+								<input type="text" name="jugador_cedula2" class="input" value="<?php echo $data['jugador_cedula2'];?>" pattern="[0-9]{1,}" title="Minimo 1 numero" required>
 							</div>
 							<div  class="wrapper">
 								<span>Nombre Completo:</span>
-								<input type="text" name="jugador_nombre2" class="input" value="<?php echo $data['jugador_nombre2'];?>">
+								<input type="text" name="jugador_nombre2" class="input" value="<?php echo $data['jugador_nombre2'];?>" pattern=".{5,}" title="Minimo 5 caracteres" required>
 							</div>
 							<div  class="wrapper">
 								<span>Sexo:</span><br /><br />
@@ -103,17 +103,17 @@
 							</div>
 							<div  class="wrapper">
 								<span>Nombre de Usuario:</span>
-								<input type="text" name="jugador_username" class="input" value="<?php echo $data['jugador_username'];?>" >
+								<input type="text" name="jugador_username" class="input" value="<?php echo $data['jugador_username'];?>" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" title="Unicamente caracteres alfanumericos (a-z 0-9). Entre 2 a 20 caracteres." required>
 							</div>
 							<div  class="wrapper">
 								<span>Contraseña:</span>
-								<input type="password" name="jugador_password" class="input" value="<?php echo $data['jugador_password'];?>" >
+								<input type="password" name="jugador_password" class="input" value="<?php echo $data['jugador_password'];?>" required>
 							</div>
 							<div  class="wrapper">
 								<span>Confirmar Contraseña:</span>
-								<input type="password" name="jugador_password_confirmation" class="input" value="<?php echo $data['jugador_password'];?>">
+								<input type="password" name="jugador_password_confirmation" class="input" value="<?php echo $data['jugador_password'];?>" required>
 							</div>							
-							<a href="#" onClick="document.getElementById('registroJugador').submit()">Actualizar</a>
+							<input type="submit" value="Enviar" class="submitbutton">
 							<a href="#" onClick="document.getElementById('registroJugador').reset()">Limpiar</a>
 						</div>
 					</form>

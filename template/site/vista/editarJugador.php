@@ -71,11 +71,11 @@
 						<div>
 							<div  class="wrapper">
 								<span>Cedula:</span>
-								<input type="text" name="jugador_codigo" class="input" value="<?php echo $data['jugador_codigo'];?>" readonly="readonly">
+								<input type="text" name="jugador_codigo" class="input" value="<?php echo $data['jugador_codigo'];?>" readonly="readonly" required>
 							</div>
 							<div  class="wrapper">
 								<span>Nombre Completo:</span>
-								<input type="text" name="jugador_nombre" class="input" value="<?php echo $data['jugador_nombre1'];?>" >
+								<input type="text" name="jugador_nombre" class="input" value="<?php echo $data['jugador_nombre1'];?>" pattern=".{5,}" title="Minimo 5 caracteres" required>
 							</div>
 							<div  class="wrapper">
 								<span>Sexo:</span><br /><br />
@@ -86,17 +86,17 @@
 							</div>
 							<div  class="wrapper">
 								<span>Nombre de Usuario:</span>
-								<input type="text" name="jugador_username" class="input" value="<?php echo $data['jugador_username'];?>">
+								<input type="text" name="jugador_username" class="input" value="<?php echo $data['jugador_username'];?>" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" title="Unicamente caracteres alfanumericos (a-z 0-9). Entre 2 a 20 caracteres." required>
 							</div>
 							<div  class="wrapper">
 								<span>Contraseña:</span>
-								<input type="password" name="jugador_password" class="input" value="<?php echo $data['jugador_password'];?>">
+								<input type="password" name="jugador_password" class="input" value="<?php echo $data['jugador_password'];?>" required>
 							</div>
 							<div  class="wrapper">
 								<span>Confirmar Contraseña:</span>
-								<input type="password" name="jugador_password_confirmation" class="input" value="<?php echo $data['jugador_password'];?>">
+								<input type="password" name="jugador_password_confirmation" class="input" value="<?php echo $data['jugador_password'];?>" required>
 							</div>							
-							<a href="#" onClick="document.getElementById('registroJugador').submit()">Actualizar</a>
+							<input type="submit" value="Enviar" class="submitbutton">
 							<a href="#" onClick="document.getElementById('registroJugador').reset()">Limpiar</a>
 						</div>
 					</form>

@@ -84,7 +84,7 @@
 							</div>
 							<div  class="wrapper">
 								<span>Fecha de Nacimiento:</span>
-								<input type="text" name="juez_fecha_nacimiento" class="input" >
+								<input type="date" name="juez_fecha_nacimiento" class="input" >
 							</div>
 							<a href="#" onClick="document.getElementById('registroJugador').submit()">Enviar</a>
 							<a href="#" onClick="document.getElementById('registroJugador').reset()">Limpiar</a>

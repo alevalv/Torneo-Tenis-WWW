@@ -69,13 +69,13 @@
 							<div>								
 								<div class="wrapper">
 									<span>Nombre de Usuario:</span>
-									<input type="text" name="username" class="input" >
+									<input type="text" name="username" class="input" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" title="Unicamente caracteres alfanumericos (a-z 0-9). Entre 2 a 20 caracteres." required>
 								</div>
 								<div  class="wrapper">
 									<span>Password:</span>
-									<input type="password" name="password" class="input" >
+									<input type="password" name="password" class="input" required>
 								</div>
-								<a href="#" onClick="document.getElementById('registroJugador').submit()">Enviar</a>
+								<input type="submit" value="Enviar" class="submitbutton">
 							</div>
 						</form>
 					</section>

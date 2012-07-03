@@ -68,11 +68,11 @@
 						<div>
 							<div  class="wrapper">
 								<span>Ubicación del Torneo:</span>
-								<input type="text" name="torneo_lugar" class="input" >
+								<input type="text" name="torneo_lugar" class="input" pattern=".{5,}" title="Minimo 5 caracteres" required>
 							</div>
 							<div  class="wrapper">
 								<span>Nombre del Torneo:</span>
-								<input type="text" name="torneo_nombre" class="input" >
+								<input type="text" name="torneo_nombre" class="input" pattern=".{5,}" title="Minimo 5 caracteres" required >
 							</div>
 							<div  class="wrapper">
 								<span>Número de Canchas:</span>
@@ -107,7 +107,7 @@
 								<span>Fecha de Inicio:</span>
 								<input type="Date" name="torneo_fecha_inicio" class="input" >
 							</div>
-							<a href="#" onClick="document.getElementById('registroJugador').submit()">Enviar</a>
+							<input type="submit" value="Enviar" class="submitbutton">
 							<a href="#" onClick="document.getElementById('registroJugador').reset()">Limpiar</a>
 						</div>
 					</form>
