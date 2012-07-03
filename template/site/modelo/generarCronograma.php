@@ -6,8 +6,11 @@
         <meta charset="utf-8">
         
         
-        <link rel="stylesheet" href="../vista/css/table.css" type="text/css" media="all">
+        
+        <link rel="stylesheet" href="../vista/css/reset.css" type="text/css" media="all">
         <link rel="stylesheet" href="../vista/css/layout.css" type="text/css" media="all">
+        <link rel="stylesheet" href="../vista/css/style.css" type="text/css" media="all">
+        <link rel="stylesheet" href="../vista/css/table.css" type="text/css" media="all">
     
         
     
