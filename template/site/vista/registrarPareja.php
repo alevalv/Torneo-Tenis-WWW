@@ -70,42 +70,42 @@
 							<h3 class="under">Jugador 1</h3>
 							<div  class="wrapper">
 								<span>Cedula:</span>
-								<input type="text" name="jugador_cedula1" class="input" >
+								<input type="text" name="jugador_cedula1" class="input" pattern="[0-9]{1,}" title="Minimo 1 numero" required>
 							</div>
 							<div  class="wrapper">
 								<span>Nombre Completo:</span>
-								<input type="text" name="jugador_nombre1" class="input" >
+								<input type="text" name="jugador_nombre1" class="input" pattern=".{5,}" title="Minimo 5 caracteres" required>
 							</div>
 							<div  class="wrapper">
 								<span>Sexo:</span><br /><br />
 								<div class="radios">
-									<input type="radio" name="jugador_sexo1" value="M" class="input" >Masculino<br />
-									<input type="radio" name="jugador_sexo1" value="F" class="input" CHECKED>Femenino<br />
+									<input type="radio" name="jugador_sexo1" value="M" class="input" required>Masculino<br />
+									<input type="radio" name="jugador_sexo1" value="F" class="input" CHECKED required>Femenino<br />
 								</div>
 							</div>
 							<h3 class="under">Jugador 2</h3>
 							<div  class="wrapper">
 								<span>Cedula:</span>
-								<input type="text" name="jugador_cedula2" class="input" >
+								<input type="text" name="jugador_cedula2" class="input" pattern="[0-9]{1,}" title="Minimo 1 numero" required>
 							</div>
 							<div  class="wrapper">
 								<span>Nombre Completo:</span>
-								<input type="text" name="jugador_nombre2" class="input" >
+								<input type="text" name="jugador_nombre2" class="input" pattern=".{5,}" title="Minimo 5 caracteres" required>
 							</div>
 							<div  class="wrapper">
 								<span>Sexo:</span><br /><br />
 								<div class="radios">
-									<input type="radio" name="jugador_sexo2" value="M" class="input" >Masculino<br />
-									<input type="radio" name="jugador_sexo2" value="F" class="input" CHECKED>Femenino<br />
+									<input type="radio" name="jugador_sexo2" value="M" class="input" required>Masculino<br />
+									<input type="radio" name="jugador_sexo2" value="F" class="input" CHECKED required>Femenino<br />
 								</div>
 							</div>
 							<div  class="wrapper">
 								<span>Nombre de Usuario:</span>
-								<input type="text" name="jugador_username" class="input" >
+								<input type="text" name="jugador_username" class="input" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" title="Unicamente caracteres alfanumericos (a-z 0-9). Entre 2 a 20 caracteres." required>
 							</div>
 							<div  class="wrapper">
 								<span>Contraseña:</span>
-								<input type="password" name="jugador_password" class="input" >
+								<input type="password" name="jugador_password" class="input" required>
 							</div>
 							<div  class="wrapper">
 								<span>Categoría Inicial:</span><br /><br />
@@ -117,7 +117,7 @@
 									<input type="radio" name="jugador_categoria" value="Novato" checked class="input" >Novato
 								</div>
 							</div>
-							<a href="#" onClick="document.getElementById('registroJugador').submit()">Enviar</a>
+							<input type="submit" value="Enviar" class="submitbutton">
 							<a href="#" onClick="document.getElementById('registroJugador').reset()">Limpiar</a>
 						</div>
 					</form>
