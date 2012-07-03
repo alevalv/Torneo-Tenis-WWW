@@ -1,5 +1,7 @@
 <?php include ("../controlador/seguridad.php");
 	comprobarSesion("aplicacion-movil/resultados.php");
+	include("../modelo/consultarPartido.php");
+	$data = consultarPartido($_GET['partidoid']);
 ?><!DOCTYPE html>
 <html>
     <head>
@@ -54,27 +56,21 @@
                         <div class="ui-block-b">
                             <div data-role="fieldcontain">
                                 <fieldset data-role="controlgroup" data-mini="true">
-                                    <label for="textinput11">
-                                    </label>
-                                    <input id="textinput11" placeholder="" value="" type="number" />
+                                    <input id="game1_jugador1" placeholder="" value="<?php echo $data['game1_jugador1'] ?>" type="number" />
                                 </fieldset>
                             </div>
                         </div>
                         <div class="ui-block-c">
                             <div data-role="fieldcontain">
                                 <fieldset data-role="controlgroup" data-mini="true">
-                                    <label for="textinput12">
-                                    </label>
-                                    <input id="textinput12" placeholder="" value="" type="number" />
+                                    <input id="game2_jugador1" placeholder="" value="<?php echo $data['game2_jugador1'] ?>" type="number" />
                                 </fieldset>
                             </div>
                         </div>
                         <div class="ui-block-d">
                             <div data-role="fieldcontain">
                                 <fieldset data-role="controlgroup" data-mini="true">
-                                    <label for="textinput13">
-                                    </label>
-                                    <input id="textinput13" placeholder="" value="" type="number" />
+                                    <input id="game3_jugador1" placeholder="" value="<?php echo $data['game3_jugador1'] ?>" type="number" />
                                 </fieldset>
                             </div>
                         </div>
@@ -86,27 +82,21 @@
                         <div class="ui-block-b">
                             <div data-role="fieldcontain">
                                 <fieldset data-role="controlgroup" data-mini="true">
-                                    <label for="textinput14">
-                                    </label>
-                                    <input id="textinput14" placeholder="" value="" type="number" />
+                                    <input id="game1_jugador2" placeholder="" value="<?php echo $data['game1_jugador2'] ?>" type="number" />
                                 </fieldset>
                             </div>
                         </div>
                         <div class="ui-block-c">
                             <div data-role="fieldcontain">
                                 <fieldset data-role="controlgroup" data-mini="true">
-                                    <label for="textinput15">
-                                    </label>
-                                    <input id="textinput15" placeholder="" value="" type="number" />
+                                    <input id="game2_jugador2" placeholder="" value="<?php echo $data['game2_jugador2'] ?>" type="number" />
                                 </fieldset>
                             </div>
                         </div>
                         <div class="ui-block-d">
                             <div data-role="fieldcontain">
                                 <fieldset data-role="controlgroup" data-mini="true">
-                                    <label for="textinput17">
-                                    </label>
-                                    <input id="textinput17" placeholder="" value="" type="number" />
+                                    <input id="game3_jugador2" placeholder="" value="<?php echo $data['game3_jugador2'] ?>" type="number" />
                                 </fieldset>
                             </div>
                         </div>
