@@ -109,7 +109,7 @@
 						<div class="wrapper pad_bot2">
 							<h3><span class="dropcap">></span>Menu</h3>
 							<?php if($isJugador && $torneoDisponible) { ?>
-							<p class="pad_bot1">Inscribirste a este torneo</p>
+							<p class="pad_bot1">Inscribirse a este torneo</p>
 							<form id="registroJugador" action="../modelo/registrarEnTorneo.php" method="post">
 								<?php
 								if($_GET["errorinsert"]=="si"){
