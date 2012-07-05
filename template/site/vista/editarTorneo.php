@@ -1,6 +1,6 @@
 <?php include ("../controlador/seguridad.php");
 	include("../modelo/consultasTorneo.php");
-	$pagename="crearTorneo.php";
+	$pagename="editarTorneo.php";
 	comprobarSesion($pagename);
 	$data = getTorneo($_GET['torneoid']);
 	//var_dump($data);
