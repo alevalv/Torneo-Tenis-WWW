@@ -112,8 +112,10 @@
 							</div>
                                                         -->
 							<div  class="wrapper">
-								<span>Fecha de Inicio: <?php echo "{$data['torneo_fecha_inicio_anio']}-{$data['torneo_fecha_inicio_mes']}-{$data['torneo_fecha_inicio_dia']}";?></span>
-								<input type="Date" name="torneo_fecha_inicio" value="<?php echo "{$data['torneo_fecha_inicio_anio']}-{$data['torneo_fecha_inicio_mes']}-{$data['torneo_fecha_inicio_dia']}";?>" class="input" >
+								<span>Fecha de Inicio:</span>
+								<input type="Date" name="torneo_fecha_inicio" value="<?php echo "{$data['torneo_fecha_inicio_anio']}-";
+								echo str_pad($data['torneo_fecha_inicio_mes'],2, '0', STR_PAD_LEFT);
+								echo  "-{$data['torneo_fecha_inicio_dia']}";?>" class="input" >
 							</div>
 							<input type="submit" value="Enviar" class="submitbutton">
 							<a href="#" onClick="document.getElementById('registroJugador').reset()">Limpiar</a>
