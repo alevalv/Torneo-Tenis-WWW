@@ -2,7 +2,7 @@
 include_once("../modelo/consultasTorneo.php");
 	$pagename="verTorneo.php";
 	comprobarSesion($pagename);
-	$data = 
+	$data = getTorneo($_GET['torneoid']);
 ?>
 <!DOCTYPE html>
 <html lang="es">
