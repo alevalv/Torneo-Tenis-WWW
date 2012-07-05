@@ -54,15 +54,50 @@
 <!-- content -->
 			<article id="content">
 				<div class="wrapper">
-					<?php 
-						include("../modelo/consultasTorneo.php");
-						$result = consultarTorneosDisponibles();
-						foreach ($result as $torneo) {
-							var_dump($torneo);
-						}
-					?>
-				</div>
+					<section class="cols">
+						<div class="wrapper pad_bot2">
+							<h3><span class="dropcap">X</span>Torneos Presentes</h3>
+							<figure><img src="images/page4_img1.jpg" alt=""></figure>
+							<p class="pad_bot1">Torneos que se juegan actualmente</p>
+							<?php 
+								include("../modelo/consultasTorneo.php");
+								$result = consultarTorneosDisponibles();
+								foreach ($result as $torneo) {
+									echo '<p><a href="verTorneo.php?torneoid=';
+									echo $torneo['_id'];
+									echo '" class="link1">';
+									echo $torneo['torneo_nombre'];
+									echo '</a></p>';
+								}
+							?>
+						</div>
+				
+					
 
+
+
+
+					</section>
+					<section class="cols pad_left1">
+						<div class="wrapper pad_bot2">
+							<h3><span class="dropcap">X</span>Torneos Planeados</h3>
+							<figure><img src="images/page4_img3.jpg" alt=""></figure>
+							<p class="pad_bot1">Torneos que se jugarán en el futuro</p>
+							<a href="../vista/ingresarJuez.php" class="link1">Ingresar un Juez</a>
+						</div>
+						
+											
+					</section>
+					
+					<section class="cols pad_left1">
+						<div class="wrapper pad_bot2">
+							<h3><span class="dropcap">X</span>Torneos Pasados</h3>
+							<figure><img src="images/page4_img5.jpg" alt=""></figure>
+							<p class="pad_bot1">Información de los torneos ya jugados</p>
+							<a href="../vista/asignarJuezPartido.php" class="link1">Asignar</a>
+						</div>
+					</section>
+				</div>
 			</article>
 		</div>
 	</div>

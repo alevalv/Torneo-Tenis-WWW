@@ -23,7 +23,7 @@ function consultarTorneosDisponibles() {
     $dia = (int) date('d');
     $mes = (int) date('m');
     $anio = (int) date('Y');
-    echo $dia . '-' . $mes . '-' . $anio;
+    //echo $dia . '-' . $mes . '-' . $anio;
     $result = $collectionTorneo->find(array(
         '$or' =>
         array(
