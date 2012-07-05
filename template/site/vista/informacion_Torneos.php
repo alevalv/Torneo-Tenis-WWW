@@ -61,13 +61,15 @@ include_once("../modelo/consultasTorneo.php");
 							<p class="pad_bot1">Torneos que se juegan actualmente</p>
 							<?php 
 								$result = consultarTorneosPresentes();
+								echo '<ul>';
 								foreach ($result as $torneo) {
-									echo '<p><a href="verTorneo.php?torneoid=';
+									echo '<li><a href="verTorneo.php?torneoid=';
 									echo $torneo['_id'];
 									echo '" class="link1">';
 									echo $torneo['torneo_nombre'];
-									echo '</a></p>';
+									echo '</a></li>';
 								}
+								echo '</ul>';
 							?>
 							
 						</div>
@@ -84,13 +86,15 @@ include_once("../modelo/consultasTorneo.php");
 							<p class="pad_bot1">Torneos que se jugarán en el futuro</p>
 							<?php 
 								$result = consultarTorneosDisponibles();
+								echo '<ul>';
 								foreach ($result as $torneo) {
-									echo '<p><a href="verTorneo.php?torneoid=';
+									echo '<li><a href="verTorneo.php?torneoid=';
 									echo $torneo['_id'];
 									echo '" class="link1">';
 									echo $torneo['torneo_nombre'];
-									echo '</a></p>';
+									echo '</a></li>';
 								}
+								echo '</ul>';
 							?>
 						</div>
 						
@@ -103,13 +107,15 @@ include_once("../modelo/consultasTorneo.php");
 							<p class="pad_bot1">Información de los torneos ya jugados</p>
 							<?php 
 								$result = consultarTorneosPasados();
+								echo '<ul>';
 								foreach ($result as $torneo) {
-									echo '<p><a href="verTorneo.php?torneoid=';
+									echo '<li><a href="verTorneo.php?torneoid=';
 									echo $torneo['_id'];
 									echo '" class="link1">';
 									echo $torneo['torneo_nombre'];
-									echo '</a></p>';
+									echo '</a></li>';
 								}
+								echo '</ul>';
 							?>
 						</div>
 					</section>
