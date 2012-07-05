@@ -55,6 +55,36 @@ function consultarTorneosPresentes() {
     return $result;
 }
 
+function esTorneoFuturo($torneo){
+    $instancia = new fachada();
+    $db = $instancia->conect();
+    $collectionTorneo = $db->torneo;
+
+
+    $dia = (int) date('d');
+    $mes = (int) date('m');
+    $anio = (int) date('Y');
+    //echo $dia . '-' . $mes . '-' . $anio;
+    $result = $collectionTorneo->find(array(
+        '$or' =>
+        array(
+            array("torneo_fecha_inicio_anio" => array('$gt' => $anio)),
+            array("torneo_fecha_inicio_anio" => array('$gte' => $anio), "torneo_fecha_inicio_mes" => array('$gt' => $mes)),
+            array("torneo_fecha_inicio_anio" => array('$gte' => $anio), "torneo_fecha_inicio_mes" => array('$gte' => $mes), "torneo_fecha_inicio_dia" => array('$gte' => $dia))
+        )
+
+
+            //array(array("torneo_fecha_inicio_anio" => array('$gte' => $anio ) , "torneo_fecha_inicio_mes" => array('$gte' => $mes ), "torneo_fecha_inicio_dia" => array('$gte' => $dia ) )  )
+            )
+    );
+    foreach($result as $torneod){
+		if($torneod['_id']==$torneo){
+			return true;
+		}
+	}
+	return false;
+}
+
 function consultarTorneosDisponibles() {
     include_once("../controlador/fachada.php");
     $instancia = new fachada();

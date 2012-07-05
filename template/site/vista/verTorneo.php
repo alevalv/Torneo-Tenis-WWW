@@ -4,6 +4,10 @@
 	$pagename="verTorneo.php";
 	comprobarSesion($pagename);
 	$data = getTorneo($_GET['torneoid']);
+	if($_SESSION["rol"]=="jugador"){
+		$isJugador=true;
+	}
+	$torneoDisponible = esTorneoFuturo($_GET['torneoid']);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -84,24 +88,40 @@
 
 
 					</section>
+					<?php if(!$torneoDisponible) { ?>
 					<section class="cols pad_left1">
 						<div class="wrapper pad_bot2">
 							<h3><span class="dropcap">></span>Ganadores</h3>
 							<p class="pad_bot1">Información sobre los ganadores</p>
 							<p>En Construcción</p>
-						</div>
-						
-											
+						</div>						
 					</section>
-					<!--
+					<?php } ?>
+					<?php if($isJugador && $torneoDisponible) { ?>
 					<section class="cols pad_left1">
 						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">></span>-------</h3>
-							<p class="pad_bot1">------------</p>
-							<p>-----</p>
+							<h3><span class="dropcap">></span>Menu</h3>
+							<p class="pad_bot1">Inscribirste a este torneo</p>
+							<form id="registroJugador" action="../modelo/registrarEnTorneo.php" method="post">
+								<?php
+								if($_GET["errorinsert"]=="si"){
+									echo 	'<div id="errorMensage">
+											Error al registrarse
+										</div><p><br></p>';
+								}else if($_GET["sussesinsert"]=="si"){
+									echo 	'<div id="sussesMensage">
+											Registro realizado Correctamente
+										</div><p><br></p>';
+								}
+								?>
+							<div>
+								<input type="hidden" value="<?php echo $data['_id']; ?>" name="combo">
+								<input type="submit" value="Registrarse" class="submitbutton">
+							</div>
+							</form>
 						</div>
 					</section>
-					-->
+					<?php } ?>
 				</div>
 			</article>
 		</div>

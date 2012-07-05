@@ -119,6 +119,13 @@ include_once("../modelo/consultasTorneo.php");
 							?>
 						</div>
 					</section>
+					<section class="cols pad_left1">
+						<div class="wrapper pad_bot2">
+							<h3><span class="dropcap">></span>Mis Torneos</h3>
+							<p class="pad_bot1">Información de los torneos ya jugados</p>
+							<p> En Construcción </p>
+						</div>
+					</section>
 				</div>
 			</article>
 		</div>
