@@ -55,7 +55,11 @@
 			<article id="content">
 				<div class="wrapper">
 					<?php 
-					//codigo para mostrar los torneos que se juegan
+						include("../modelo/consultasTorneo.php");
+						$result = consultarTorneosDisponibles();
+						foreach ($result as $torneo) {
+							var_dump($torneo);
+						}
 					?>
 				</div>
 

@@ -1,5 +1,6 @@
 <?php include ("../controlador/seguridad.php");
 	include("../modelo/consultasTorneo.php");
+	include_once("../controlador/fachada.php");
 	$pagename="editarTorneo.php";
 	comprobarSesion($pagename);
 	$data = getTorneo($_GET['torneoid']);
@@ -111,8 +112,8 @@
 							</div>
                                                         -->
 							<div  class="wrapper">
-								<span>Fecha de Inicio:</span>
-								<input type="Date" name="torneo_fecha_inicio" value="<?php echo $data['torneo_fecha_inicio_anio']+'-'+$data['torneo_fecha_inicio_mes']+'-'+$data['torneo_fecha_inicio_dia'];?>" class="input" >
+								<span>Fecha de Inicio: <?php echo "{$data['torneo_fecha_inicio_anio']}-{$data['torneo_fecha_inicio_mes']}-{$data['torneo_fecha_inicio_dia']}";?></span>
+								<input type="Date" name="torneo_fecha_inicio" value="<?php echo "{$data['torneo_fecha_inicio_anio']}-{$data['torneo_fecha_inicio_mes']}-{$data['torneo_fecha_inicio_dia']}";?>" class="input" >
 							</div>
 							<input type="submit" value="Enviar" class="submitbutton">
 							<a href="#" onClick="document.getElementById('registroJugador').reset()">Limpiar</a>
