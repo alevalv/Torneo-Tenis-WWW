@@ -4,6 +4,8 @@
 	$pagename="editarTorneo.php";
 	comprobarSesion($pagename);
 	$data = getTorneo($_GET['torneoid']);
+	if(is_null($data))
+		$test=true;
 	//var_dump($data);
 ?>
 <!DOCTYPE html>
@@ -58,7 +60,7 @@
 						<h2 class="under">Editar Torneo</h2>
 						<form id="registroJugador" action="../modelo/actualizarTorneo.php" method="post">
 						<?php
-							if($_GET["errorobtener"]=="si"){
+							if($test){
 								echo 	'<div id="errorMensage">
 											Error al obtener el torneo
 										</div><p><br></p>';
@@ -70,6 +72,7 @@
 						?>
 						<div id="errorMensage" name="div-validar"> </div>
 						<div>
+							<?php if($test==false) { ?>
 							<div  class="wrapper">
 								<span>Torneo Id:</span>
 								<input type="text" name="torneo_id" class="input" value="<?php echo $data['_id'];?>" readonly="readonly" required>
@@ -120,7 +123,9 @@
 							<input type="submit" value="Enviar" class="submitbutton">
 							<a href="#" onClick="document.getElementById('registroJugador').reset()">Limpiar</a>
 						</div>
+						<?php } ?>
 					</form>
+					
 					</section>
 					<section class="col2 pad_left1">
 						<h2 class="under">Contactar</h2>
