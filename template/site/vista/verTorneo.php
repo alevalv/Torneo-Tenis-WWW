@@ -7,6 +7,13 @@
 	if($_SESSION["rol"]=="jugador"){
 		$isJugador=true;
 	}
+	else if($_SESSION["rol"]=="admin"){
+		$isAdmin=true;
+	}
+	else{
+		$isJugador=false;
+		$isAdmin=false;
+	}
 	$torneoDisponible = esTorneoFuturo($_GET['torneoid']);
 ?>
 <!DOCTYPE html>
@@ -97,10 +104,11 @@
 						</div>						
 					</section>
 					<?php } ?>
-					<?php if($isJugador && $torneoDisponible) { ?>
+					
 					<section class="cols pad_left1">
 						<div class="wrapper pad_bot2">
 							<h3><span class="dropcap">></span>Menu</h3>
+							<?php if($isJugador && $torneoDisponible) { ?>
 							<p class="pad_bot1">Inscribirste a este torneo</p>
 							<form id="registroJugador" action="../modelo/registrarEnTorneo.php" method="post">
 								<?php
@@ -119,9 +127,18 @@
 								<input type="submit" value="Registrarse" class="submitbutton">
 							</div>
 							</form>
+							<?php } ?>
+							<?php if($isAdmin && $torneoDisponible) { ?>
+							<p class="pad_bot1">Editar este Torneo: </p>
+							<p><br>
+							<form id="registroJugador" action="editarTorneo.php" method="get">
+								<input type="hidden" name="torneoid" class="input" value="<?php echo $data['_id']; ?>" required>
+								<input type="submit" value="Editar" class="submitbutton">
+							</form></p>
+							<?php } ?>
 						</div>
 					</section>
-					<?php } ?>
+					
 				</div>
 			</article>
 		</div>

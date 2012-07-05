@@ -59,14 +59,6 @@
 							<figure><img src="images/page4_img1.jpg" alt=""></figure>
 							<p class="pad_bot1">Aqui puede realizar la creación de un torneo de tennis.</p>
 							<p><a href="../vista/crearTorneo.php" class="link1">Crear Torneo</a></p>
-							<p>Editar un Torneo: <br>
-							<form id="registroJugador" action="editarTorneo.php" method="get">
-								<div  class="wrapper">
-									Id:
-									<input type="text" name="torneoid" class="input" required>
-								</div>
-								<input type="submit" value="Editar" class="submitbutton">
-							</form></p>
 							<a href="../vista/gestionarCronograma.php" class="link1">Generar Cronograma</a>
 
 						</div>
