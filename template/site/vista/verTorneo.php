@@ -1,7 +1,8 @@
 <?php include ("../controlador/seguridad.php");
 include_once("../modelo/consultasTorneo.php");
-	$pagename="verTorneos.php";
+	$pagename="verTorneo.php";
 	comprobarSesion($pagename);
+	$data = 
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -57,21 +58,23 @@ include_once("../modelo/consultasTorneo.php");
 				<div class="wrapper">
 					<section class="cols">
 						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">></span>Torneos Presentes</h3>
-							<p class="pad_bot1">Torneos que se juegan actualmente</p>
-							<?php 
-								$result = consultarTorneosPresentes();
-								echo '<ul>';
-								foreach ($result as $torneo) {
-									echo '<li><a href="verTorneo.php?torneoid=';
-									echo $torneo['_id'];
-									echo '" class="link1">';
-									echo $torneo['torneo_nombre'];
-									echo '</a></li>';
-								}
-								echo '</ul>';
-							?>
-							
+							<h3><span class="dropcap">></span><?php echo $data['torneo_nombre']; ?></h3>
+							<p class="pad_bot1">Información del Torneo</p>
+							<p>Id: <br/> <?php echo $data['_id']; ?></p>
+							<p>Ubicación: <br/> <?php echo $data['torneo_lugar']; ?></p>
+							<p>Número de Canchas: <br/> <?php echo $data['torneo_num_canchas']; ?></p>
+							<p>Número de Jugadores: <br/> <?php echo $data['torneo_num_jugadores']; ?></p>
+							<p>Fecha de Inicio: <br/> <?php echo "{$data['torneo_fecha_inicio_anio']}-";
+								echo str_pad($data['torneo_fecha_inicio_mes'],2, '0', STR_PAD_LEFT);
+								echo  '-';
+								echo str_pad($data['torneo_fecha_inicio_dia'],2, '0', STR_PAD_LEFT);
+								;?></p>
+							<p>Fecha de Finalización: <br/> <?php echo "{$data['torneo_fecha_fin_anio']}-";
+								echo str_pad($data['torneo_fecha_fin_mes'],2, '0', STR_PAD_LEFT);
+								echo  '-';
+								echo str_pad($data['torneo_fecha_fin_dia'],2, '0', STR_PAD_LEFT);
+								;?></p>
+								
 						</div>
 				
 					
@@ -82,20 +85,9 @@ include_once("../modelo/consultasTorneo.php");
 					</section>
 					<section class="cols pad_left1">
 						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">></span>Torneos Planeados</h3>
-							<p class="pad_bot1">Torneos que se jugarán en el futuro</p>
-							<?php 
-								$result = consultarTorneosDisponibles();
-								echo '<ul>';
-								foreach ($result as $torneo) {
-									echo '<li><a href="verTorneo.php?torneoid=';
-									echo $torneo['_id'];
-									echo '" class="link1">';
-									echo $torneo['torneo_nombre'];
-									echo '</a></li>';
-								}
-								echo '</ul>';
-							?>
+							<h3><span class="dropcap">></span>Ganadores</h3>
+							<p class="pad_bot1">Información sobre los ganadores</p>
+							<p>En Construcción</p>
 						</div>
 						
 											
@@ -103,20 +95,9 @@ include_once("../modelo/consultasTorneo.php");
 					
 					<section class="cols pad_left1">
 						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">></span>Torneos Pasados</h3>
-							<p class="pad_bot1">Información de los torneos ya jugados</p>
-							<?php 
-								$result = consultarTorneosPasados();
-								echo '<ul>';
-								foreach ($result as $torneo) {
-									echo '<li><a href="verTorneo.php?torneoid=';
-									echo $torneo['_id'];
-									echo '" class="link1">';
-									echo $torneo['torneo_nombre'];
-									echo '</a></li>';
-								}
-								echo '</ul>';
-							?>
+							<h3><span class="dropcap">></span>-------</h3>
+							<p class="pad_bot1">------------</p>
+							<p>-----</p>
 						</div>
 					</section>
 				</div>
