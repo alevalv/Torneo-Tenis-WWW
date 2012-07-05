@@ -1,5 +1,6 @@
 <?php include ("../controlador/seguridad.php");
-include_once("../modelo/consultasTorneo.php");
+	include_once("../modelo/consultasTorneo.php");
+	include_once("../controlador/fachada.php");
 	$pagename="verTorneo.php";
 	comprobarSesion($pagename);
 	$data = getTorneo($_GET['torneoid']);
@@ -68,12 +69,12 @@ include_once("../modelo/consultasTorneo.php");
 								echo str_pad($data['torneo_fecha_inicio_mes'],2, '0', STR_PAD_LEFT);
 								echo  '-';
 								echo str_pad($data['torneo_fecha_inicio_dia'],2, '0', STR_PAD_LEFT);
-								;?></p>
+								?></p>
 							<p>Fecha de Finalización: <br/> <?php echo "{$data['torneo_fecha_fin_anio']}-";
 								echo str_pad($data['torneo_fecha_fin_mes'],2, '0', STR_PAD_LEFT);
 								echo  '-';
 								echo str_pad($data['torneo_fecha_fin_dia'],2, '0', STR_PAD_LEFT);
-								;?></p>
+								?></p>
 								
 						</div>
 				
@@ -92,7 +93,7 @@ include_once("../modelo/consultasTorneo.php");
 						
 											
 					</section>
-					
+					<!--
 					<section class="cols pad_left1">
 						<div class="wrapper pad_bot2">
 							<h3><span class="dropcap">></span>-------</h3>
@@ -100,6 +101,7 @@ include_once("../modelo/consultasTorneo.php");
 							<p>-----</p>
 						</div>
 					</section>
+					-->
 				</div>
 			</article>
 		</div>

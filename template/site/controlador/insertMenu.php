@@ -9,7 +9,7 @@
 		$active_register='';
 		if($pagename=="index.php"){
 			$active_index = $code_active;
-		}else if($pagename=="informacion_Torneos.php"){
+		}else if($pagename=="informacion_Torneos.php" || ($pagename == "verTorneo.php")){
 			$active_torneo = $code_active;
 		}else if( ($pagename=="juez.php") || ($pagename=="administrador.php") || ($pagename=="jugador.php")
 				||($pagename=="asignarJuezPartido.php")||($pagename=="crearTorneo.php")||($pagename=="gestionarCronograma.php")
