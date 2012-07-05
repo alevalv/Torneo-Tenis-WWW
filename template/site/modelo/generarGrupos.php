@@ -15,14 +15,40 @@
     
     <body id="page4">
     <?php
-    include("../modelo/consultasTorneo.php");
-    try {
+    include("../modelo/consultasCronograma.php");
+   // try {
         
-        $partidos = $_POST["partidos"];
-        $combo = $_POST["combo"];
-        echo '<p>'.'entre'.$partidos.$combo.'</p>';
         
-        $arraySubTorneos = generarArraySubTorneos($combo);// en este array tendremos el id del subtorneo y tendremos 'si' si supero el minimo de jugadores y no de los contrario 
+       $combo = $_POST["torneo"];
+       $arraySubTorneos=$_POST["array"];
+       $arrayInscritos=$_POST["inscritos"];
+       
+       // echo '<p>'.'id: '.$combo.'</p>';
+        //echo '<p>'.'Array: '.$arraySubTorneos.'</p>';
+        
+        //var_dump($arraySubTorneos);
+        $idSubTorneo = explode('-',$arraySubTorneos);
+        $inscritos= explode('-',$arrayInscritos);
+         //var_dump($idSubTorneo);
+         
+        // var_dump($inscritos);
+         
+         echo '<p>'.sizeof($idSubTorneo).'</p><br>';
+         $longitud=sizeof($idSubTorneo);
+         for ($i=1;$i < $longitud;$i++){
+             
+             $number=(int ) $inscritos[$i];
+             
+             $cantidadDeGrupos = ceil($number/4);
+            // echo '<p>'.$i .'---'.$idSubTorneo[$i].'</p><br>';
+             
+             asignarGrupoAjugadores($combo,$idSubTorneo[$i],$cantidadDeGrupos);
+             
+             
+         }
+        
+        
+        /*$arraySubTorneos = generarArraySubTorneos($combo);// en este array tendremos el id del subtorneo y tendremos 'si' si supero el minimo de jugadores y no de los contrario 
         
         $Torneo =getTorneo($combo);//es el valor que se ingresa al crear el torneo y sirve para decidir si un torneo se lleva a cabo, esto se hace distinguiendo modalidad categoria teniedo en cuenta que estos generan otro torneo
        
@@ -73,12 +99,12 @@
     echo'</table> </div> ';
 
    
-        
+        echo ' <input type="button" value ="Siguiente" onClick="generarGrupos.php" >';
         
         
     } catch (Exception $e) {
         echo 'Caught exception: ', $e->getMessage(), "\n";
-    }
+    }*/
     ?>
 
         </body >
