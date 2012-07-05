@@ -1,4 +1,5 @@
 <?php include ("../controlador/seguridad.php");
+include_once("../modelo/consultasTorneo.php");
 	$pagename="informacion_Torneos.php";
 	comprobarSesion($pagename);
 ?>
@@ -54,11 +55,71 @@
 <!-- content -->
 			<article id="content">
 				<div class="wrapper">
-					<?php 
-					//codigo para mostrar los torneos que se juegan
-					?>
-				</div>
+					<section class="cols">
+						<div class="wrapper pad_bot2">
+							<h3><span class="dropcap">></span>Torneos Presentes</h3>
+							<p class="pad_bot1">Torneos que se juegan actualmente</p>
+							<?php 
+								$result = consultarTorneosPresentes();
+								echo '<ul>';
+								foreach ($result as $torneo) {
+									echo '<li><a href="verTorneo.php?torneoid=';
+									echo $torneo['_id'];
+									echo '" class="link1">';
+									echo $torneo['torneo_nombre'];
+									echo '</a></li>';
+								}
+								echo '</ul>';
+							?>
+							
+						</div>
+				
+					
 
+
+
+
+					</section>
+					<section class="cols pad_left1">
+						<div class="wrapper pad_bot2">
+							<h3><span class="dropcap">></span>Torneos Planeados</h3>
+							<p class="pad_bot1">Torneos que se jugarán en el futuro</p>
+							<?php 
+								$result = consultarTorneosDisponibles();
+								echo '<ul>';
+								foreach ($result as $torneo) {
+									echo '<li><a href="verTorneo.php?torneoid=';
+									echo $torneo['_id'];
+									echo '" class="link1">';
+									echo $torneo['torneo_nombre'];
+									echo '</a></li>';
+								}
+								echo '</ul>';
+							?>
+						</div>
+						
+											
+					</section>
+					
+					<section class="cols pad_left1">
+						<div class="wrapper pad_bot2">
+							<h3><span class="dropcap">></span>Torneos Pasados</h3>
+							<p class="pad_bot1">Información de los torneos ya jugados</p>
+							<?php 
+								$result = consultarTorneosPasados();
+								echo '<ul>';
+								foreach ($result as $torneo) {
+									echo '<li><a href="verTorneo.php?torneoid=';
+									echo $torneo['_id'];
+									echo '" class="link1">';
+									echo $torneo['torneo_nombre'];
+									echo '</a></li>';
+								}
+								echo '</ul>';
+							?>
+						</div>
+					</section>
+				</div>
 			</article>
 		</div>
 	</div>

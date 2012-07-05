@@ -53,7 +53,7 @@ comprobarSesion($pagename);
                     <div class="wrapper">
                         <section class="col1">
                             <h2 class="under">Generar Cronograma </h2>
-                            <form id="registroJugador" action="../modelo/generarCronograma.php" method="post">
+                            <form id="registroJugador" action="../modelo/InscritosPorTorneo.php" method="post">
                                 <div>
 
                                     <div  class="wrapper">
@@ -77,7 +77,8 @@ comprobarSesion($pagename);
 
                                     </div>
 
-                                    <a href="#" onClick="submit()">Generar</a>
+                                    <input type="button" value ="Enviar" onClick="submit()" >
+                                   
                                   
                                 </div>
                             </form>

@@ -13,8 +13,50 @@ function consultarTorneoSinCronograma() {
     return $result;
 }
 
+function consultarTorneosPasados() {
+    include_once("../controlador/fachada.php");
+    $instancia = new fachada();
+    $db = $instancia->conect();
+    $collectionTorneo = $db->torneo;
+    $dia = (int) date('d');
+    $mes = (int) date('m');
+    $anio = (int) date('Y');
+    $result = $collectionTorneo->find(array('$and' =>
+										array(
+											array("torneo_fecha_inicio_anio" => array('$lte' => $anio)),
+											array("torneo_fecha_fin_anio" => array('$lte' => $anio)),
+											array("torneo_fecha_inicio_mes" => array('$lte' => $mes)),
+											array("torneo_fecha_fin_mes" => array('$lte' => $mes)),
+											array("torneo_fecha_inicio_dia" => array('$lt' => $dia)),
+											array("torneo_fecha_fin_dia" => array('$lt' => $dia))
+											)
+										));
+    return $result;
+}
+
+function consultarTorneosPresentes() {
+    include_once("../controlador/fachada.php");
+    $instancia = new fachada();
+    $db = $instancia->conect();
+    $collectionTorneo = $db->torneo;
+    $dia = (int) date('d');
+    $mes = (int) date('m');
+    $anio = (int) date('Y');
+    $result = $collectionTorneo->find(array('$and' =>
+										array(
+											array("torneo_fecha_inicio_anio" => array('$lte' => $anio)),
+											array("torneo_fecha_fin_anio" => array('$gte' => $anio)),
+											array("torneo_fecha_inicio_mes" => array('$lte' => $mes)),
+											array("torneo_fecha_fin_mes" => array('$gte' => $mes)),
+											array("torneo_fecha_inicio_dia" => array('$lt' => $dia)),
+											array("torneo_fecha_fin_dia" => array('$gt' => $dia))
+											)
+										));
+    return $result;
+}
+
 function consultarTorneosDisponibles() {
-    include("../controlador/fachada.php");
+    include_once("../controlador/fachada.php");
     $instancia = new fachada();
     $db = $instancia->conect();
     $collectionTorneo = $db->torneo;
@@ -23,7 +65,7 @@ function consultarTorneosDisponibles() {
     $dia = (int) date('d');
     $mes = (int) date('m');
     $anio = (int) date('Y');
-    echo $dia . '-' . $mes . '-' . $anio;
+    //echo $dia . '-' . $mes . '-' . $anio;
     $result = $collectionTorneo->find(array(
         '$or' =>
         array(
@@ -80,7 +122,7 @@ function generarArraySubTorneos($idtorneo) {
 }
 
 function  getTorneo($combo) {
-    include("../controlador/fachada.php");
+    
     $instancia = new fachada();
     $db = $instancia->conect();
     $collectionTorneo = $db->torneo;
