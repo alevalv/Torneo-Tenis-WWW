@@ -40,7 +40,7 @@ function comprobarSesion($pagename){
 			if($_SESSION["rol"] == "admin"){
 				
 				if(($pagename == "administrador.php") || ($pagename == "crearTorneo.php" || ($pagename == "ingresarJuez.php")
-				|| ($pagename == "asignarJuezPartido.php"))){
+				|| ($pagename == "asignarJuezPartido.php")) || $pagename == "editarTorneo.php"){
 					return 1;
 
 				}

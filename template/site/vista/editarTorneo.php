@@ -1,13 +1,15 @@
 <?php include ("../controlador/seguridad.php");
 	include("../modelo/consultasTorneo.php");
-	$pagename="crearTorneo.php";
+	include_once("../controlador/fachada.php");
+	$pagename="editarTorneo.php";
 	comprobarSesion($pagename);
 	$data = getTorneo($_GET['torneoid']);
+	//var_dump($data);
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Crear Torneo</title>
+<title>Editar Torneo</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
@@ -53,7 +55,7 @@
 			<article id="content">
 				<div class="wrapper">
 					<section class="col1">
-						<h2 class="under">Crear Torneo</h2>
+						<h2 class="under">Editar Torneo</h2>
 						<form id="registroJugador" action="../modelo/actualizarTorneo.php" method="post">
 						<?php
 							if($_GET["errorobtener"]=="si"){
@@ -70,7 +72,7 @@
 						<div>
 							<div  class="wrapper">
 								<span>Torneo Id:</span>
-								<input type="text" name="torneo_id" class="input" value="<?php echo $data['torneo_id'];?>" readonly="readonly" required>
+								<input type="text" name="torneo_id" class="input" value="<?php echo $data['_id'];?>" readonly="readonly" required>
 							</div>
 							<div  class="wrapper">
 								<span>Ubicación del Torneo:</span>
@@ -110,8 +112,8 @@
 							</div>
                                                         -->
 							<div  class="wrapper">
-								<span>Fecha de Inicio:</span>
-								<input type="Date" name="torneo_fecha_inicio" value="<?php echo $data['torneo_fecha_inicio_anio']+'-'+$data['torneo_fecha_inicio_mes']+'-'+$data['torneo_fecha_inicio_dia'];?>" class="input" >
+								<span>Fecha de Inicio: <?php echo "{$data['torneo_fecha_inicio_anio']}-{$data['torneo_fecha_inicio_mes']}-{$data['torneo_fecha_inicio_dia']}";?></span>
+								<input type="Date" name="torneo_fecha_inicio" value="<?php echo "{$data['torneo_fecha_inicio_anio']}-{$data['torneo_fecha_inicio_mes']}-{$data['torneo_fecha_inicio_dia']}";?>" class="input" >
 							</div>
 							<input type="submit" value="Enviar" class="submitbutton">
 							<a href="#" onClick="document.getElementById('registroJugador').reset()">Limpiar</a>
