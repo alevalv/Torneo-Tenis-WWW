@@ -13,6 +13,34 @@ function consultarTorneoSinCronograma() {
     return $result;
 }
 
+function consultarTorneosPresentes() {
+    include("../controlador/fachada.php");
+    $instancia = new fachada();
+    $db = $instancia->conect();
+    $collectionTorneo = $db->torneo;
+
+
+    $dia = (int) date('d');
+    $mes = (int) date('m');
+    $anio = (int) date('Y');
+    $result = $collectionTorneo->find(array('$and' =>
+										array(
+											array("torneo_fecha_inicio_anio" => array('$lte' => $anio)),
+											array("torneo_fecha_fin_anio" => array('$gte' => $anio)),
+											array("torneo_fecha_inicio_mes" => array('$lte' => $mes)),
+											array("torneo_fecha_fin_mes" => array('$gte' => $mes)),
+											array("torneo_fecha_inicio_dia" => array('$lt' => $dia)),
+											array("torneo_fecha_fin_dia" => array('$gt' => $dia))
+											)
+										));
+
+    //  "torneo_fecha_inicio_mes" => array('$gte' => $mes ),"torneo_fecha_inicio_anio" => array('$gte' => $anio )  ,
+    //$db->users->find(array('$or' => array(array("a" => 1), array("b" => 2) )));
+    //codigo de los torneos con cronograma
+    //var_dump($result);
+    return $result;
+}
+
 function consultarTorneosDisponibles() {
     include("../controlador/fachada.php");
     $instancia = new fachada();
