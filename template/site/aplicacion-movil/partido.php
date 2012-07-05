@@ -26,22 +26,22 @@
                     Torneo Tenis
                 </h3>
             </div>
-            <div data-role="content" style="padding: 15px">
-                <form action="">
+            <div id="partido" data-role="content" style="padding: 15px">
+                <form action="resultados.php" method="get">
                     <h2>
                         Seleccionar Partido
                     </h2>
                     <div data-role="fieldcontain">
                         <fieldset data-role="controlgroup">
-                            <label for="textinput8">
-                                Codigo Partido
+                            <label for="partidoid">
+                                Codigo Partido:
                             </label>
-                            <input id="textinput8" placeholder="" value="" type="text" />
+                            <input id="partidoid" name="partidoid" type="text" required />
                         </fieldset>
                     </div>
-                    <a data-role="button" data-transition="fade" href="#page2">
-                        Enviar
-                    </a>
+                    <div data-role="fieldcontain" >
+						<input value="Enviar" type="submit" />
+                    </div>
                 </form>
                 <a data-role="button" data-transition="fade" href="../controlador/salir.php">
                         Salir
