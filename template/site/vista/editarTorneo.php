@@ -3,6 +3,7 @@
 	$pagename="crearTorneo.php";
 	comprobarSesion($pagename);
 	$data = getTorneo($_GET['torneoid']);
+	//var_dump($data);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -53,7 +54,7 @@
 			<article id="content">
 				<div class="wrapper">
 					<section class="col1">
-						<h2 class="under">Crear Torneo</h2>
+						<h2 class="under">Editar Torneo</h2>
 						<form id="registroJugador" action="../modelo/actualizarTorneo.php" method="post">
 						<?php
 							if($_GET["errorobtener"]=="si"){
@@ -70,7 +71,7 @@
 						<div>
 							<div  class="wrapper">
 								<span>Torneo Id:</span>
-								<input type="text" name="torneo_id" class="input" value="<?php echo $data['torneo_id'];?>" readonly="readonly" required>
+								<input type="text" name="torneo_id" class="input" value="<?php echo $data['_id'];?>" readonly="readonly" required>
 							</div>
 							<div  class="wrapper">
 								<span>Ubicación del Torneo:</span>

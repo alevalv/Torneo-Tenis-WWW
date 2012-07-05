@@ -80,7 +80,7 @@ function generarArraySubTorneos($idtorneo) {
 }
 
 function  getTorneo($combo) {
-    
+    include("../controlador/fachada.php");
     $instancia = new fachada();
     $db = $instancia->conect();
     $collectionTorneo = $db->torneo;
