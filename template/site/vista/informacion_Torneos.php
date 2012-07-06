@@ -124,21 +124,21 @@ include_once("../modelo/consultasTorneo.php");
 						<div class="wrapper pad_bot2">
 							<h3><span class="dropcap">></span>Rankings</h3>
 							<p class="pad_bot1">Información de los torneos ya jugados</p>
-							<p><a href="verRanking?rankingid=1">Ranking de Novatos Hombres </a></p>
-							<p><a href="verRanking?rankingid=2">Ranking de Categoria 1 Hombres </a></p>
-							<p><a href="verRanking?rankingid=3">Ranking de Categoria 2 Hombres </a></p>
-							<p><a href="verRanking?rankingid=4">Ranking de Categoria 3 Hombres </a></p>
-							<p><a href="verRanking?rankingid=5">Ranking de Categoria 4 Hombres </a></p>
-							<p><a href="verRanking?rankingid=6">Ranking de Novatos Mujeres </a></p>
-							<p><a href="verRanking?rankingid=7">Ranking de Categoria 1 Mujer </a></p>
-							<p><a href="verRanking?rankingid=8">Ranking de Categoria 2 Mujer </a></p>
-							<p><a href="verRanking?rankingid=9">Ranking de Categoria 3 Mujer </a></p>
-							<p><a href="verRanking?rankingid=10">Ranking de Categoria 4 Mujer </a></p>
-							<p><a href="verRanking?rankingid=11">Ranking de Novatos Dobles </a></p>
-							<p><a href="verRanking?rankingid=12">Ranking de Categoria 1 Dobles </a></p>
-							<p><a href="verRanking?rankingid=13">Ranking de Categoria 2 Dobles </a></p>
-							<p><a href="verRanking?rankingid=14">Ranking de Categoria 3 Dobles </a></p>
-							<p><a href="verRanking?rankingid=15">Ranking de Categoria 4 Dobles </a></p>
+							<p><a href="verRanking.php?rankingid=1">Ranking de Novatos Hombres </a></p>
+							<p><a href="verRanking.php?rankingid=2">Ranking de Categoria 1 Hombres </a></p>
+							<p><a href="verRanking.php?rankingid=3">Ranking de Categoria 2 Hombres </a></p>
+							<p><a href="verRanking.php?rankingid=4">Ranking de Categoria 3 Hombres </a></p>
+							<p><a href="verRanking.php?rankingid=5">Ranking de Categoria 4 Hombres </a></p>
+							<p><a href="verRanking.php?rankingid=6">Ranking de Novatos Mujeres </a></p>
+							<p><a href="verRanking.php?rankingid=7">Ranking de Categoria 1 Mujer </a></p>
+							<p><a href="verRanking.php?rankingid=8">Ranking de Categoria 2 Mujer </a></p>
+							<p><a href="verRanking.php?rankingid=9">Ranking de Categoria 3 Mujer </a></p>
+							<p><a href="verRanking.php?rankingid=10">Ranking de Categoria 4 Mujer </a></p>
+							<p><a href="verRanking.php?rankingid=11">Ranking de Novatos Dobles </a></p>
+							<p><a href="verRanking.php?rankingid=12">Ranking de Categoria 1 Dobles </a></p>
+							<p><a href="verRanking.php?rankingid=13">Ranking de Categoria 2 Dobles </a></p>
+							<p><a href="verRanking.php?rankingid=14">Ranking de Categoria 3 Dobles </a></p>
+							<p><a href="verRanking.php?rankingid=15">Ranking de Categoria 4 Dobles </a></p>
 						</div>
 					</section>
 				</div>
