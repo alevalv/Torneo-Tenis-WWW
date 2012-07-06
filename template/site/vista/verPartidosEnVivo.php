@@ -1,22 +1,16 @@
 <?php include ("../controlador/seguridad.php");
-	$pagename="jugador.php";
+	$pagename="mostrarPartidosJuez.php";
 	comprobarSesion($pagename);
-	//para saber si es pareja o no
-	$varlink = "../vista/editarJugador.php";
-	session_start();
-	if($_SESSION["pareja"]){
-		$varlink ="../vista/editarPareja.php";
-	}
-							
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Gestión Jugador</title>
+<title>Ver Partidos Asignados Juez</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<script src="ajax.js"></script>
 <script type="text/javascript" src="js/jquery-1.6.js" ></script>
 <script type="text/javascript" src="js/cufon-yui.js"></script>
 <script type="text/javascript" src="js/cufon-replace.js"></script>
@@ -35,8 +29,7 @@
 			<a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0"  alt="" /></a>
 		</div>
 	<![endif]-->
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
 </head>
 
 <body id="page4">
@@ -62,48 +55,11 @@
 <!-- content -->
 			<article id="content">
 				<div class="wrapper">
-					<section class="cols">
-						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">1</span>Actualizar</h3>
-							<figure><img src="images/a.jpg" alt=""></figure>
-							<p class="pad_bot1">Edita tus datos basicos.</p>														
-							<a href="<?php echo $varlink; ?>" class="link1">Actualizar</a>
-						</div>
-					</section>
-					<section class="cols pad_left1">
-						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">2</span>Inscribete</h3>
-							<figure><img src="images/page4_img1.jpg" alt=""></figure>
-							<p class="pad_bot1">Registrate en un torneo para poder participar.</p>
-							<a href="../vista/informacion_Torneos.php" class="link1">Jugador Torneo</a>
-						</div>	
-					</section>
+					<?php
+					//codigo para mostrar los partidos
 					
-					<section class="cols pad_left2">
-						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">3</span>Proximos Partidos</h3>
-							<?php 
-							include("../modelo/consultarPartido.php");
-							$misPartidos = consultarMisPartidos($_SESSION['_id']);
-							$i=1;
-							foreach($misPartidos as $partido){
-								echo "<p><b>Partido {$i}</b><br/>";
-								echo 'Fecha: ';
-								echo $partido['partido_fecha'];
-								echo '<br/>';
-								echo 'Hora: ';
-								echo $partido['partido_hora'];
-								echo '<br/>';
-								echo 'Cancha:';
-								echo $partido['partido_cancha'];
-								echo '</p>';
-								$i++;
-							}
-							?>
-						</div>
-					</section>
+					?>
 				</div>
-
 			</article>
 		</div>
 	</div>
@@ -132,7 +88,7 @@
 						</ul>
 					</section>
 					<section class="col3 pad_left2">
-						<h4>¡Siguenos!</h4>
+						<h4>�Siguenos!</h4>
 						<ul id="icons">
 							<li><a href="#"><img src="images/icon1.jpg" alt="">Facebook</a></li>
 							<li><a href="#"><img src="images/icon2.jpg" alt="">Twitter</a></li>

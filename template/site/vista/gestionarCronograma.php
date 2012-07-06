@@ -79,7 +79,7 @@ comprobarSesion($pagename);
 
                                     </div>
 
-                                    <input type="button" value ="Enviar" onClick="submit()" >
+                                    <input type="button" value ="Enviar" onClick="submit()" class="submitbutton" >
                                    
                                   
                                 </div>
