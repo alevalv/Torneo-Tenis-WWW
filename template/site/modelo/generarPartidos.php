@@ -100,6 +100,8 @@
         </article>
         </div>
         </div>';
+        
+        cambiarValorCronogramaDeTorneo($combo);
         ?>
     
     <div class="body4">
