@@ -29,7 +29,18 @@
                 </h3>
             </div>
             <div data-role="content" style="padding: 15px">
-                <form action="">
+                <form action="../modelo/actualizarPartido.php" method="post">
+					<?php
+							if($_GET["errorupdate"]=="si"){
+								echo 	'<div id="errorMensage">
+											Error al actualizar el partido
+										</div>';
+							}else if($_GET["sussesupdate"]=="si"){
+								echo 	'<div id="sussesMensage">
+											Actualización Correcta
+										</div><p><br></p>';
+							}
+					?>
                     <div class="ui-grid-c">
                         <div class="ui-block-a">
                         </div>
@@ -56,21 +67,21 @@
                         <div class="ui-block-b">
                             <div data-role="fieldcontain">
                                 <fieldset data-role="controlgroup" data-mini="true">
-                                    <input id="game1_jugador1" placeholder="" value="<?php echo $data['game1_jugador1'] ?>" type="number" />
+                                    <input id="game1_jugador1" name="game1_jugador1" placeholder="" value="<?php echo $data['game1_jugador1'] ?>" type="number" required />
                                 </fieldset>
                             </div>
                         </div>
                         <div class="ui-block-c">
                             <div data-role="fieldcontain">
                                 <fieldset data-role="controlgroup" data-mini="true">
-                                    <input id="game2_jugador1" placeholder="" value="<?php echo $data['game2_jugador1'] ?>" type="number" />
+                                    <input id="game2_jugador1" name="game2_jugador1" placeholder="" value="<?php echo $data['game2_jugador1'] ?>" type="number" />
                                 </fieldset>
                             </div>
                         </div>
                         <div class="ui-block-d">
                             <div data-role="fieldcontain">
                                 <fieldset data-role="controlgroup" data-mini="true">
-                                    <input id="game3_jugador1" placeholder="" value="<?php echo $data['game3_jugador1'] ?>" type="number" />
+                                    <input id="game3_jugador1" name="game3_jugador1" placeholder="" value="<?php echo $data['game3_jugador1'] ?>" type="number" />
                                 </fieldset>
                             </div>
                         </div>
@@ -82,28 +93,29 @@
                         <div class="ui-block-b">
                             <div data-role="fieldcontain">
                                 <fieldset data-role="controlgroup" data-mini="true">
-                                    <input id="game1_jugador2" placeholder="" value="<?php echo $data['game1_jugador2'] ?>" type="number" />
+                                    <input id="game1_jugador2" name="game1_jugador2" placeholder="" value="<?php echo $data['game1_jugador2'] ?>" type="number" required />
                                 </fieldset>
                             </div>
                         </div>
                         <div class="ui-block-c">
                             <div data-role="fieldcontain">
                                 <fieldset data-role="controlgroup" data-mini="true">
-                                    <input id="game2_jugador2" placeholder="" value="<?php echo $data['game2_jugador2'] ?>" type="number" />
+                                    <input id="game2_jugador2" name="game2_jugador2" placeholder="" value="<?php echo $data['game2_jugador2'] ?>" type="number" />
                                 </fieldset>
                             </div>
                         </div>
                         <div class="ui-block-d">
                             <div data-role="fieldcontain">
                                 <fieldset data-role="controlgroup" data-mini="true">
-                                    <input id="game3_jugador2" placeholder="" value="<?php echo $data['game3_jugador2'] ?>" type="number" />
+                                    <input id="game3_jugador2" name="game3_jugador2" placeholder="" value="<?php echo $data['game3_jugador2'] ?>" type="number" />
                                 </fieldset>
                             </div>
                         </div>
+                        <input type="hidden" id="_id" name="_id" value="<?php echo $data['_id']; ?>" />
                     </div>
-                    <a data-role="button" data-transition="fade" href="#">
-                        Actualizar
-                    </a>                    
+                    <div data-role="fieldcontain" >
+						<input value="Enviar" type="submit" />
+                    </div>          
                 </form>
                 <a data-role="button" data-transition="fade" href="../controlador/salir.php">
                         Salir
