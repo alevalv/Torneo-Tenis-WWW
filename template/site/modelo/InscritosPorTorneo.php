@@ -50,7 +50,7 @@
           
           $minIns=(int )  $minimoParaGenerarTorneo;
           $Inscritos=(int) $v;
-          $seJuega=$Inscritos>-4 ;
+          $seJuega=$Inscritos>$minIns;
           
           if($seJuega){
               $jugar="Si se Juega";
