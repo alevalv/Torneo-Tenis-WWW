@@ -54,7 +54,7 @@ function comprobarSesion($pagename){
 			}
 			if($_SESSION["rol"] == "juez"){
 				
-				if(($pagename == "juez.php") || $pagename == "editarJuez.php") {
+				if(($pagename == "juez.php") || $pagename == "editarJuez.php" || ($pagename=="mostrarPartidosJuez.php") ){
 					return 1;
 				}
 				//No se puede acceder no tiene privilegios alguna pagina de error
