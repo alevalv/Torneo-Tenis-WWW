@@ -16,10 +16,15 @@ function consultarPartido($id, $juezId){
 function consultarMisPartidos($jugador){
 	include("../controlador/fachada.php");
 	$instancia = new fachada();
-    $db = $instancia->conect();
-    $collectionPartido= new MongoCollection($db, 'partidos_torneo');
-    $query =  array ('$and' => array( '$or' => array('registrados_jugador1_codigo' => '4ff5fd1b8946d2a900000000', 'registrados_jugador2_codigo' => '4ff5fd1b8946d2a900000000') , 'partido_ganador' => '0'));
+	$db = $instancia->conect();
+	$jugador = "{$jugador}";
+	$collectionPartido= new MongoCollection($db, 'partidos_torneos');
+    $query =  array('$and' => array(
+								array('$or' => array(
+									array("registrados_jugador1_codigo" => $jugador),
+									array("registrados_jugador2_codigo" => $jugador))),
+								array("partido_ganador" => "0")));
     $result = $collectionPartido->find($query);
-	return $result;
+    return $result;
 }
 ?>

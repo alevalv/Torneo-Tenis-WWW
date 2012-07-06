@@ -83,11 +83,20 @@
 							<h3><span class="dropcap">3</span>Proximos Partidos</h3>
 							<?php 
 							include("../modelo/consultarPartido.php");
-							$misPartidos = consultarMisPartidos($_SESSION['id']);
+							$misPartidos = consultarMisPartidos($_SESSION['_id']);
+							$i=1;
 							foreach($misPartidos as $partido){
-								echo '<p>';
-								var_dump($partido);
+								echo "<p><b>Partido {$i}</b><br/>";
+								echo 'Fecha: ';
+								echo $partido['partido_fecha'];
+								echo '<br/>';
+								echo 'Hora: ';
+								echo $partido['partido_hora'];
+								echo '<br/>';
+								echo 'Cancha:';
+								echo $partido['partido_cancha'];
 								echo '</p>';
+								$i++;
 							}
 							?>
 						</div>
