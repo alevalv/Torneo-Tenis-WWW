@@ -68,44 +68,38 @@
 							<p class="pad_bot1">Edita tus datos basicos.</p>														
 							<a href="<?php echo $varlink; ?>" class="link1">Actualizar</a>
 						</div>
-						<!--<div class="wrapper">
-							<h3><span class="dropcap">4</span>Ingresar Juez</h3>
-							<figure><img src="images/page4_img2.jpg" alt=""></figure>
-							<p class="pad_bot1">En esta sección se desplegara un formulario para el ingreso de jueces oficiales para los diferentes torneos que se realicen y la asignación de estos.</p>
-							<a href="#" class="link1">Ingresar un Juez</a>
-						</div>
-						-->
 					</section>
 					<section class="cols pad_left1">
 						<div class="wrapper pad_bot2">
 							<h3><span class="dropcap">2</span>Inscribete</h3>
 							<figure><img src="images/page4_img1.jpg" alt=""></figure>
 							<p class="pad_bot1">Registrate en un torneo para poder participar.</p>
-							<a href="../vista/registrarTorneoJugador.php" class="link1">Jugador Torneo</a>
-						</div>
-						<!--<div class="wrapper">
-							<h3><span class="dropcap">5</span>Product name</h3>
-							<figure><img src="images/page4_img4.jpg" alt=""></figure>
-							<p class="pad_bot1">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-							<a href="#" class="link1">Read More</a>
-						</div>
-						-->						
+							<a href="../vista/informacion_Torneos.php" class="link1">Jugador Torneo</a>
+						</div>	
 					</section>
 					
-					<section class="cols pad_left1">
-						<!--<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">3</span>Asigar Juez a Partido</h3>
-							<figure><img src="images/page4_img5.jpg" alt=""></figure>
-							<p class="pad_bot1">Gestiona los jueces y asignalos a los partidos que sean necesarios.</p>
-							<a href="../vista/asignarJuezPartido.php" class="link1">Asignar</a>
+					<section class="cols pad_left2">
+						<div class="wrapper pad_bot2">
+							<h3><span class="dropcap">3</span>Proximos Partidos</h3>
+							<?php 
+							include("../modelo/consultarPartido.php");
+							$misPartidos = consultarMisPartidos($_SESSION['_id']);
+							$i=1;
+							foreach($misPartidos as $partido){
+								echo "<p><b>Partido {$i}</b><br/>";
+								echo 'Fecha: ';
+								echo $partido['partido_fecha'];
+								echo '<br/>';
+								echo 'Hora: ';
+								echo $partido['partido_hora'];
+								echo '<br/>';
+								echo 'Cancha:';
+								echo $partido['partido_cancha'];
+								echo '</p>';
+								$i++;
+							}
+							?>
 						</div>
-						--><!--
-						<div class="wrapper">
-							<h3><span class="dropcap">6</span>Product name</h3>
-							<figure><img src="images/page4_img6.jpg" alt=""></figure>
-							<p class="pad_bot1">Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-							<a href="#" class="link1">Read More</a>
-						</div>--> 
 					</section>
 				</div>
 

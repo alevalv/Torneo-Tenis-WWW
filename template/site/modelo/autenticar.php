@@ -64,6 +64,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 			}else{
 				$_SESSION["pareja"]=false;
 			}
+			$_SESSION["_id"]=$data['_id'];
 		}else{
 			header("Location: ../vista/login.php?errorusuario=si");
 			exit();
