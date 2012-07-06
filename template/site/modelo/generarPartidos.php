@@ -76,8 +76,8 @@
 		<div class="main">
                     <!-- content -->
 			<article id="content">
-                                 <form action="../modelo/generarPartidos.php" method="post">
-                                 <input type="submit" value ="Enviar" class="submitbutton" >
+                                 <form action="../vista/index.php" method="post">
+                                 <input type="submit" value ="home" class="submitbutton" >
 				<h5>Partidos por Grupos </h5>';
 				
         $longitud = sizeof($idSubTorneo);
@@ -96,7 +96,7 @@
         
 
         echo'
-        
+         El torneo se genero satisfactoriamente  
         </article>
         </div>
         </div>';

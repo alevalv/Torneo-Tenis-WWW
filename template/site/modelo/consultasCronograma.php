@@ -109,7 +109,7 @@ function existeYa($idjugador,$idTorneo,$idSubtorneo){
     
 }
 
-function crearPartidos($combo, $idSubTorneo, $indiceHora, $vectorhoras ,$indiceCancha,$canchas,$dia){
+function crearPartidos($combo, $idSubTorneo, &$indiceHora, &$vectorhoras ,&$indiceCancha,&$canchas,&$dia){
     
     
     $instancia = new fachada();
@@ -124,8 +124,8 @@ function crearPartidos($combo, $idSubTorneo, $indiceHora, $vectorhoras ,$indiceC
     for ($i=0;true ;$i++){
         
          $result = $collectionTorneo->find(array("idcategoria_modalidad" => $idSubTorneo, "registrados_torneo_codigo" => $combo , "jugador_grupo"=>$i )); //traigame todos los jugadores de ese subtorneo
-        echo 'entre a la consulta ::::::::::: <br> I '.$i.'- IDSUB'.$idSubTorneo.'- TORNEO '.$combo;
-        var_dump($result);
+    
+       
          
          $cantidad=$result->count();
          if($cantidad==0) break;
@@ -134,17 +134,16 @@ function crearPartidos($combo, $idSubTorneo, $indiceHora, $vectorhoras ,$indiceC
         
          foreach ($result as $obj) {
              
-              echo 'entre a la alguien tiene algo  ::::::::::: <br> ';
+             
              $idJugadores[$j] = $obj["registrados_jugador_codigo"];
              $j++;
-             echo 'jugador ::::::::::::'.$obj["registrados_jugador_codigo"];
+            
              
              
          }
          
          generarPartidos($idJugadores,$idSubTorneo,$combo,1,$indiceHora, $vectorhoras ,$indiceCancha,$canchas,$dia);
-         echo 'var ::::::::::::';
-         var_dump($idJugadores);
+         
         
          
          
@@ -162,7 +161,7 @@ function crearPartidos($combo, $idSubTorneo, $indiceHora, $vectorhoras ,$indiceC
     }
     
     
-    function generarPartidos($idJugadores,$idSubtorneo,$idTorneo,$ronda,$indiceHora, $vectorhoras ,$indiceCancha,$canchas,$dia){
+    function generarPartidos($idJugadores,$idSubtorneo,$idTorneo,$ronda,&$indiceHora, &$vectorhoras ,&$indiceCancha,&$canchas,&$dia){
          $instancia = new fachada();
          $db = $instancia->conect();
          $collection = new MongoCollection($db, 'partidos_torneos');
@@ -176,7 +175,12 @@ function crearPartidos($combo, $idSubTorneo, $indiceHora, $vectorhoras ,$indiceC
         
         for ($i=0;$i<$numJugadores;$i++){
             
-            for ($j=$i;$j<$numJugadores;$j++){
+            for ($j=$i+1;$j<$numJugadores;$j++){
+                
+                if ($indiceCancha==$canchas ){
+                    $dia++;
+                    
+                }
                 
                 
                 if ($indiceHora== sizeof($vectorhoras)){
@@ -191,13 +195,15 @@ function crearPartidos($combo, $idSubTorneo, $indiceHora, $vectorhoras ,$indiceC
              
                 $doc = array( 'registrados_jugador1_codigo' => $idJugadores[$i],
              'registrados_jugador2_codigo' => $idJugadores[$j] , 'registrados_torneo_codigo' => $idTorneo ,
-             'partido_ronda' => $ronda, 'partido_fecha' => 0 , 'partido_hora'=> 0,
-             'partido_cancha' => 0, 'set_ganados_jugador1' => 0, 'set_ganados_jugador2' => 0, 
+             'partido_ronda' => $ronda, 'partido_fecha' => $dia , 'partido_hora'=>$vectorhoras[$indiceHora],
+             'partido_cancha' => $indiceCancha, 'set_ganados_jugador1' => 0, 'set_ganados_jugador2' => 0, 
              'game1_jugador1' => 0,'game1_jugador2' => 0,'game2_jugador1' => 0,
              'game2_jugador2' => 0,'game3_jugador1' => 0,'game3_jugador2' => 0,
              'partido_ganador' => "0","idcategoria_modalidad" => $idSubtorneo);
                 
                 $collection->insert($doc);
+                
+                $indiceHora++;
                 
             }
         
