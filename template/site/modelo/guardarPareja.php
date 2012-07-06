@@ -21,7 +21,7 @@
 		else if($_POST['jugador_categoria'] == "Categoria 4"){
 			$jugadorCategoriaModalidad=15;
 		}
-		$newUser = array('jugador_cedula1' => $_POST['jugador_cedula1'],'jugador_cedula2'=> $_POST['jugador_cedula2'], 'jugador_username' => $_POST['jugador_username'], 'jugador_password' => $_POST['jugador_password'],'jugador_es_pareja' => true,'jugador_nombre1' => $_POST['jugador_nombre1'],'jugador_nombre2' => $_POST['jugador_nombre2'], 'jugador_sexo1' => $_POST['jugador_sexo1'], 'jugador_sexo2' => $_POST['jugador_sexo2'], 'idcategoria_modalidad' => $jugadorCategoriaModalidad,'jugador_ranking' => 1);
+		$newUser = array('jugador_cedula1' => $_POST['jugador_cedula1'],'jugador_cedula2'=> $_POST['jugador_cedula2'], 'jugador_username' => $_POST['jugador_username'], 'jugador_password' => md5($_POST['jugador_password']),'jugador_es_pareja' => true,'jugador_nombre1' => $_POST['jugador_nombre1'],'jugador_nombre2' => $_POST['jugador_nombre2'], 'jugador_sexo1' => $_POST['jugador_sexo1'], 'jugador_sexo2' => $_POST['jugador_sexo2'], 'idcategoria_modalidad' => $jugadorCategoriaModalidad,'jugador_ranking' => 1);
 		$collection->insert($newUser);
 		header("Location: ../vista/registrarPareja.php?sussesinsert=si");
 		exit();

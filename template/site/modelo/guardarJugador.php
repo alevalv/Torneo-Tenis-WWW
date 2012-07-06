@@ -38,7 +38,7 @@
 			else if($_POST['jugador_sexo'] == "F" && $_POST['jugador_categoria'] == "Categoria 4"){
 				$jugadorCategoriaModalidad=10;
 			}
-			$newUser = array("jugador_codigo" => $_POST['jugador_codigo'], "jugador_username" => $_POST['jugador_username'], "jugador_password" => $_POST['jugador_password'], "jugador_es_pareja" => false,"jugador_nombre1" => $_POST['jugador_nombre'], "jugador_sexo1" => $_POST['jugador_sexo'], "idcategoria_modalidad" => $jugadorCategoriaModalidad, "jugador_ranking" => 1);
+			$newUser = array("jugador_codigo" => $_POST['jugador_codigo'], "jugador_username" => $_POST['jugador_username'], "jugador_password" => md5($_POST['jugador_password']), "jugador_es_pareja" => false,"jugador_nombre1" => $_POST['jugador_nombre'], "jugador_sexo1" => $_POST['jugador_sexo'], "idcategoria_modalidad" => $jugadorCategoriaModalidad, "jugador_ranking" => 1);
 			$collection->insert($newUser);
 			header("Location: ../vista/registrarJugador.php?sussesinsert=si");
 			exit();

@@ -16,6 +16,8 @@
 <script type="text/javascript" src="js/Swis721_Cn_BT_400.font.js"></script>
 <script type="text/javascript" src="js/Swis721_Cn_BT_700.font.js"></script>
 <script type="text/javascript" src="js/tabs.js"></script>
+<?php include("../controlador/validarFormulario.php");?>
+
 <!--[if lt IE 9]>
   	<script type="text/javascript" src="js/html5.js"></script>
 	<style type="text/css">
@@ -27,6 +29,8 @@
 			<a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0"  alt="" /></a>
 		</div>
 <![endif]-->
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body id="page5">
 	<div class="body1">
@@ -53,7 +57,7 @@
 					<section class="col1">
 						<h2 class="under">Registrarse</h2>
 						<a href="registrarJugador.php"><h3>Registrarse Individualmente (Aqui)</h3></a>
-						<form id="registroJugador" action="../modelo/guardarPareja.php" method="post">
+						<form id="registroJugador" onSubmit="return validarPasswd()" action="../modelo/guardarPareja.php" method="post">
 						<?php
 							if($_GET["errorinsert"]=="si"){
 								echo 	'<div id="errorMensage">
@@ -105,8 +109,12 @@
 							</div>
 							<div  class="wrapper">
 								<span>Contraseña:</span>
-								<input type="password" name="jugador_password" class="input" required>
+								<input type="password" id="pass" name="jugador_password" pattern="^[a-zA-Z0-9-_\.]{3,20}$" class="input" title="Unicamente caracteres alfanumericos (a-z 0-9). Entre 3 a 20 caracteres." required>
 							</div>
+							<div  class="wrapper">
+								<span>Confirmar Contraseña:</span>
+								<input type="password" id="passConfirm" name="jugador_password_confirm" pattern="^[a-zA-Z0-9-_\.]{3,20}$" class="input" title="Unicamente caracteres alfanumericos (a-z 0-9). Entre 3 a 20 caracteres." required>
+							</div>							
 							<div  class="wrapper">
 								<span>Categoría Inicial:</span><br /><br />
 								<div class="radios">

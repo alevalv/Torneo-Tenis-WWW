@@ -3,11 +3,12 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 	 include("../controlador/fachada.php");
      $instancia = new fachada();
 	 $db = $instancia->conect();
+	 $passmd5 = md5($_POST['password']);
 	 
 	 if(isset($_GET['movil'])){
 		 if($_GET['movil']=="si"){
 			$colection_Juez = $db->juez;
-			$usr_Juez = array("juez_username" => $_POST['username'] , "juez_password" => $_POST['password']);
+			$usr_Juez = array("juez_username" => $_POST['username'] , "juez_password" => $passmd5);
 			$result_Juez = $colection_Juez->find($usr_Juez);
 			
 			if($result_Juez->count()!=0){
@@ -31,15 +32,15 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 		exit();
 	}else{
 		$colection_Admin = $db->admin;	 
-		$usr_Admin = array( "admin_username" => $_POST['username'] , "admin_password" => $_POST['password']);	 
+		$usr_Admin = array( "admin_username" => $_POST['username'] , "admin_password" => $passmd5);	 
 		$result_Admin = $colection_Admin->find($usr_Admin);
 	 
 		$colection_Juez = $db->juez;
-		$usr_Juez = array( "juez_username" => $_POST['username'] , "juez_password" => $_POST['password']);
+		$usr_Juez = array( "juez_username" => $_POST['username'] , "juez_password" => $passmd5);
 		$result_Juez = $colection_Juez->find($usr_Juez);
 	 
 		$colection = $db->jugador;
-		$usr = array( "jugador_username" => $_POST['username'] , "jugador_password" => $_POST['password']);	 
+		$usr = array( "jugador_username" => $_POST['username'] , "jugador_password" => $passmd5);	 
 		$result = $colection->find($usr);
 		
 		if($result_Admin->count()!=0){
