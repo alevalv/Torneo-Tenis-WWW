@@ -12,7 +12,7 @@
 		
 		$result = $collectionTorneo->find(array("partido_fecha" => $fecha));
                      
-		
+		var_dump($result);
 		return $result;
 		
 			
