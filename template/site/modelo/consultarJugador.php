@@ -59,5 +59,14 @@ function insertarInscritoBD($id_jugador, $id_torneo,$categoria_modalidad ) {
 			
 	}
 
+function consultarRanking($idcategoria_modalidad){
+		include_once("../controlador/fachada.php");
+		$instancia = new fachada();
+		$db = $instancia->conect();
+		$collectionTorneo = $db->jugador;
+		$id = intval($idcategoria_modalidad);
+		$result = $collectionTorneo->find(array("idcategoria_modalidad" => $id));
+		return $result;
+	}
 
 ?>

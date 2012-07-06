@@ -1,12 +1,11 @@
 <?php include ("../controlador/seguridad.php");
-include_once("../modelo/consultasTorneo.php");
-	$pagename="informacion_Torneos.php";
+	$pagename="verRanking.php";
 	comprobarSesion($pagename);
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Torneos</title>
+<title>Ranking de Jugadores</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
@@ -55,93 +54,16 @@ include_once("../modelo/consultasTorneo.php");
 		<div class="main">
 <!-- content -->
 			<article id="content">
-				<div class="wrapper">
-					<section class="cols">
-						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">></span>Torneos Presentes</h3>
-							<p class="pad_bot1">Torneos que se juegan actualmente</p>
-							<?php 
-								$result = consultarTorneosPresentes();
-								echo '<ul>';
-								foreach ($result as $torneo) {
-									echo '<li><a href="verTorneo.php?torneoid=';
-									echo $torneo['_id'];
-									echo '" class="link1">';
-									echo $torneo['torneo_nombre'];
-									echo '</a></li>';
-								}
-								echo '</ul>';
-							?>
-							
-						</div>
-				
-					
-
-
-
-
-					</section>
-					<section class="cols pad_left1">
-						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">></span>Torneos Planeados</h3>
-							<p class="pad_bot1">Torneos que se jugarán en el futuro</p>
-							<?php 
-								$result = consultarTorneosDisponibles();
-								echo '<ul>';
-								foreach ($result as $torneo) {
-									echo '<li><a href="verTorneo.php?torneoid=';
-									echo $torneo['_id'];
-									echo '" class="link1">';
-									echo $torneo['torneo_nombre'];
-									echo '</a></li>';
-								}
-								echo '</ul>';
-							?>
-						</div>
-						
-											
-					</section>
-					
-					<section class="cols pad_left1">
-						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">></span>Torneos Pasados</h3>
-							<p class="pad_bot1">Información de los torneos ya jugados</p>
-							<?php 
-								$result = consultarTorneosPasados();
-								echo '<ul>';
-								foreach ($result as $torneo) {
-									echo '<li><a href="verTorneo.php?torneoid=';
-									echo $torneo['_id'];
-									echo '" class="link1">';
-									echo $torneo['torneo_nombre'];
-									echo '</a></li>';
-								}
-								echo '</ul>';
-							?>
-						</div>
-					</section>
-					<section class="cols pad_right1">
-						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">></span>Rankings</h3>
-							<p class="pad_bot1">Información de los torneos ya jugados</p>
-							<p><a href="verRanking.php?rankingid=1">Ranking de Novatos Hombres </a></p>
-							<p><a href="verRanking.php?rankingid=2">Ranking de Categoria 1 Hombres </a></p>
-							<p><a href="verRanking.php?rankingid=3">Ranking de Categoria 2 Hombres </a></p>
-							<p><a href="verRanking.php?rankingid=4">Ranking de Categoria 3 Hombres </a></p>
-							<p><a href="verRanking.php?rankingid=5">Ranking de Categoria 4 Hombres </a></p>
-							<p><a href="verRanking.php?rankingid=6">Ranking de Novatos Mujeres </a></p>
-							<p><a href="verRanking.php?rankingid=7">Ranking de Categoria 1 Mujer </a></p>
-							<p><a href="verRanking.php?rankingid=8">Ranking de Categoria 2 Mujer </a></p>
-							<p><a href="verRanking.php?rankingid=9">Ranking de Categoria 3 Mujer </a></p>
-							<p><a href="verRanking.php?rankingid=10">Ranking de Categoria 4 Mujer </a></p>
-							<p><a href="verRanking.php?rankingid=11">Ranking de Novatos Dobles </a></p>
-							<p><a href="verRanking.php?rankingid=12">Ranking de Categoria 1 Dobles </a></p>
-							<p><a href="verRanking.php?rankingid=13">Ranking de Categoria 2 Dobles </a></p>
-							<p><a href="verRanking.php?rankingid=14">Ranking de Categoria 3 Dobles </a></p>
-							<p><a href="verRanking.php?rankingid=15">Ranking de Categoria 4 Dobles </a></p>
-						</div>
-					</section>
-				</div>
+				<p>Ranking</p>
+				<?php 
+					include_once("../modelo/consultarJugador.php");
+					$jugadores = consultarRanking($_GET['rankingid']);
+					$i=1;
+					foreach($jugadores as $jugador){
+						echo "{$i}. {$jugador['jugador_nombre1']} <br/>";
+						$i++;
+					}
+				?>
 			</article>
 		</div>
 	</div>
@@ -211,4 +133,3 @@ include_once("../modelo/consultasTorneo.php");
 </script>
 </body>
 </html>
-
