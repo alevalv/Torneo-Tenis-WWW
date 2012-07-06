@@ -60,7 +60,7 @@
 					$jugadores = consultarRanking($_GET['rankingid']);
 					$i=1;
 					foreach($jugadores as $jugador){
-						echo "{$i}. {$jugador['jugador_nombre']} <br/>";
+						echo "{$i}. {$jugador['jugador_nombre1']} <br/>";
 						$i++;
 					}
 				?>

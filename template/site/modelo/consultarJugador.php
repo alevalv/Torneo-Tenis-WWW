@@ -64,7 +64,8 @@ function consultarRanking($idcategoria_modalidad){
 		$instancia = new fachada();
 		$db = $instancia->conect();
 		$collectionTorneo = $db->jugador;
-		$result = $collectionTorneo->find(array("idcategoria_modalidad" => $idcategoria_modalidad));
+		$id = intval($idcategoria_modalidad);
+		$result = $collectionTorneo->find(array("idcategoria_modalidad" => $id));
 		return $result;
 	}
 
