@@ -21,7 +21,7 @@ function comprobarSesion($pagename){
 		if($pagename == "verTorneo.php"){
 			return 0;
 		}
-		if($pagenama == "verRanking.php"){
+		if($pagename == "verRanking.php"){
 			return 0;
 		}
 		if($pagename == "aplicacion-movil/index.php"){
@@ -38,7 +38,7 @@ function comprobarSesion($pagename){
 		//ademas salgo de este script    
 		return 0;
     }else{// si nos registramos
-		if(($pagename == "index.php") || ($pagename == "informacion_Torneos.php") || ($pagename == "verTorneo.php")){ return 1;}
+		if(($pagename == "index.php") || ($pagename == "informacion_Torneos.php") || ($pagename == "verTorneo.php") || ($pagename == "verRanking.php")){ return 1;}
 		if(($pagename == "registrarJugador.php") || ($pagename == "registrarPareja.php") || ($pagename == "login.php")){//redirecciona a index.php
 			header("Location: ../vista/index.php");
 			return 1;			
