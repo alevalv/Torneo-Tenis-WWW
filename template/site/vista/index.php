@@ -103,6 +103,17 @@
 						    </p>
 						</div>
 					</section>
+					<section class="col2 pad_left2">
+						<h2 class="under">Partidos en Juego</h2>
+						<div class="wrapper">
+							<p class="pad_bot1">
+								Brujeria acá
+							</p>
+							<p>
+								
+						    </p>
+						</div>
+					</section>
 					<!--
 					<section class="col2 pad_left1">
 						<h2>Testimonials</h2>
