@@ -49,14 +49,33 @@ function generarTablaConGrupos($idSubtorneo,$idTorneo) {
     $collectionTorneo = $db->clasificacion_torneos;
      $idSubtorneo;
 
-    $result = $collectionTorneo->find(array("idcategoria_modalidad" => $idSubtorneo, "registrados_torneo_codigo" => $idTorneo)); //traigame todos los jugadores de ese subtorneo
+    $result = $collectionTorneo->find(array("idcategoria_modalidad" => $idSubtorneo, "registrados_torneo_codigo" => $idTorneo))->sort(array("jugador_grupo" => -1)); //traigame todos los jugadores de ese subtorneo
     $i = 0;
-    $grupoActual=-1;
+    
     $grupoAnterior=-1;
-    $filas="";
+    
     foreach ($result as $obj) {
         
-        $filas=$filas+'<tr>
+        $grupo = (int) $obj["jugador_grupo"];
+        
+        if ($grupoAnterior != $grupo){
+            
+            $filas=$filas.'<tr class="winner">
+        <td>'.''.'</td>
+        <td>'.''.'</td>
+                <td> <h5>'.'Grupo'.' </h5> </td>
+                     <td> <h5>'. $obj["jugador_grupo"].'</h5></td>
+                       <td>'.''.'</td>
+        
+            </tr>';
+            
+            $grupoAnterior=$grupo;
+            
+        }
+        else
+            {
+        
+        $filas=$filas.'<tr>
         <td>'.$obj["registrados_jugador_codigo"].'</td>
         <td>'.$obj["jugador_grupo"].'</td>
             <td>'.$obj["idcategoria_modalidad"].'</td>
@@ -64,6 +83,8 @@ function generarTablaConGrupos($idSubtorneo,$idTorneo) {
                     <td>'.$obj["jugador_puntos"].'</td>
         
         </tr>';
+        
+        }
         
         $i++;
     }
