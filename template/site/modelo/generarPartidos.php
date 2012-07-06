@@ -81,10 +81,16 @@
 				<h5>Partidos por Grupos </h5>';
 				
         $longitud = sizeof($idSubTorneo);
+        $canchas=6;
+        $dia=1;
+        $vectorhoras=array('10:00','11:00','2:00','3:00','4:00','5:00');// 6 horas diarias 
+        $indiceCancha=0;
+        $indiceHora=0;
+        //$matrizHorasvsCancha;
         for ($i = 1; $i < $longitud; $i++) {
 
             
-            crearPartidos($combo, $idSubTorneo[$i]);
+            crearPartidos($combo, $idSubTorneo[$i],$indiceHora, $vectorhoras ,$indiceCancha,$canchas,$dia);
         }
         
         

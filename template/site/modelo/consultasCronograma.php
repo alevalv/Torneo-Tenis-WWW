@@ -109,7 +109,7 @@ function existeYa($idjugador,$idTorneo,$idSubtorneo){
     
 }
 
-function crearPartidos($combo, $idSubTorneo){
+function crearPartidos($combo, $idSubTorneo, $indiceHora, $vectorhoras ,$indiceCancha,$canchas,$dia){
     
     
     $instancia = new fachada();
@@ -135,18 +135,18 @@ function crearPartidos($combo, $idSubTorneo){
          foreach ($result as $obj) {
              
               echo 'entre a la alguien tiene algo  ::::::::::: <br> ';
-             $idJugadores[$j]== $obj["registrados_jugador_codigo"];
+             $idJugadores[$j] = $obj["registrados_jugador_codigo"];
              $j++;
+             echo 'jugador ::::::::::::'.$obj["registrados_jugador_codigo"];
              
              
          }
          
-         //generarPartidos($idJugadores,$idSubtorneo,$idTorneo,1);
+         generarPartidos($idJugadores,$idSubTorneo,$combo,1,$indiceHora, $vectorhoras ,$indiceCancha,$canchas,$dia);
          echo 'var ::::::::::::';
          var_dump($idJugadores);
-         unset($idJugadores);
-         echo 'vaciadaaaaaaaaaaaa ::::::::::::';
-         var_dump($idJugadores);
+        
+         
          
          
         /* db.partidos_torneos.insert({'partido_codigo': '457', 'registrados_jugador1_codigo': '8796', 
@@ -162,10 +162,10 @@ function crearPartidos($combo, $idSubTorneo){
     }
     
     
-    function generarPartidos($idJugadores,$idSubtorneo,$idTorneo,$ronda){
-          $instancia = new fachada();
-    $db = $instancia->conect();
-    $collection = new MongoCollection($db, 'partidos_torneos');
+    function generarPartidos($idJugadores,$idSubtorneo,$idTorneo,$ronda,$indiceHora, $vectorhoras ,$indiceCancha,$canchas,$dia){
+         $instancia = new fachada();
+         $db = $instancia->conect();
+         $collection = new MongoCollection($db, 'partidos_torneos');
     
         
         $cancha=1;
@@ -178,10 +178,20 @@ function crearPartidos($combo, $idSubTorneo){
             
             for ($j=$i;$j<$numJugadores;$j++){
                 
+                
+                if ($indiceHora== sizeof($vectorhoras)){
+                    
+                    $indiceHora=0;
+                    $indiceCancha++;
+                    
+                }
+                
+                
+                
              
                 $doc = array( 'registrados_jugador1_codigo' => $idJugadores[$i],
              'registrados_jugador2_codigo' => $idJugadores[$j] , 'registrados_torneo_codigo' => $idTorneo ,
-             'partido_ronda' => $ronda, 'partido_fecha' => $p_fecha , 'partido_hora'=> $p_hora,
+             'partido_ronda' => $ronda, 'partido_fecha' => 0 , 'partido_hora'=> 0,
              'partido_cancha' => 0, 'set_ganados_jugador1' => 0, 'set_ganados_jugador2' => 0, 
              'game1_jugador1' => 0,'game1_jugador2' => 0,'game2_jugador1' => 0,
              'game2_jugador2' => 0,'game3_jugador1' => 0,'game3_jugador2' => 0,
