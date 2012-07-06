@@ -9,7 +9,9 @@
 		$dia = (int) date('d');
         $mes = (int) date('m');
         $anio = (int) date('Y');
+		$fecha = $dia.'-'.$mes.'-'.$anio;
 		
+		echo $fecha;
 		$result = $collectionTorneo->find(array("partido_fecha" => $fecha));
                      
 		var_dump($result);
