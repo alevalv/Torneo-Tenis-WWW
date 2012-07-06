@@ -21,6 +21,9 @@ function comprobarSesion($pagename){
 		if($pagename == "verTorneo.php"){
 			return 0;
 		}
+		if($pagenama == "verRanking.php"){
+			return 0;
+		}
 		if($pagename == "aplicacion-movil/index.php"){
 			return 3;
 		}
