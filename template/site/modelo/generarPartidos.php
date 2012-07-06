@@ -59,42 +59,17 @@
 
         $combo = $_POST["torneo"];
         $arraySubTorneos = $_POST["array"];
-        $arrayInscritos = $_POST["inscritos"];
+       
 
         // echo '<p>'.'id: '.$combo.'</p>';
         //echo '<p>'.'Array: '.$arraySubTorneos.'</p>';
         //var_dump($arraySubTorneos);
         $idSubTorneo = explode('-', $arraySubTorneos);
-        $inscritos = explode('-', $arrayInscritos);
+        
         //var_dump($idSubTorneo);
         // var_dump($inscritos);
 
-        $longitud = sizeof($idSubTorneo);
-        for ($i = 1; $i < $longitud; $i++) {
-
-            $number = (int) $inscritos[$i];
-
-            $cantidadDeGrupos = ceil($number / 4);
-            // echo '<p>'.$i .'---'.$idSubTorneo[$i].'</p><br>';
-
-            asignarGrupoAjugadores($combo, $idSubTorneo[$i], $cantidadDeGrupos);
-        }
-
-
-
-
-
-
-        /* for ($i=1;$i < $longitud;$i++){
-
-
-
-
-          // echo '<p>'.$i .'---'.$idSubTorneo[$i].'</p><br>';
-
-          generarTablaPorSubCategoria($combo,$idSubTorneo[$i]);
-
-          } */
+        
 
 
         echo '<div class="body3">
@@ -102,58 +77,19 @@
                     <!-- content -->
 			<article id="content">
                                  <form action="../modelo/generarPartidos.php" method="post">
-                                         <input value ="'.$combo.'" name="torneo" type="hidden"  >
-                                         <input value ="'.$arraySubTorneos.'" name="array" type="hidden"  >
-                                         
-                                         <input type="submit" value ="Enviar" class="submitbutton" >
-                                 </form>
-				<h5>Grupos Torneo</h5>
-				<div class="wrapper tabs">
-					<h3> Categoria_Modalidad: </h3>
-					<ul class="nav">';
-
-
-
+                                 <input type="submit" value ="Enviar" class="submitbutton" >
+				<h5>Partidos por Grupos </h5>';
+				
+        $longitud = sizeof($idSubTorneo);
         for ($i = 1; $i < $longitud; $i++) {
 
-
-            echo '<li  > <a href="#tab' . $idSubTorneo[$i] . '">' . $idSubTorneo[$i] . '</a></li>';
+            
+            crearPartidos($combo, $idSubTorneo[$i]);
         }
-        echo '</ul>
-        <p> <br></p>';
-
-
-        for ($i = 1; $i < $longitud; $i++) {
-
-
-
-
-            echo '<div class="tab-content" id="tab' . $idSubTorneo[$i] . '">';
-
-            echo '<p> <br> </p><h1> Mostrar los partidos de esta fase</h1><p> <br> </p>
-        <table cellspacing="0" cellpadding="0">
-        <col style="width: 200px" />
-        <col style="width: 100px" span="3" />
-        <tr>
-        <th >Codigo Jugador</th>
-        <th >Grupo</th>
-        <th >idcategoria_modalidad</th>
-        <th >Ronda</th>
-        <th >Puntos</th>
-        </tr>';
-            echo generarTablaConGrupos($idSubTorneo[$i], $combo);
-
-            echo '</table>
-                </div>';   
-        }
+        
+        
 
         echo'
-            
-</div>
-
-        </div>
-        
-        
         
         </article>
         </div>
