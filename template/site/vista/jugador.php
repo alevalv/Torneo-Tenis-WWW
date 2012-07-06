@@ -75,7 +75,7 @@
 							<h3><span class="dropcap">2</span>Inscribete</h3>
 							<figure><img src="images/page4_img1.jpg" alt=""></figure>
 							<p class="pad_bot1">Registrate en un torneo para poder participar.</p>
-							<a href="../vista/informacion_Torneos.php" class="link1">Jugador Torneo</a>
+							<a href="../vista/registrarTorneoJugador.php" class="link1">Jugador Torneo</a>
 						</div>	
 					</section>
 					
