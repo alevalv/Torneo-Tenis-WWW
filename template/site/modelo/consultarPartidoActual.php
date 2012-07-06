@@ -11,6 +11,7 @@
         $anio = (int) date('Y');
 		$fecha = $dia.'-'.$mes.'-'.$anio;
 		
+		echo "prueba";
 		echo $fecha;
 		$result = $collectionTorneo->find(array("partido_fecha" => $fecha));
                      
