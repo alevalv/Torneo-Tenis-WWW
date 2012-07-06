@@ -10,11 +10,8 @@
         $mes = (int) date('m');
         $anio = (int) date('Y');
 		
-		$result = $collectionTorneo->find(array(
-                    '$or' => 
-                    array(
-                        array("torneo_fecha_inicio_anio" => $anio , "torneo_fecha_inicio_mes" => $mes , "torneo_fecha_inicio_dia" => $dia )
-                        )
+		$result = $collectionTorneo->find(array("partido_fecha" => $fecha));
+                     
 		
 		return $result;
 		
