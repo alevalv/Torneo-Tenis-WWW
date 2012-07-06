@@ -2,8 +2,8 @@
 * Parametros mandatorios
 */
     var seconds = 2; // el tiempo en que se refresca
-	var divid = "contenido"; // el div que quieres actualizar!
-	var url = "tiempo.php"; // el archivo que ira en el div
+	var divid = "body3"; // el div que quieres actualizar!
+	var url = "../verPartidosEnVivo.php"; // el archivo que ira en el div
 
 	function refreshdiv(){
 
