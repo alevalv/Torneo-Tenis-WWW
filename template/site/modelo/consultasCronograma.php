@@ -221,7 +221,7 @@ function crearPartidos($combo, $idSubTorneo, &$indiceHora, &$vectorhoras ,&$indi
         $db = $instancia->conect();
          $collectionTorneo = $db->torneo;
          $mongoId = new MongoId($idTorneo);
-        $collectionTorneo->update(array("_id" => $mongoId), array('$set' => array("tiene_cronograma" => "si")));
+        $collectionTorneo->update(array("tiene_cronograma" => "si"), array('$set' => array("tiene_cronograma" => "no")));
     }
     
     
